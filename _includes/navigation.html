@@ -25,12 +25,17 @@
 
     backdrop-blur-md
     dark:bg-gray-near-darkest/75
-    fixed"
-    style="padding: 20px 40px; width: 100%; left:0; right:0;"
+    fixed
+    left-0
+    right-0
+    px-[30px]
+    md:px-[40px] py-[20px]
+"
+    style="width: 100%;"
 >
     <ul class="flex justify-between items-center m-auto list-none">
         <li class="logo font-black "  >
-            <a href="/" class="hover:text-red uppercase"><span class="">{{site.title}}</span><br><span class="font-normal text-xs text-gray-darker dark:text-red text-[16px]">{{site.subtitle}}</span></a>
+            <a href="/" class="hover:text-red uppercase"><span class="">{{site.title}}</span><br><span class="font-normal hidden lg:block text-xs text-gray-darker dark:text-red text-[16px]">{{site.subtitle}}</span></a>
         </li>
         <li class="menu">
             <!-- Menu Desktop/tablet -->
