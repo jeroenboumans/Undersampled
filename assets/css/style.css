@@ -245,6 +245,12 @@ body {
                         }
                 }
 
+
+                & p {
+                  @apply mt-[20px];
+                }
+
+
                 & img {
                     padding: 0px;
                     border-radius: 16px;
