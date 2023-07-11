@@ -12,7 +12,8 @@
         <div class="journal-item w-full md:flex md:gap-[40px]">
             {% if item.thumbnail %}
             <div style="background-image: url('{{ item.thumbnail }}'); background-size: {{ item.heroImageSize | default: 'cover' }}"
-                 class=" flex flex-col w-full h-[250px] md:w-[150px] h-[300px] md:h-[150px] rounded-lg bg-no-repeat bg-center mb-[20px] md:mb-0]">
+                 class=" flex flex-col w-full h-[250px] md:w-[150px] h-[300px] md:h-[150px] rounded-lg bg-no-repeat bg-center mb-[20px] md:mb-0]
+                    border-[1px] border-[rgba(255,255,255,0.075)]">
             </div>
             {% endif %}
             <div class="description flex flex-col self-stretch items-start flex-1 gap-[20px]">
@@ -26,7 +27,7 @@
 
         </div>
         {% if forloop.last == false %}
-        <div class="divider"></div>
+            {% include elements/divider.html %}
         {% endif %}
         {% endfor %}
     </div>

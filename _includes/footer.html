@@ -1,10 +1,10 @@
 <footer>
-    <div class="divider"></div>
+
+    {% include elements/divider.html %}
 
     <div
         class="flex flex-col sm:flex-row px-[40px]"
         style="
-
         justify-content: center;
         align-items: flex-start;
         gap: 80px;
@@ -33,7 +33,9 @@
         flex-direction: column;
         justify-content: center;
         align-self: stretch;">
-        <div class="divider"></div>
+
+        {% include elements/divider.html %}
+
         <p class="mt-[40px] px-[40px]">{{ 'now' | date: "%Y" }} © UNDERSAMPLED, Jeroen Boumans</p>
     </div>
 

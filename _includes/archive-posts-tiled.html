@@ -9,8 +9,10 @@
 
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {% for item in items %}
-            <a href="{{item.url}}" class="aspect-square rounded-lg flex items-center font-noto-sans font-black text-white bg-cover
-              bg-center bg-[percentage:100%] hover:bg-[percentage:300%] ease-out hover:duration-[7000ms] transition-all duration-300"
+            <a href="{{item.url}}" class="aspect-square rounded-lg flex items-center font-noto-sans font-black text-white
+                bg-center bg-[percentage:100%] hover:bg-[percentage:300%] ease-out hover:duration-[7000ms] transition-all duration-300
+                border-[1px]
+                border-[rgba(255,255,255,0.075)]"
                style="background-image: url({{item.thumbnail}})">
                 <div class="w-full text-center text-xl">{{page.prefix}}{{item[page.category]}}</div>
             </a>

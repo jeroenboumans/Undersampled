@@ -129,7 +129,7 @@ body {
 
             & .title {
                 display: flex;
-                max-width: 720px;
+                max-width: 960px;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -144,7 +144,6 @@ body {
 
             .hero {
                 display: flex;
-                aspect-ratio: 16/9;
                 padding: 20px;
                 flex-direction: column;
                 justify-content: flex-end;
@@ -156,22 +155,18 @@ body {
                 background-repeat: no-repeat;
                 background-size: cover;
                 /*100% / contain no-repeat;*/
-
-                @media only screen and (min-width: 960px) {
-                    aspect-ratio: 16/9 !important;
-                }
             }
 
             .content {
                 width: 100%;
                 display: flex;
-                max-width: 720px;
+                max-width: 960px;
                 flex-direction: column;
                 gap: 20px;
                 align-self: center;
 
                 &.content-grid {
-                     max-width: 1280px;
+                     max-width: 960px;
                  }
 
                 &.collection {
@@ -309,6 +304,13 @@ body {
     }
 }
 .tags {
+    justify-content: center;
+
+    .content.collection &
+    {
+        justify-content: start;
+    }
+
     & .tag {
           @apply bg-gray dark:bg-gray-darked;
           display: flex;
@@ -327,14 +329,14 @@ body {
 }
 
 footer {
-    width: 100%;
+
     margin-top: 80px;
     display: flex;
-    max-width: 720px;
+    max-width: 960px;
     flex-direction: column;
-    align-items: center;
+
     gap: 80px;
-    align-self: center;
+
 
     & nav {
         width: 100%;
@@ -349,13 +351,6 @@ footer {
     }
 }
 
-.divider {
-    @apply bg-gray dark:bg-gray-darker;
-    background: #E8E8E8;
-    width: 100%;
-    height: 1px;
-    max-width: 720px;
-}
 h2 {
     margin-top: 20px;
 }

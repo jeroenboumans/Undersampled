@@ -13,9 +13,8 @@
     xl:top-[40px]
 
     md:mb-[100px]
+    max-w-[1280px]
 
-    max-w-none
-    xl:max-w-5xl
     lg:m-auto
     transition-all
     ease-in-out
@@ -37,7 +36,6 @@
         <li class="menu">
             <!-- Menu Desktop/tablet -->
             <ul class="hidden md:flex justify-center items-center gap-[40px] list-none p-0">
-                {% include elements/darkmode.html %}
 
                 {% for link in site.data.menu-main.links %}
                     {% if link.links %}
@@ -53,6 +51,9 @@
                         <li><a href="{{link.link}}">{{link.title}}</a></li>
                     {% endif %}
                 {% endfor %}
+
+                {% include elements/darkmode.html %}
+
 
             </ul>
 
