@@ -5,7 +5,7 @@ date:   2023-07-05 11:40:16 +0200
 heroImage: '/assets/img/heq5-pro.svg'
 thumbnail: '/assets/img/heq5-pro.svg'
 heroImageSize: 'contain'
-category: blog
+category: 
 tags: classic hollywood m42
 description: "You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes."
 ---

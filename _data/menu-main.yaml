@@ -6,15 +6,15 @@ links:
         link: /messier
       - title: NGC
         link: /ngc
-  - title: Reference
-    links:
-      - title: Blog
-        link: /blog
-      - title: How To's
-        link: /how-to
-      - title: Equipment
-        link: /equipment
-      - title: Archive
-        link: /archive
+#  - title: Reference
+#    links:
+#      - title: Blog
+#        link: /blog
+#      - title: How To's
+#        link: /how-to
+#      - title: Equipment
+#        link: /equipment
+#      - title: Archive
+#        link: /archive
   - title: Contact
     link: /contact
