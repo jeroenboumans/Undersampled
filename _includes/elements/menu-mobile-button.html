@@ -1,0 +1,12 @@
+<button @click="open = !open"  x-bind:class="open ? 'group' : ''"  class="relative">
+    <div class="flex flex-col justify-between w-[20px] h-[18px] transform transition-all duration-300 origin-center overflow-hidden">
+        <div class="bg-black dark:bg-white h-[2px] w-7 transform transition-all duration-300 origin-left delay-100" x-bind:class="open ? 'translate-y-6' : ''"></div>
+        <div class="bg-black dark:bg-white h-[2px] w-7 rounded transform transition-all duration-300 delay-75" x-bind:class="open ? 'translate-y-6' : ''"></div>
+        <div class="bg-black dark:bg-white h-[2px] w-7 transform transition-all duration-300 origin-left" x-bind:class="open ? 'translate-y-6' : ''"></div>
+
+        <div class="absolute items-center justify-between transform transition-all duration-500 top-2 flex w-0" x-bind:class="open ? 'translate-x-0 w-12' : '-translate-x-10'">
+            <div class="absolute bg-black dark:bg-white h-[2px] w-[20px] transform transition-all duration-500  delay-300" x-bind:class="open ? 'rotate-45' : 'rotate-0'"></div>
+            <div class="absolute bg-black dark:bg-white h-[2px] w-[20px] transform transition-all duration-500 delay-300" x-bind:class="open ? '-rotate-45' : '-rotate-0 '"></div>
+        </div>
+    </div>
+</button>

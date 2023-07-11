@@ -1,0 +1,34 @@
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #fff;
+}
+.highlight .cp {
+  color: #CC00A3;
+}
+.highlight .cs {
+  color: #CC00A3;
+}
+
+.highlight .kc {
+  color: #C34E00;
+}
+
+
+
+.highlight .kr {
+  color: #007575;
+}
+
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+  color: #7272ff;
+}
+.highlight .sa {
+  color: #0000FF;
+}
+.highlight .nb, .highlight .bp {
+  color: #C34E00;
+}
+.highlight .nv {
+  color: #dcdcdc;
+}

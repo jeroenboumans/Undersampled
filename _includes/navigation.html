@@ -1,0 +1,85 @@
+<nav
+    @scroll.window="atTop = (window.pageYOffset < 40)"
+    :class="{
+        'opacity-100': atTop,
+        'shadow-[0_10px_120px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_10px_120px_-15px_rgba(255,16,0,0.2)]': !atTop
+    }"
+    x-data="{open: false}" class="
+
+    rounded-none
+    xl:rounded-[16px]
+
+    top-[0px]
+    xl:top-[40px]
+
+    md:mb-[100px]
+
+    max-w-none
+    xl:max-w-5xl
+    lg:m-auto
+    transition-all
+    ease-in-out
+    duration-300
+    font-noto-sans  block w-full
+
+    bg-white/75
+
+    backdrop-blur-md
+    dark:bg-gray-near-darkest/75
+    fixed"
+
+    style="padding: 20px 40px; width: 100%; left:0; right:0;"
+>
+    <ul class="flex justify-between items-center m-auto list-none">
+        <li class="logo font-black "  >
+            <a href="/" class="hover:text-red uppercase"><span class="">{{site.title}}</span><br><span class="font-normal text-xs text-gray-darker dark:text-red text-[16px]">{{site.subtitle}}</span></a>
+        </li>
+        <li class="menu">
+            <!-- Menu Desktop/tablet -->
+            <ul class="hidden md:flex justify-center items-center gap-[40px] list-none p-0">
+                {% include elements/darkmode.html %}
+
+                {% for link in site.data.menu-main.links %}
+                    {% if link.links %}
+                        <li class="dropdown">
+                            {% include elements/dropdown-link.html to=link.link label=link.title %}
+                            <ul class="dropdown-content flex flex-col gap-[20px] items-start">
+                                {% for link in link.links %}
+                                    <li><a href="{{link.link}}">{{link.title}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li><a href="{{link.link}}">{{link.title}}</a></li>
+                    {% endif %}
+                {% endfor %}
+
+            </ul>
+
+            <!-- Menu Mobile -->
+            <ul class="block md:hidden flex flex-row items-center gap-[20px]">
+               {% include elements/darkmode.html %}
+                {% include elements/menu-mobile-button.html %}
+            </ul>
+        </li>
+    </ul>
+    <div x-show="open" class="w-full h-full font-black md:hidden block flex-grow lg:items-center lg:w-auto ">
+        <div class="text-sm lg:flex-grow">
+            <ul class="list-none">
+                {% for link in site.data.menu-main.links %}
+                    <li>
+                        <a href="{{link.link}}" class="hover:text-red block text-lg mt-4">{{link.title}}</a>
+                        {% if link.links %}
+                            <ul class="list-none">
+                                {% for link in link.links %}
+                                <li><a class="hover:text-red font-normal block mt-1 text-lg" href="{{link.link}}">{{link.title}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>
+

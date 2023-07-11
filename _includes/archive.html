@@ -1,0 +1,20 @@
+<div class="body">
+    {% include title.html %}
+    <div class="content">
+        {% for collection in site.collections %}
+        <h2>{{ collection.label | capitalize }}</h2>
+        <table>
+            {% for item in site[collection.label] %}
+            <tr>
+                <td class="w-[200px]">
+                    <h6 class="inline mr-2">{{ item.date  | date: "%-d %B, %Y" }}</h6>
+                </td>
+                <td>
+                    <a href="{{ item.url }}">{{ item.title }}</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endfor %}
+    </div>
+</div>

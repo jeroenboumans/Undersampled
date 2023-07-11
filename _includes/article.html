@@ -1,0 +1,10 @@
+<div class="body">
+    {% include title.html %}
+
+    <div class="content">
+        {% if page.toc %}
+        {% include toc.html %}
+        {% endif %}
+        {{ content }}
+    </div>
+</div>

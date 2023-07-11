@@ -1,0 +1,91 @@
+---
+layout: post
+title:  "M44, Beehive Cluster"
+date:   2023-03-01 11:40:16 +0200
+thumbnail: "/assets/img/thumbnails/m44.png"
+heroImage: "/assets/img/m44.png"
+categories: m44 broadband messier journal
+tags: m44 ngc mono broadband messier
+toc: true
+messier: 44
+ngc: 2632
+description: "This is the Beehive Cluster, also known as M44, is an open star cluster which is a cluster build of a minimum amount of stars. Its distance to earth is about 610 light years. Just a quick test after rebuilding my HEQ5 Pro mount and finally fixing auto guiding!"
+---
+
+## Session Details
+
+| M42       | Red  | Green | Blue | Illuminance |
+|-----------|------|-------|------|-------------|
+| Frames    | 17   | 16    | 16   | 12          |
+| Exp. Time | 120s | 120s  | 120s | 300s        |
+
+## How to Start?
+This is the Beehive Cluster, also known as M44, is an open star cluster which is a cluster build of a minimum amount of stars. Its distance to earth is about 610 light years. Just a quick test after rebuilding my HEQ5 Pro mount and finally fixing auto guiding!
+
+Process involved WBPP (mono), DynamicBackgroundExtraction, ChannelCombination on RGB, ColorCalibration, BackgroundNeutralization, HistogramTransformation, NoiseXTerminator, CurvesTransformation, ImageSolver, AnnotateImage
+
+
+Setup contains:
+- ASI533mm Pro,
+- RedCat 51,
+- HEQ5 Pro,
+- ASI120mm S (for auto-guiding)
+- ASIAir
+
+Setup contains:
+1. ASI533mm Pro,
+2. RedCat 51,
+3. HEQ5 Pro,
+4. ASI120mm S (for auto-guiding)
+5. ASIAir
+
+> In qua quid est boni praeter summam voluptatem, et eam sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est investigatio rerumano occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et sed potionibus, minorem voluptatem. Ego quoque, inquit, didicerim libentius si quiduse.
+
+## Capturing Mono Frames
+In qua quid est boni praeter summam voluptatem, et eam sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est investigatio rerumano occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et sed potionibus, minorem voluptatem. Ego quoque, inquit, didicerim libentius si quiduse.
+Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.
+
+![](https://cdn.astrobin.com/solutions/images/121236/2023/16ad66a2-2210-4b93-8fba-b0f7ec8c16a7-1677711173.jpg){: height="150px" }
+
+In qua quid est boni praeter summam voluptatem, et eam sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est investigatio rerumano occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et sed potionibus, minorem voluptatem. Ego quoque, inquit, didicerim libentius si quiduse.
+Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.
+
+```php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
+class Answer extends Model
+{
+    use HasUuids;
+
+    protected $fillable = [
+        'question_id',
+        'survey_id',
+        'answer',
+    ];
+
+    protected $hidden = [
+        'id', 'survey_id',
+    ];
+
+    public function survey(): BelongsTo
+    {
+        return $this->belongsTo(Survey::class);
+    }
+
+    public function question(): BelongsTo
+    {
+        return $this->belongsTo(Question::class);
+    }
+}
+```
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
