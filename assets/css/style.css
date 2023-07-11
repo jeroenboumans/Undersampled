@@ -334,9 +334,7 @@ footer {
     display: flex;
     max-width: 960px;
     flex-direction: column;
-
     gap: 80px;
-
 
     & nav {
         width: 100%;
