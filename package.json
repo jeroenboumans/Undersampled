@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "build": "npx tailwindcss -i ./assets/css/style.css -o ./assets/dist-style.css",
     "watch": "npx tailwindcss -i ./assets/css/style.css -o ./assets/dist-style.css --watch"
   },
   "devDependencies": {
