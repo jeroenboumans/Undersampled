@@ -162,7 +162,6 @@ body {
                 display: flex;
                 max-width: 960px;
                 flex-direction: column;
-                gap: 20px;
                 align-self: center;
 
                 &.content-grid {
@@ -171,7 +170,6 @@ body {
 
                 &.collection {
                     /*max-width: 960px;*/
-                     gap: 60px;
                  }
 
                 & > p, & > h2, & > table, & > ul, & > ol  {
@@ -329,12 +327,8 @@ body {
 }
 
 footer {
-
-    margin-top: 80px;
-    display: flex;
     max-width: 960px;
-    flex-direction: column;
-    gap: 80px;
+
 
     & nav {
         width: 100%;
