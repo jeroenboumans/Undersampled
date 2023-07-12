@@ -83,10 +83,10 @@ li {
 
 .menu li {
     margin: 0px;
-    text-align: right;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
+    list-style: none;
     line-height: normal;
 
     & a:hover {
@@ -214,7 +214,12 @@ body {
                     align-self: stretch;
                     border-radius: 16px;
                     border: 1px solid ;
+                    margin-bottom: 20px;
                     @apply border-gray dark:border-gray-dark;
+
+                    & p {
+                        margin: 0px;
+                    }
 
                     & .links {
                           display: flex;
@@ -339,41 +344,73 @@ footer {
     & nav {
         width: 100%;
         align-self: stretch;
-        align-items: end;
         display: flex;
         flex-direction: column;
         & a {
-              display: flex;
+              display: block;
               margin-bottom: 10px;
+              @apply text-left sm:text-right;
         }
     }
 }
 
 h2 {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
+
+
+p > a.submit,
+form button[type=submit] {
+  @apply font-noto-sans font-black text-white py-[12px] px-[32px] justify-center items-center gap-[10px] rounded-lg bg-red w-auto inline-block;
+}
+
+form {
+    @apply my-[30px];
+    display: flex;
+    @apply p-[20px] md:p-[40px] my-[40px];
+    border-radius: 16px;
+    border: 2px solid #F5F5F5;
+    flex-direction: column;
+    gap:40px;
+    width: 100%;
+
+    & input[type=email],
+      textarea {
+
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          align-self: stretch;
+          border-radius: 8px;
+
+          padding: 12px 32px;
+          background: #F5F5F5;
+    }
+
+}
 blockquote,
 .highlighter-rouge,
 img {
     margin: 30px 0px ;
 }
 
-/* Dropdown Button */
-.dropbtn {
-    border: none;
-}
+/*!* Dropdown Button *!*/
+/*.dropbtn {*/
+/*    border: none;*/
+/*}*/
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    /*cursor: pointer;*/
-}
+/*!* The container <div> - needed to position the dropdown content *!*/
+/*.dropdown {*/
+/*    position: relative;*/
+/*    cursor: pointer;*/
+/*    display: inline-block;*/
+/*}*/
 
 .dropdown:hover svg {
     @apply rotate-180;
 }
-/*.dropdown::after*/
+/*!*.dropdown::after*/
 /* {*/
 /*     content: "";*/
 /*     width: 11px;*/
@@ -384,33 +421,81 @@ img {
 /*     background-repeat: no-repeat;*/
 /*     background-size: contain;*/
 /*     display: inline-block;*/
-/* }*/
+/*}*!*/
+
+/*.dropdown:hover .dropdown-content {*/
+/*    display: block;*/
+/*}*/
+
+/*.dropdown-content {*/
+/*    display: none;*/
+/*    position: absolute;*/
+/*    background-color: #f9f9f9;*/
+/*    min-width: 160px;*/
+/*    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+/*    z-index: 1;*/
+/*    @apply bg-white dark:bg-gray-near-darkest backdrop-blur-md top-[30px]*/
+/*    dark:bg-gray-near-darkest/75*/
+/*    ;*/
+/*}*/
+/*.dropdown-content li{*/
+/*    display: flex;*/
+/*}*/
+/*    !* Links inside the dropdown *!*/
+/*.dropdown-content a {*/
+/*    display: block;*/
+/*    padding: 10px 20px;*/
+/*    width: 100%;*/
+/*    text-align: left;*/
+/*}*/
+
+/*!*.dropdown-content li:hover a {*!*/
+/*!*    background: red;*!*/
+/*!*}*!*/
+
+/*!* Show the dropdown menu on hover *!*/
+/*.dropdown:hover .dropdown-content {display: block;}*/
+/* Style The Dropdown Button */
+.dropbtn {
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-    display: none;
-    border-radius: 16px;
-    position: absolute;
-    list-style: none;
-    min-width: 160px;
-    z-index: 1;
     left: -20px;
-    @apply  bg-white dark:bg-gray-near-darkest py-[10px];
-}
-.dropdown-content li{
-    display: flex;
-}
-    /* Links inside the dropdown */
-.dropdown-content a {
-    display: block;
-    padding: 10px 20px;
-    width: 100%;
-    text-align: left;
+    display: none;
+    align-items: start;
+    position: absolute;
+    min-width: 160px;
+    width: auto;
+    z-index: 10000;
 }
 
-/*.dropdown-content li:hover a {*/
-/*    background: red;*/
-/*}*/
+.dropdown-content-spacer {
+    margin-top: 10px;
+    border-radius: 16px;
+    display: block;
+    @apply bg-white dark:bg-gray-near-darkest
+    shadow-[0_10px_120px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_10px_120px_-15px_rgba(255,16,0,0.2)];
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Change color of dropdown links on hover */
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+    display: block;
+}

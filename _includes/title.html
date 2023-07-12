@@ -1,4 +1,4 @@
-<div class="title w-full mb-0 md:mb-[50px] xl:mb-[70px] mt-[100px] md:mt-[150px] xl:mt-[200px]">
+<div class="title w-full mb-0 md:mb-[50px] xl:mb-[70px] mt-[100px] md:mt-[150px]">
     <h1>{{page.title}}</h1>
 
     {% if page.subtitle %}
@@ -18,10 +18,13 @@
     aspect-square md:aspect-video
     border-[1px]
     border-[rgba(255,255,255,0.075)]
-    mb-0 md:dark:mb-[60px]
-" style="background-image: url({{page.heroImage}});
+    mb-0 md:dark:mb-[60px]"
+     style="
+     background-image: url({{page.heroImage}});
     {% if page.heroImageSize %}
         background-size: {{page.heroImageSize}};
     {% endif %}
 "></div>
 {% endif %}
+
+<!--     -->

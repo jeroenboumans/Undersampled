@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
+  plugins: [
+      require('@tailwindcss/forms')
+  ],
   content: [
     '_includes/**/*.html',
     '_layouts/**/*.html',
@@ -25,7 +28,6 @@ module.exports = {
       "noto-sans": ['Noto Sans', 'sans-serif'],
       "noto-serif": ['Noto Serif', 'serif'],
     }
-  },
-  plugins: [],
+  }
 }
 

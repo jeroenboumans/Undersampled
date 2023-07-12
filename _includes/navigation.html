@@ -1,58 +1,69 @@
 <nav
     @scroll.window="atTop = (window.pageYOffset < 40)"
+    class="rounded-none lg:rounded-[16px]
+        max-w-[1280px]  transition-all ease-in-out duration-300 font-noto-sans block
+        backdrop-blur-md bg-white/75 dark:bg-gray-darked/50
+
+        fixed top-0 left-0 right-0 py-[20px] px-[40px]
+        lg:sticky lg:top-[40px] lg:w-full
+    "
     :class="{
         'opacity-100': atTop,
-        'shadow-[0_10px_120px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_10px_120px_-15px_rgba(255,16,0,0.2)]': !atTop
-    }"
-    x-data="{open: false}" class="
-
-    rounded-none
-    xl:rounded-[16px]
-    top-[0px]
-    xl:top-[40px]
-
-    md:mb-[100px]
-    max-w-[1280px]
-
-
-    lg:m-auto
-    transition-all
-    ease-in-out
-    duration-300
-    font-noto-sans  block w-full
-
-    bg-white/75
-
-    backdrop-blur-md
-    dark:bg-gray-near-darkest/75
-    fixed
-    left-0
-    right-0
-    px-[30px]
-    md:px-[40px] py-[20px]
-"
-    style="width: 100%;"
+        'shadow-[0_10px_120px_-15px_rgba(0,0,0,0.2)]': !atTop}"
+    x-data="{open: false}"
 >
+
     <ul class="flex justify-between items-center m-auto list-none">
-        <li class="logo font-black "  >
-            <a href="/" class="hover:text-red uppercase"><span class="">{{site.title}}</span><br><span class="font-normal hidden lg:block text-xs text-gray-darker dark:text-red text-[16px]">{{site.subtitle}}</span></a>
+        <li class="logo font-black " >
+            <a href="/" class="hover:text-red uppercase"><span class="">{{site.title}}</span>
+<!--                <br><span class="font-normal hidden lg:block text-xs text-gray-darker dark:text-red text-[16px]">{{site.subtitle}}</span>-->
+            </a>
         </li>
         <li class="menu">
             <!-- Menu Desktop/tablet -->
             <ul class="hidden md:flex justify-center items-center gap-[40px] list-none p-0">
 
                 {% for link in site.data.menu-main.links %}
+                    {% assign indexMain = forloop.index %}
                     {% if link.links %}
-                        <li class="dropdown">
-                            {% include elements/dropdown-link.html to=link.link label=link.title %}
-                            <ul class="dropdown-content flex flex-col gap-[20px] items-start">
+
+                    <li class="dropdown">
+                        <!-- {% include elements/dropdown-link.html link=link %} -->
+                            <span class="dropbtn flex flex-row items-center gap-[10px]">{{link.title}}
+                                <svg class="w-4 h-4 transition-transforms duration-100 ease-in-out "
+                                     xmlns="http://www.w3.org/2000/svg"
+                                     fill="none"
+                                     viewBox="0 0 24 24"
+                                     stroke-width="1.5"
+                                     stroke="currentColor"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </span>
+                            <div class="dropdown-content flex flex-col gap-[20px] items-start pt-[20px]">
+                                <ul class="dropdown-content-spacer">
                                 {% for link in link.links %}
-                                    <li><a href="{{link.link}}">{{link.title}}</a></li>
+                                {% assign indexSub = forloop.index %}
+
+                                <li>
+                                        {% if link.link %}
+                                            <a {% if link.link %}href="{{link.link}}"{% endif %}>{{link.title}}</a>
+                                        {% else %}
+                                            <span>{{link.title}}</span>
+                                        {% endif %}
+                                    </li>
                                 {% endfor %}
-                            </ul>
+                                </ul>
+                            </div>
                         </li>
                     {% else %}
-                        <li><a href="{{link.link}}">{{link.title}}</a></li>
+                <li>
+                    {% if link.link %}
+                        <a {% if link.link %}href="{{link.link}}"{% endif %}>{{link.title}}</a>
+                    {% else %}
+                        <span>{{link.title}}</span>
+                    {% endif %}
+                </li>
                     {% endif %}
                 {% endfor %}
 
@@ -73,11 +84,23 @@
             <ul class="list-none">
                 {% for link in site.data.menu-main.links %}
                     <li>
+                        {% if link.link %}
                         <a href="{{link.link}}" class="hover:text-red block text-lg mt-4">{{link.title}}</a>
+                        {% else %}
+                        <span class="hover:text-red block text-lg mt-4">{{link.title}}</span>
+                        {% endif %}
+
                         {% if link.links %}
                             <ul class="list-none">
                                 {% for link in link.links %}
-                                <li><a class="hover:text-red font-normal block mt-1 text-lg" href="{{link.link}}">{{link.title}}</a></li>
+                                <li>
+                                    {% if link.link %}
+                                        <a href="{{link.link}}" class="hover:text-red font-normal block mt-1 text-lg">{{link.title}}</a>
+                                    {% else %}
+                                        <span class="hover:text-red font-normal block mt-1 text-lg">{{link.title}}</span>
+                                    {% endif %}
+                                </li>
+
                                 {% endfor %}
                             </ul>
                         {% endif %}

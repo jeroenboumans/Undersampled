@@ -1,7 +1,8 @@
 links:
   - title: Journal
-    link: /journal
     links:
+      - title: Recent
+        link: /journal
       - title: Messier
         link: /messier
       - title: NGC
