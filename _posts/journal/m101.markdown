@@ -1,29 +1,33 @@
 ---
 layout: post
-title:  "NGC 2237, The Rosette Nebula"
-date:   2023-03-01 11:40:16 +0200
-thumbnail: "https://cdn.astrobin.com/thumbs/lfbYjG5HRAvX_620x0_Be3UpoUG.jpg"
-heroImage: "https://cdn.astrobin.com/thumbs/lfbYjG5HRAvX_1824x0_Be3UpoUG.jpg"
-categories: ngc broadband journal
-tags: ngc mono broadband
+title:  "M101 and the SN 2023ixf Supernova"
+#date:   2023-06-06 11:40:16 +0200
+heroImage: "https://cdn.astrobin.com/thumbs/C0kX9lp-MTSi_1824x0_Be3UpoUG.jpg"
+thumbnail: "/assets/img/thumbnails/m101.png"
+categories: ngc messier mono broadband journal
+tags: ngc messier mono broadband
 toc: true
-messier: 
-ngc: 2237
-description: "This is the Beehive Cluster, also known as M44, is an open star cluster which is a cluster build of a minimum amount of stars. Its distance to earth is about 610 light years. Just a quick test after rebuilding my HEQ5 Pro mount and finally fixing auto guiding!"
+m: 101
+ngc: 5457
+description: "Another run on M42 after a full strip down of the HEQ5 Pro and applying some thorough maintenance. Shot this new footage of M42 together with some new flat frames since my master flat frame had some banding issues. Luckily this could be fixed easily by making new ones with longer exposures."
 ---
 
-## Session Details
+## Sessions Details
 
-| M42       | Red  | Green | Blue | Illuminance |
+| M101      | Red  | Green | Blue | Illuminance |
 |-----------|------|-------|------|-------------|
 | Frames    | 17   | 16    | 16   | 12          |
 | Exp. Time | 120s | 120s  | 120s | 300s        |
 
 ## How to Start?
-This is the Beehive Cluster, also known as M44, is an open star cluster which is a cluster build of a minimum amount of stars. Its distance to earth is about 610 light years. Just a quick test after rebuilding my HEQ5 Pro mount and finally fixing auto guiding!
+Another run on M42 after a full [strip down](/stripdown) of the HEQ5 Pro and applying some thorough maintenance.
 
-Process involved WBPP (mono), DynamicBackgroundExtraction, ChannelCombination on RGB, ColorCalibration, BackgroundNeutralization, HistogramTransformation, NoiseXTerminator, CurvesTransformation, ImageSolver, AnnotateImage
 
+Shot this new footage of M42 together with some new flat frames since my master flat frame had some banding issues. Luckily this could be fixed easily by making new ones with longer exposures.
+
+Maybe time for an Hα-filter? 🙃
+
+Pixinsight process involved: WBPP, DynamicBackgroundExtraction, ChannelCombination on RGB, ImageSolver, PhotometricColorCalibration with background neutralization, BackgroundNeutralization, HistogramTransformation, masked appliance of NoiseXTerminator and BlurXTerminator. Final adjustments (LRGB merging color and saturation) done in in Photoshop.
 
 Setup contains:
 - ASI533mm Pro,
@@ -45,7 +49,7 @@ Setup contains:
 In qua quid est boni praeter summam voluptatem, et eam sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est investigatio rerumano occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et sed potionibus, minorem voluptatem. Ego quoque, inquit, didicerim libentius si quiduse.
 Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.
 
-![](https://cdn.astrobin.com/solutions/images/121236/2023/16ad66a2-2210-4b93-8fba-b0f7ec8c16a7-1677711173.jpg){: height="150px" }
+![](https://cdn.astrobin.com/thumbs/JjVb2CgRk8_N_16536x0_5zBUdnFz.png){: height="150px" }
 
 In qua quid est boni praeter summam voluptatem, et eam sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est investigatio rerumano occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et sed potionibus, minorem voluptatem. Ego quoque, inquit, didicerim libentius si quiduse.
 Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.

@@ -1,15 +1,14 @@
 ---
 layout: post
-title:  "NGC 2023 & 2024, The Horsehead Nebula"
-date:   2023-03-01 11:40:16 +0200
-thumbnail: "https://cdn.astrobin.com/thumbs/h_kOc5_feC4G_620x0_rD3zNzWc.jpg"
-heroImage: "https://cdn.astrobin.com/thumbs/h_kOc5_feC4G_16536x0_5zBUdnFz.jpg"
-categories: ngc ic broadband journal
-tags: ngc ic mono broadband
+title:  "NGC 2237, The Rosette Nebula"
+#date:   2023-03-01 11:40:16 +0200
+thumbnail: "https://cdn.astrobin.com/thumbs/lfbYjG5HRAvX_620x0_Be3UpoUG.jpg"
+heroImage: "https://cdn.astrobin.com/thumbs/lfbYjG5HRAvX_1824x0_Be3UpoUG.jpg"
+categories: ngc broadband journal
+tags: ngc mono broadband
 toc: true
-messier: 
-ngc: 2024
-ic: 434
+m: 
+ngc: 2237
 description: "This is the Beehive Cluster, also known as M44, is an open star cluster which is a cluster build of a minimum amount of stars. Its distance to earth is about 610 light years. Just a quick test after rebuilding my HEQ5 Pro mount and finally fixing auto guiding!"
 ---
 
@@ -20,10 +19,11 @@ description: "This is the Beehive Cluster, also known as M44, is an open star cl
 | Frames    | 17   | 16    | 16   | 12          |
 | Exp. Time | 120s | 120s  | 120s | 300s        |
 
-## Description
-Had two hours before the dutch clouds came back so I tried the Horsehead Nebula, IC 434. Didn't have much time to gather lots of data but was very excited to get started with this one. Might upload a revision in the future! ;)
+## How to Start?
+This is the Beehive Cluster, also known as M44, is an open star cluster which is a cluster build of a minimum amount of stars. Its distance to earth is about 610 light years. Just a quick test after rebuilding my HEQ5 Pro mount and finally fixing auto guiding!
 
-Process involved WBPP (mono), DynamicCrop, DynamicBackgroundExtraction, MultiscaleLinearTransform (with masks powered by ExtractWaveletLayers), ChannelCombination on RGB, ImageSolver, PhotometricColorCalibration, BlurXTerminator, HistogramTransformation. RGB + Luminance merging and curves adjustments were done in Photoshop.
+Process involved WBPP (mono), DynamicBackgroundExtraction, ChannelCombination on RGB, ColorCalibration, BackgroundNeutralization, HistogramTransformation, NoiseXTerminator, CurvesTransformation, ImageSolver, AnnotateImage
+
 
 Setup contains:
 - ASI533mm Pro,

@@ -7,6 +7,7 @@ subtitle: "( NGC )"
 permalink: /ngc
 slug: ngc
 category: ngc
-sort: 'title'
+sort: 'ngc'
+group: 'ngc'
 prefix: 'NGC '
 ---

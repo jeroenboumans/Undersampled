@@ -8,7 +8,7 @@
     {% if page.date %}
     <h6>{{page.date | date: "%-d %B, %Y"  }}</h6>
     {% endif %}
-    {% include tags.html tags=page.categories %}
+    {% include tags.html tags=page.tags %}
 </div>
 
 {% if page.heroImage %}
@@ -24,6 +24,11 @@
     {% if page.heroImageSize %}
         background-size: {{page.heroImageSize}};
     {% endif %}
+
+    {% if page.heroImagePosition %}
+        background-position: {{page.heroImagePosition}};
+    {% endif %}
+
 "></div>
 {% endif %}
 

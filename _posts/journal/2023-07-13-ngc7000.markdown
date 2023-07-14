@@ -1,0 +1,79 @@
+---
+layout: post
+title:  "NGC 7000, The America Nebula"
+date:   2023-07-13 11:40:16 +0200
+thumbnail: "/assets/img/thumbnails/ngc7000.png"
+heroImage: "https://cdn.astrobin.com/thumbs/9bulv_M37fco_2560x0_fZJoBdJE.jpg"
+captures: [
+  {label: "Sulfur (SII)", "url": "/assets/img/NGC7000_S.webp"},
+  {label: "Hydrogen (Hα)", "url": "/assets/img/NGC7000_H.webp"},
+  {label: "Oxygen (OIII)", "url": "/assets/img/NGC7000_O.webp"}
+]
+heroImagePosition: 'bottom'
+categories: ngc ic journal
+tags: mono narrowband nebula
+toc: true
+m: 
+ngc: 7000
+ic: 
+description: "The North America Nebula, also ✨ NGC 7000 ✨. I captured it about a year ago using DSLR but decided to finally pull the trigger and get some narrowband filters."
+---
+
+
+## Description
+The North America Nebula, also ✨ NGC 7000 ✨.
+I captured it about a year ago using my Canon 70D DSLR but decided to finally pull the trigger and get some narrowband filters for my ASI533mm Pro.
+
+Shooting targets like this with narrowband filters will create the posibility to create images with a more Hubble-like color palette than shooting broadband
+(visual spectrum; what you see is what you get) images which result in a more red'ish looking image.
+
+🔭 Hope you guys like it. Clear skies!
+
+## Hubble Color Palette
+![Pillars of Creation](/assets/img/pillars.png "Pillars of Creation")
+*Pillars of Creation by the Hubble Telescope*
+
+If you'd like to create a narrowband image and want to follow the Hubble palette, you'd assign narrowband as **SHO** instead of **HOO**/**HSO**.
+
+- **Sulfur** to **Red**
+- **Hydrogen** to **Green**
+- **Oxygen** to **Blue**
+
+## Acquisition Details
+
+{% include elements/grid.html %}
+
+| NGC 7000        | Sulfur (SII) | Hydrogen (Hα) | Oxygen (OIII) |
+|-----------------|--------------|---------------|---------------|
+| Frames          | 60           | 54            | 60            |
+| Palette         | Red          | Green         | Blue          |
+| Exp. Time       | 180s         | 180s          | 180s          |
+| Shot on (y/m/d) | 2023/07/13   | 2023/07/09    | 2023/07/11    |
+
+|-------------------|----------------------------------------------------------------------|
+| Astrometry Job    | [8199017](https://nova.astrometry.net/user_images/8199017#annotated) |
+| Center (Dec, dms) | +44° 22' 18.378"                                                     |
+| Center (RA, Dec)  | (314.678, 44.372)                                                    |
+| Center (RA, hms)  | 20h 58m 42.628s                                                      |
+| DEC center        | +44°22′19″                                                           |
+| Pixel Scale       | 1.56 arcsec/pixel                                                    |
+| RA center         | 20h58m42s.7                                                          |
+| Radius            | 	1.750 deg                                                           |
+| Size              | 2.47 x 2.48 deg                                                      |
+
+## Data Processing
+
+Processing was done in PixInsight only. Steps of the process are listed below:
+
+1. [ChannelCombination](https://pixinsight.com/doc/tools/ChannelCombination/ChannelCombination.html){:target="_blank"} (SHO),
+2. BlurXTerminator,
+3. [SPCC](https://pixinsight.com/doc/docs/SPCC/SPCC.html#__Applying_SPCC_to_Narrowband_Images__){:target="_blank"}, 
+4. [ Color Calibration](https://pixinsight.com/doc/tools/ColorCalibration/ColorCalibration.html){:target="_blank"} for evening the SHO levels, 
+5. DarkStructureEnhance, 
+6. StarXTerminator (splitting stars and background), 
+7. Masking and denoising applied to background layer using NoiseXTerminator, 
+8. Boosting and adjusting colors and saturation, 
+9. Recombining front and background using PixelMath, 
+10. EZ Star Reduction, 
+11. Final tweaks...
+

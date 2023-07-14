@@ -1,5 +1,5 @@
 
-/*@config "./../../tailwind.config.js";*/
+@config "./../../tailwind.config.js";
 
 
 @tailwind base;
@@ -10,6 +10,7 @@ html {
     font-family: Noto Serif;
     -webkit-font-smoothing: antialiased;
     font-size: 19px;
+    line-height: 1.7em;
 }
 
 h1 {
@@ -24,6 +25,14 @@ h2 {
     font-weight: 600;
     line-height: 32px;
 }
+
+h3 {
+    @apply text-black dark:text-gray;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
 h6 {
     @apply text-red;
     font-size: 16px;
@@ -36,9 +45,13 @@ table {
     font-size: 16px;
     border-collapse: separate;
     border-spacing: 0px 10px;
+    table-layout: fixed;
 
     & td, & th {
         padding: 0;
+    }
+    & td:first-child {
+        width: 200px;
     }
 
     & thead {
@@ -160,7 +173,8 @@ body {
             .content {
                 width: 100%;
                 display: flex;
-                max-width: 960px;
+
+                @apply max-w-[720px] md:max-w-[840px];
                 flex-direction: column;
                 align-self: center;
 
@@ -179,21 +193,22 @@ body {
                 & p > a {
                     @apply text-red;
                     font-style: italic;
-
-                    &[href^="http"]::after,
-                    &[href^="https://"]::after
-                    {
-                        content: "";
-                        width: 11px;
-                        height: 11px;
-                        margin-left: 4px;
-                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: contain;
-                        display: inline-block;
-                    }
                 }
+                & a {
+                        &[href^="http"]::after,
+                        &[href^="https://"]::after
+                         {
+                             content: "";
+                             width: 11px;
+                             height: 11px;
+                             margin-left: 4px;
+                             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+                             background-position: center;
+                             background-repeat: no-repeat;
+                             background-size: contain;
+                             display: inline-block;
+                         }
+                    }
 
                 & > * {
 
@@ -205,6 +220,10 @@ body {
                         padding: 0px 40px;
                     }
                 }
+
+                & table, & h3 {
+    margin: 15px 0 0;
+                  }
 
                 & .toc {
                     display: flex;
@@ -265,23 +284,30 @@ body {
                     gap: 10px;
                     align-self: stretch;
                 }
+
                 & blockquote {
                     border-radius: 16px;
                     display: flex;
                     padding: 40px;
                     flex-direction: column;
-                    align-items: center;
+                    align-items: flex-start;
                     gap: 20px;
                     align-self: stretch;
                     @apply bg-gray dark:bg-gray-dark-20%;
                     /*font-style: italic;*/
+                    & img {
+                        display: block;
+                      }
 
+                      & * {
 
-
-                    & p::first-letter {
-                        font-size: 2em;
-                        line-height: 1.2em;
-                    }
+                            margin-top: 0;
+                            margin-bottom: 0;
+                        /*&::first-letter {*/
+                        /*      font-size: 2em;*/
+                        /*      line-height: 1.2em;*/
+                        /*  }*/
+                        }
                 }
 
                 & .highlighter-rouge  {
@@ -338,7 +364,7 @@ body {
 }
 
 footer {
-    max-width: 960px;
+    @apply max-w-[720px] md:max-w-[840px];
 
 
     & nav {
@@ -355,7 +381,7 @@ footer {
 }
 
 h2 {
-    margin-top: 30px;
+    margin: 30px 0 20px 0;
 }
 
 
@@ -365,16 +391,59 @@ form button[type=submit] {
   @apply font-noto-sans font-black text-white py-[12px] px-[32px] justify-center items-center gap-[10px] rounded-lg bg-red w-auto inline-block;
 }
 
-form {
-    @apply my-[30px];
+#ff-sec-root > div.ff-button-bar > a {
+    display: none !important;
+    opacity: 0;
+}
+
+.ff-form {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+#ff-compose > .ff-form {
+    margin: 40px;
+    padding: 0 !important;
+
+    & .ff-section {
+      display: flex!important;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    & .ff-section .ff-secfields {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+      }
+}
+
+.ff-form *{
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+}
+.ff-form input{
+    padding: 10px 20px  !important;
+    border-radius: 16px !important;
+}
+#ff-compose {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    @apply my-[30px]  p-[20px] md:p-[40px];
     display: flex;
-    @apply p-[20px] md:p-[40px] my-[40px];
     border-radius: 16px;
     border: 2px solid #F5F5F5;
     flex-direction: column;
-    gap:40px;
+    gap: 40px;
     width: 100%;
 
+& button {
+  @apply font-noto-sans font-black;
+  border-radius: 8px;
+    & img {display: none}
+  }
     & input[type=email],
       textarea {
 
@@ -392,7 +461,11 @@ form {
 blockquote,
 .highlighter-rouge,
 img {
-    margin: 30px 0px ;
+    margin: 20px 0 ;
+}
+em {
+    margin-top: 10px !important;
+    @apply block  text-center text-gray-darker mt-2 text-sm;
 }
 
 /*!* Dropdown Button *!*/

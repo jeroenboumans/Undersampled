@@ -1,0 +1,10 @@
+<div class="grid grid-cols-2 xl:grid-cols-{{page.captures | size | at_most:3}} gap-[20px] mt-[30px]">
+    {% for frame in page.captures %}
+    <div>
+<!-- hover:scale-[110%] hover:shadow-[0_10px_120px_-15px_rgba(0,0,0,1)] -->
+        <div class="flex w-full aspect-square  rounded-lg border-[1px]
+    border-[rgba(255,255,255,0.075)]  transition-all duration-300" style="background-size: cover; background-image: url('{{frame.url}}');"></div>
+    <em>{{frame.label}}</em>
+    </div>
+    {% endfor %}
+</div>

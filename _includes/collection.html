@@ -13,7 +13,7 @@
                 <a href="{{item.url}}" class="flex flex-col items-start gap-[10px] " >
                     <h2 class="hover:text-red m-0 ">{{ item.title }}</h2>
                     <h6>{{ item.date  | date: "%-d %B, %Y" }}</h6>
-                    {% include tags.html tags=item.categories %}
+                    {% include tags.html tags=item.tags %}
                     <p class="md:mt-[20px]">{{ item.description | truncatewords: 25 }}</p>
                 </a>
             </div>

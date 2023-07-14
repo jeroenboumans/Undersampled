@@ -13,9 +13,9 @@ links:
 #        link: /blog
 #      - title: How To's
 #        link: /how-to
-#      - title: Equipment
-#        link: /equipment
+  - title: Equipment
+    link: /equipment
 #      - title: Archive
 #        link: /archive
-  - title: Contact
-    link: /contact
+  - title: About
+    link: /about

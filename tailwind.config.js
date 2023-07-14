@@ -2,7 +2,7 @@
 module.exports = {
   darkMode: 'class',
   plugins: [
-      require('@tailwindcss/forms')
+      // require('@tailwindcss/forms')
   ],
   content: [
     '_includes/**/*.html',

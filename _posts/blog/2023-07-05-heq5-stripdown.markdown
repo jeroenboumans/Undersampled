@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "HEQ5 Pro Stripdown"
-date:   2023-07-05 11:40:16 +0200
+#date:   2023-07-05 11:40:16 +0200
 heroImage: '/assets/img/heq5-pro.svg'
 thumbnail: '/assets/img/heq5-pro.svg'
 heroImageSize: 'contain'
