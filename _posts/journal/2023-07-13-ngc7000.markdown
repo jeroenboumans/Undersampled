@@ -18,8 +18,17 @@ ngc: 7000
 ic: 
 description: "The North America Nebula, also ✨ NGC 7000 ✨. I captured it about a year ago using DSLR but decided to finally pull the trigger and get some narrowband filters."
 ---
+## Acquisition Details
 
+| NGC 7000  | SII      | Hα       | OIII     |
+|-----------|----------|----------|----------|
+| Frames    | 60       | 54       | 60       |
+| Palette   | Red      | Green    | Blue     |
+| Exp. Time | 180s     | 180s     | 180s     |
 
+## Final Masters
+
+{% include elements/grid.html %}
 ## Description
 The North America Nebula, also ✨ NGC 7000 ✨.
 I captured it about a year ago using my Canon 70D DSLR but decided to finally pull the trigger and get some narrowband filters for my ASI533mm Pro.
@@ -29,26 +38,19 @@ Shooting targets like this with narrowband filters will create the posibility to
 
 🔭 Hope you guys like it. Clear skies!
 
-## Hubble Color Palette
-![Pillars of Creation](/assets/img/pillars.png "Pillars of Creation")
-*Pillars of Creation by the Hubble Telescope*
+> ## Hubble Color Palette
+> ![Pillars of Creation](/assets/img/pillars.png "Pillars of Creation")
+> *Pillars of Creation by the Hubble Telescope*
+>
+> If you'd like to create a narrowband image and want to follow the Hubble palette, you'd assign narrowband as **SHO** instead of **HOO**/**HSO**.
+>
+> - **Sulfur** to **Red**
+> - **Hydrogen** to **Green**
+> - **Oxygen** to **Blue**
 
-If you'd like to create a narrowband image and want to follow the Hubble palette, you'd assign narrowband as **SHO** instead of **HOO**/**HSO**.
 
-- **Sulfur** to **Red**
-- **Hydrogen** to **Green**
-- **Oxygen** to **Blue**
 
-## Acquisition Details
-
-{% include elements/grid.html %}
-
-| NGC 7000        | Sulfur (SII) | Hydrogen (Hα) | Oxygen (OIII) |
-|-----------------|--------------|---------------|---------------|
-| Frames          | 60           | 54            | 60            |
-| Palette         | Red          | Green         | Blue          |
-| Exp. Time       | 180s         | 180s          | 180s          |
-| Shot on (y/m/d) | 2023/07/13   | 2023/07/09    | 2023/07/11    |
+## Astrometry Calibration 
 
 |-------------------|----------------------------------------------------------------------|
 | Astrometry Job    | [8199017](https://nova.astrometry.net/user_images/8199017#annotated) |
@@ -60,6 +62,9 @@ If you'd like to create a narrowband image and want to follow the Hubble palette
 | RA center         | 20h58m42s.7                                                          |
 | Radius            | 	1.750 deg                                                           |
 | Size              | 2.47 x 2.48 deg                                                      |
+
+
+
 
 ## Data Processing
 

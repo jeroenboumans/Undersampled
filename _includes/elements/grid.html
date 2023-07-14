@@ -1,4 +1,5 @@
-<div class="grid grid-cols-2 xl:grid-cols-{{page.captures | size | at_most:3}} gap-[20px] mt-[30px]">
+<div class="grid grid-cols-1 sm:grid-cols-2 {{page.captures | size | at_most:3}} gap-[20px] md:gap-[40px] mt-[20px]">
+
     {% for frame in page.captures %}
     <div>
 <!-- hover:scale-[110%] hover:shadow-[0_10px_120px_-15px_rgba(0,0,0,1)] -->
