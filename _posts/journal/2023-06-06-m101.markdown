@@ -17,7 +17,7 @@ toc: true
 m: 101
 ngc: 5457
 ic:
-description: "The North America Nebula, also ✨ NGC 7000 ✨. I captured it about a year ago using DSLR but decided to finally pull the trigger and get some narrowband filters."
+description: "This is the Pinwheel Galaxy. After the discovery of a recent supernova I decided to give this target a try."
 ---
 
 ## Acquisition Details
