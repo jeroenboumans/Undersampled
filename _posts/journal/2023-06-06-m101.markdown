@@ -22,11 +22,10 @@ description: "The North America Nebula, also ✨ NGC 7000 ✨. I captured it abo
 
 ## Acquisition Details
 
-| NGC 7000  | SII      | Hα       | OIII     |
-|-----------|----------|----------|----------|
-| Frames    | 60       | 54       | 60       |
-| Palette   | Red      | Green    | Blue     |
-| Exp. Time | 180s     | 180s     | 180s     |
+| NGC 7000  | L    | R    | G    | B    |
+|-----------|------|------|------|------|
+| Frames    | 55   | 18   | 15   | 15   |
+| Exp. Time | 300s | 300s | 300s | 300s |
 
 ## Final Masters
 
