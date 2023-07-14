@@ -1,0 +1,77 @@
+---
+layout: post
+title:  "M101, Pinwheel Galaxy & SN 2023ixf (supernova)"
+date: 2023-06-06 12:17:32 +0200
+thumbnail: "/assets/img/thumbnails/m101.jpg"
+heroImage: "/assets/img/M101.jpg"
+captures: [
+    {label: "L", "url": "/assets/img/M101_L.jpg"},
+    {label: "R", "url": "/assets/img/M101_R.jpg"},
+    {label: "G", "url": "/assets/img/M101_G.jpg"},
+    {label: "B, pretty out of focus", "url": "/assets/img/M101_B.jpg"}
+]
+#heroImagePosition: 'bottom'
+categories: messier journal
+tags:  mono broadband nebula
+toc: true
+m: 101
+ngc: 5457
+ic:
+description: "The North America Nebula, also ✨ NGC 7000 ✨. I captured it about a year ago using DSLR but decided to finally pull the trigger and get some narrowband filters."
+---
+
+## Acquisition Details
+
+| NGC 7000  | SII      | Hα       | OIII     |
+|-----------|----------|----------|----------|
+| Frames    | 60       | 54       | 60       |
+| Palette   | Red      | Green    | Blue     |
+| Exp. Time | 180s     | 180s     | 180s     |
+
+## Final Masters
+
+{% include elements/grid.html %}
+
+[//]: # (## Annotated Masters)
+
+[//]: # (![]&#40;/assets/img/M101_SN2023ixf.jpg&#41;)
+
+[//]: # (*SN 2023ixf, annotated*)
+
+
+## Description
+This is Messier 101, also known as the Pinwheel Galaxy. After the [discovery](https://science.nasa.gov/supernova-discovered-nearby-spiral-galaxy-m101)
+of a recent supernova, **SN 2023ixf**, I decided to give this target a try with my wide angle RedCat 51.
+
+Could use a larger focal length but pretty content with this one as the skies are getting shorter and less dark these days, 
+resulting in less available exposure time. Also frames were shot during full moon causing some colored background gradients and loss of signal.
+
+The image below shows a high contrast visual of the annotated M101 and its supernova.
+
+![](/assets/img/M101_WB_SN2023ixf.jpg)
+*SN 2023ixf, annotated, high contrast*
+
+
+🔭 Clear skies!
+
+## Astrometry Calibration
+
+|-------------------|----------------------------------------------------------------------|
+| Astrometry Job    | [7834990](https://nova.astrometry.net/status/7834990) |
+| Center (Dec, dms) | +54° 19' 03.514"                                                     |
+| Center (RA, Dec)  | (210.777, 54.318)                                                    |
+| Center (RA, hms)  | 14h 03m 06.385s                                                      |
+| Pixel Scale       | 1.56 arcsec/pixel                                                    |
+| Radius            | 1.654 deg                                                           |
+| Size              | 2.34 x 2.34 deg                                                      |
+
+## Data Processing
+
+Processing was done in PixInsight only. Steps of the process are listed below:
+
+1. Weighted Batch PreProcessing,
+2. DynamicBackgroundExtraction
+3. [ChannelCombination](https://pixinsight.com/doc/tools/ChannelCombination/ChannelCombination.html){:target="_blank"}, 
+4. HistogramTransformation
+5. Masked appliance of NoiseXTerminator and CurvesTransformation
+6. Final adjustments in Photoshop.

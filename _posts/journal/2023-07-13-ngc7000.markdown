@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "NGC 7000, The America Nebula"
-date:   2023-07-13 11:40:16 +0200
+date: 2023-07-13 11:40:16 +0200
 thumbnail: "/assets/img/thumbnails/ngc7000.jpg"
 heroImage: "/assets/img/ngc7000.jpg"
 captures: [
@@ -29,6 +29,7 @@ description: "The North America Nebula, also ✨ NGC 7000 ✨. I captured it abo
 ## Final Masters
 
 {% include elements/grid.html %}
+
 ## Description
 The North America Nebula, also ✨ NGC 7000 ✨.
 I captured it about a year ago using my Canon 70D DSLR but decided to finally pull the trigger and get some narrowband filters for my ASI533mm Pro.
@@ -57,10 +58,8 @@ Shooting targets like this with narrowband filters will create the posibility to
 | Center (Dec, dms) | +44° 22' 18.378"                                                     |
 | Center (RA, Dec)  | (314.678, 44.372)                                                    |
 | Center (RA, hms)  | 20h 58m 42.628s                                                      |
-| DEC center        | +44°22′19″                                                           |
 | Pixel Scale       | 1.56 arcsec/pixel                                                    |
-| RA center         | 20h58m42s.7                                                          |
-| Radius            | 	1.750 deg                                                           |
+| Radius            | 1.750 deg                                                           |
 | Size              | 2.47 x 2.48 deg                                                      |
 
 

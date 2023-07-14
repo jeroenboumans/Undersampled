@@ -4,7 +4,7 @@ title:  "M42, the Orion Nebula in LRGB"
 #date:   2023-03-05 11:40:16 +0200
 heroImage: "https://cdn.astrobin.com/thumbs/OxWvmkc7MLI-_1824x0_fZJoBdJE.jpg"
 thumbnail: "https://cdn.astrobin.com/thumbs/OxWvmkc7MLI-_620x0_fZJoBdJE.jpg"
-categories: ngc messier mono broadband journal
+categories: ngc m mono broadband journal
 tags: ngc messier mono broadband
 toc: true
 m: 42
