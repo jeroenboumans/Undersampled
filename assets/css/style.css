@@ -45,7 +45,8 @@ table {
     font-size: 16px;
     border-collapse: separate;
     border-spacing: 0px 10px;
-    table-layout: fixed;
+
+    @apply table-fixed;
 
     & td, & th {
         padding: 0;
@@ -219,14 +220,7 @@ body {
                     }
 
                 & > * {
-
-                    @media only screen and (min-width: 600px) {
-                        padding: 0px 20px;
-                    }
-
-                    @media only screen and (min-width: 720px) {
-                        padding: 0px 40px;
-                    }
+                    @apply py-0 md:px-[20px] lg:px-[40px];
                 }
 
                 & table, & h3 {
@@ -235,14 +229,13 @@ body {
 
                 & .toc {
                     display: flex;
-                    padding: 40px;
                     align-items: flex-start;
                     gap: 10px;
                     align-self: stretch;
                     border-radius: 16px;
                     border: 1px solid ;
                     margin-bottom: 20px;
-                    @apply border-gray dark:border-gray-dark;
+                    @apply p-[20px] sm:p-[40px] border-gray dark:border-gray-dark;
 
                     & p {
                         margin: 0px;
@@ -296,12 +289,12 @@ body {
                 & blockquote {
                     border-radius: 16px;
                     display: flex;
-                    padding: 40px;
                     flex-direction: column;
                     align-items: flex-start;
                     gap: 20px;
                     align-self: stretch;
-                    @apply bg-gray dark:bg-gray-dark-20%;
+                    @apply p-[20px] sm:p-[40px] bg-gray dark:bg-gray-dark-20%;
+
                     /*font-style: italic;*/
                     & img {
                         display: block;

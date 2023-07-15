@@ -2,19 +2,25 @@
     flex flex-col
     mt-[30px] md:mt-[80px]
     gap-[30px] md:gap-[60px]
+
 ">
 
     {% include elements/divider.html %}
 
     <div
-        class="flex flex-col sm:flex-row px-[10px] md:px-[40px]        gap-[30px] md:gap-[80px]
-"
+        class="
+        flex flex-col sm:flex-row
+
+        py-0 md:px-[20px] lg:px-[40px]
+
+        gap-[30px] md:gap-[80px]"
+
         style="
-        justify-content: center;
-        align-items: flex-start;
-        text-align: start;
-        align-self: stretch;
-">
+            justify-content: center;
+            align-items: flex-start;
+            text-align: start;
+            align-self: stretch;
+        ">
         <div class="description flex flex-col gap-[10px]">
             <p class="font-bold mb-[10px]">
                 Jeroen Boumans
@@ -56,11 +62,12 @@
     <div style="display: flex;
         flex-direction: column;
         justify-content: center;
-        align-self: stretch;">
+"
+    class="py-0 md:px-[20px] lg:px-[40px]">
 
         {% include elements/divider.html %}
 
-        <p class="mt-[40px] px-[40px] font-noto-sans font-black"><a href="/">UNDERSAMPLED ©{{ 'now' | date: "%Y" }}</a></p>
+        <p class="mt-[40px] font-noto-sans font-black"><a href="/">UNDERSAMPLED ©{{ 'now' | date: "%Y" }}</a></p>
     </div>
 
 </footer>

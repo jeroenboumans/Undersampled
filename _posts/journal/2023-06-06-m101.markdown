@@ -22,10 +22,13 @@ description: "This is the Pinwheel Galaxy. After the discovery of a recent super
 
 ## Acquisition Details
 
-| NGC 7000  | L    | R    | G    | B    |
-|-----------|------|------|------|------|
-| Frames    | 55   | 18   | 15   | 15   |
-| Exp. Time | 300s | 300s | 300s | 300s |
+| NGC 7000   | L      | R  | G  | B  |
+|------------|--------|----|----|----|
+| Frames     | 55     | 18 | 15 | 15 |
+| Exp. Time  | 300s   |    |    |    |
+| Flats      | 20     | 20 | 20 | 20 |
+| Flat Darks | 20     |   |    |    |
+| Darks      | Master |   |    |    |
 
 ## Final Masters
 
