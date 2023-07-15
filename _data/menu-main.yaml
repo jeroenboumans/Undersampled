@@ -1,7 +1,7 @@
 links:
-  - title: Journal
+  - title: Observations
     links:
-      - title: Recent
+      - title: Journal
         link: /journal
       - title: Messier
         link: /messier

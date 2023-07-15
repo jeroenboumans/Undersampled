@@ -1,11 +1,38 @@
-<div class="grid grid-cols-1 sm:grid-cols-2 {{page.captures | size | at_most:3}} gap-[20px] md:gap-[40px] mt-[20px]">
+<div  x-data="{ modalOpen: false, divClass: 'inner', color: 'red', activeUrl: '', activeLabel: '' }">
 
-    {% for frame in page.captures %}
-    <div>
-<!-- hover:scale-[110%] hover:shadow-[0_10px_120px_-15px_rgba(0,0,0,1)] -->
-        <div class="flex w-full aspect-square  rounded-lg border-[1px]
-    border-[rgba(255,255,255,0.075)]  transition-all duration-300" style="background-size: cover; background-image: url('{{frame.url}}');"></div>
-    <em>{{frame.label}}</em>
+    <div  x-on:click="modalOpen = false" x-show="modalOpen == true" x-bind:class="`${divClass}`"  style="display: none" class="
+            fixed
+            w-full
+
+            flex flex-col
+            justify-center content-center
+
+            top-0 left-0 bottom-0 right-0
+            bg-black/80 flex flex-col p-0">
+
+        <img class="cursor-pointer block max-w-[75%] mx-auto object-contain object-scale-down mb-[10px] self-center" x-bind:src="activeUrl" >
+
+        <div class="flex flex-row content-center items-center mx-auto font-black font-noto-sans gap-[20px]">
+<!--            <span x-on:click="modalOpen = true"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">-->
+<!--                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />-->
+<!--                </svg>-->
+<!--            </span>-->
+            <p class="self-center text-white m-0 p-0" style="margin: 0;" x-html="activeLabel"></p>
+<!--            <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">-->
+<!--                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />-->
+<!--                </svg>-->
+<!--            </span>-->
+        </div>
     </div>
-    {% endfor %}
+
+    <div class="grid grid-cols-2 sm:grid-cols-2 {{page.captures | size | at_most:3}} gap-[20px] md:gap-[40px] mt-[20px]">
+        {% for frame in page.captures %}
+        <div>
+            <div class="flex w-full aspect-square rounded-lg border-[1px] border-[rgba(255,255,255,0.075)] cursor-pointer "
+                 style="background-size: cover; background-image: url('{{frame.url}}');" x-on:click="activeUrl = '{{frame.url}}';activeLabel = '{{frame.label}}'; modalOpen = true"
+            ></div>
+            <em>{{frame.label}}</em>
+        </div>
+        {% endfor %}
+    </div>
 </div>

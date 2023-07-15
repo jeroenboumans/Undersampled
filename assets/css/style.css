@@ -45,14 +45,13 @@ table {
     font-size: 16px;
     border-collapse: separate;
     border-spacing: 0px 10px;
+    font-family: "Noto Sans";
+    font-size: 0.8em;
 
-    @apply table-fixed;
+    @apply table-fixed w-full;
 
     & td, & th {
         padding: 0;
-    }
-    & td:first-child {
-        width: 180px;
     }
 
     & thead {
@@ -100,7 +99,7 @@ li {
 }
 
 .menu li {
-    margin: 0px;
+    margin: 0;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -130,7 +129,7 @@ body {
 
 
     .container {
-        margin: 0px;
+        margin: 0;
         display: flex;
         width: 100%;
         max-width: 1440px;
@@ -238,7 +237,7 @@ body {
                     @apply p-[20px] sm:p-[40px] border-gray dark:border-gray-dark;
 
                     & p {
-                        margin: 0px;
+                        @apply m-[0px];
                     }
 
                     & .links {
@@ -247,9 +246,9 @@ body {
                           align-items: flex-start;
                           gap: 10px;
                           flex: 1 0 0;
-                      & ul {
-                            @apply list-decimal;
-                        }
+                      /*& ul {*/
+                      /*      @apply list-decimal;*/
+                      /*  }*/
                   }
 
                   & .actions {
@@ -399,7 +398,7 @@ form button[type=submit] {
 
 .ff-form {
     width: 100%;
-    margin: 0px;
+    margin: 0;
     padding: 0px;
 }
 #ff-compose > .ff-form {

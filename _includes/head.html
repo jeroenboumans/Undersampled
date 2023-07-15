@@ -20,5 +20,8 @@
 <body x-data="{atTop: true}" >
 <script>
     const selectedTheme = localStorage.getItem('darkMode');
-    document.getElementsByTagName( 'html' )[0].classList[selectedTheme === 'dark' || (selectedTheme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'add' : 'remove']('dark');
+    const element = document.getElementsByTagName( 'html' );
+    if(element)
+        element[0].classList[selectedTheme === 'dark' || (selectedTheme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'add' : 'remove']('dark');
 </script>
+
