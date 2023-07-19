@@ -3,12 +3,12 @@ layout: post
 title:  "M42, the Orion Nebula"
 date: 2023-03-05 20:16:17 +0200
 thumbnail: "/assets/img/thumbnails/M42.jpg"
-heroImage: "/assets/img/M42.jpg"
+heroImage: "/assets/img/M42/M42.jpg"
 captures: [
-  {label: "L, 30s", "url": "/assets/img/M42_L_30.jpg"},
-  {label: "R", "url": "/assets/img/M42_R.jpg"},
-  {label: "G", "url": "/assets/img/M42_G.jpg"},
-  {label: "B", "url": "/assets/img/M42_B.jpg"}
+  {label: "L, 30s", "url": "/assets/img/M42/L_30.jpg"},
+  {label: "R", "url": "/assets/img/M42/R.jpg"},
+  {label: "G", "url": "/assets/img/M42/G.jpg"},
+  {label: "B", "url": "/assets/img/M42/B.jpg"}
 ]
 #heroImagePosition: 'bottom'
 categories: messier ngc journal
@@ -34,7 +34,7 @@ description: "Another run on M42 after a full strip down of the HEQ5 Pro and app
 
 [//]: # (## Annotated Masters)
 
-[//]: # (![]&#40;/assets/img/M101_SN2023ixf.jpg&#41;)
+[//]: # (![]&#40;/assets/img/M101/SN2023ixf.jpg&#41;)
 
 [//]: # (*SN 2023ixf, annotated*)
 
@@ -48,7 +48,7 @@ Maybe time for an Hα-filter? 🙃
 
 The image below shows a high contrast visual of the annotated M42.
 
-![](/assets/img/M42_WB.jpg)
+![](/assets/img/M42/WB.jpg)
 *M42, annotated, high contrast*
 
 ## Astrometry Calibration

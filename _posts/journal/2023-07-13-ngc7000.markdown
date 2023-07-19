@@ -3,11 +3,11 @@ layout: post
 title:  "NGC 7000, The America Nebula"
 date: 2023-07-13 11:40:16 +0200
 thumbnail: "/assets/img/thumbnails/ngc7000.jpg"
-heroImage: "/assets/img/ngc7000.jpg"
+heroImage: "/assets/img/ngc7000/ngc7000.jpg"
 captures: [
-  {label: "Sulfur (SII)", "url": "/assets/img/NGC7000_S.webp"},
-  {label: "Hydrogen (Hα)", "url": "/assets/img/NGC7000_H.webp"},
-  {label: "Oxygen (OIII)", "url": "/assets/img/NGC7000_O.webp"}
+  {label: "Sulfur (SII)", "url": "/assets/img/NGC7000/S.webp"},
+  {label: "Hydrogen (Hα)", "url": "/assets/img/NGC7000/H.webp"},
+  {label: "Oxygen (OIII)", "url": "/assets/img/NGC7000/O.webp"}
 ]
 heroImagePosition: 'bottom'
 categories: ngc ic journal

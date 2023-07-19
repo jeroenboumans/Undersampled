@@ -1,0 +1,69 @@
+---
+layout: post
+title:  "M44, Beehive Cluster"
+date: 2023-03-01 23:52:59 +0200
+thumbnail: "/assets/img/thumbnails/M44.jpg"
+heroImage: "/assets/img/M44/M44.jpg"
+captures: [
+    {label: "R", "url": "/assets/img/M44/R.jpg"},
+    {label: "G", "url": "/assets/img/M44/G.jpg"},
+    {label: "B", "url": "/assets/img/M44/B.jpg"}
+]
+#heroImagePosition: 'bottom'
+categories: messier ngc journal
+tags:  mono broadband nebula
+toc: true
+m: 44
+ngc: 2632
+ic:
+description: "This is the Pinwheel Galaxy. After the discovery of a recent supernova I decided to give this target a try."
+---
+
+## Acquisition Details
+
+| M44       | Red | Green | Blue |
+|-----------|-----|-------|------|
+| Frames    | 24  | 30    | 15   |
+| Exp. Time | 30s | 30s   | 30s  |
+| Darks     |     |       |      |
+
+## Final Masters
+
+{% include elements/grid.html %}
+
+[//]: # (## Annotated Masters)
+
+[//]: # (![]&#40;/assets/img/M101/SN2023ixf.jpg&#41;)
+
+[//]: # (*SN 2023ixf, annotated*)
+
+
+## Description
+This is the Beehive Cluster, also known as M44, is an open star cluster which is a cluster build of a minimum amount of stars. 
+Its distance to earth is about 610 light years. Just a quick test after rebuilding my HEQ5 Pro mount and finally fixing auto guiding!
+
+## Astrometry Calibration
+
+|-------------------|----------------------------------------------------------------------|
+| Astrometry Job    | [7265895](http://nova.astrometry.net/status/7265895) |
+| Center (Dec, dms) | +19° 36' 00.176"                                                    |
+| Center (RA, Dec)  | (130.086, 19.600)                                                    |
+| Center (RA, hms)  | 08h 40m 20.525s                                                    |
+| Pixel Scale       | 3.13 arcsec/pixel                                                    |
+| Radius            | 1.257 deg                                                           |
+| Size              | 	1.78 x 1.78 deg                                                      |
+
+## Data Processing
+
+Processing was done in PixInsight only. Steps of the process are listed below:
+
+1. Weighted Batch PreProcessing,
+2. DynamicBackgroundExtraction,
+3. ChannelCombination,
+4. ColorCalibration,
+5. BackgroundNeutralization,
+6. HistogramTransformation,
+7. NoiseXTerminator,
+8. CurvesTransformation,
+9. ImageSolver,
+10. AnnotateImage

@@ -3,12 +3,12 @@ layout: post
 title:  "M101, Pinwheel Galaxy & SN 2023ixf (supernova)"
 date: 2023-06-06 12:17:32 +0200
 thumbnail: "/assets/img/thumbnails/m101.jpg"
-heroImage: "/assets/img/M101.jpg"
+heroImage: "/assets/img/M101/M101.jpg"
 captures: [
-    {label: "L", "url": "/assets/img/M101_L.jpg"},
-    {label: "R", "url": "/assets/img/M101_R.jpg"},
-    {label: "G", "url": "/assets/img/M101_G.jpg"},
-    {label: "B, pretty out of focus", "url": "/assets/img/M101_B.jpg"}
+    {label: "L", "url": "/assets/img/M101/L.jpg"},
+    {label: "R", "url": "/assets/img/M101/R.jpg"},
+    {label: "G", "url": "/assets/img/M101/G.jpg"},
+    {label: "B, pretty out of focus", "url": "/assets/img/M101/B.jpg"}
 ]
 #heroImagePosition: 'bottom'
 categories: messier ngc journal
@@ -36,7 +36,7 @@ description: "This is the Pinwheel Galaxy. After the discovery of a recent super
 
 [//]: # (## Annotated Masters)
 
-[//]: # (![]&#40;/assets/img/M101_SN2023ixf.jpg&#41;)
+[//]: # (![]&#40;/assets/img/M101/SN2023ixf.jpg&#41;)
 
 [//]: # (*SN 2023ixf, annotated*)
 
@@ -50,7 +50,7 @@ resulting in less available exposure time. Also frames were shot during full moo
 
 The image below shows a high contrast visual of the annotated M101 and its supernova.
 
-![](/assets/img/M101_WB_SN2023ixf.jpg)
+![](/assets/img/M101/WB_SN2023ixf.jpg)
 *SN 2023ixf, annotated, high contrast*
 
 
