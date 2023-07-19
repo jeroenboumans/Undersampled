@@ -40,7 +40,7 @@ Shooting targets like this with narrowband filters will create the posibility to
 🔭 Hope you guys like it. Clear skies!
 
 > ## Hubble Color Palette
-> ![Pillars of Creation](/assets/img/pillars.png "Pillars of Creation")
+> ![Pillars of Creation](/assets/img/pillars.jpg "Pillars of Creation")
 > *Pillars of Creation by the Hubble Telescope*
 >
 > If you'd like to create a narrowband image and want to follow the Hubble palette, you'd assign narrowband as **SHO** instead of **HOO**/**HSO**.

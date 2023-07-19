@@ -1,0 +1,77 @@
+---
+layout: post
+title:  "M42, the Orion Nebula"
+date: 2023-03-05 20:16:17 +0200
+thumbnail: "/assets/img/thumbnails/M42.jpg"
+heroImage: "/assets/img/M42.jpg"
+captures: [
+  {label: "L, 30s", "url": "/assets/img/M42_L_30.jpg"},
+  {label: "R", "url": "/assets/img/M42_R.jpg"},
+  {label: "G", "url": "/assets/img/M42_G.jpg"},
+  {label: "B", "url": "/assets/img/M42_B.jpg"}
+]
+#heroImagePosition: 'bottom'
+categories: messier ngc journal
+tags:  mono broadband nebula
+toc: true
+m: 42
+ngc: 1976
+ic:
+description: "Another run on M42 after a full strip down of the HEQ5 Pro and applying some thorough maintenance."
+---
+
+## Acquisition Details
+
+| M42        | Lum.                | Red   | Green | Blue |
+|-----------|---------------------|-------|-------|------|
+| Frames    | 28                  | 17    | 16    | 16   |
+| Exp. Time | 30s, 120s (unused)  | 120s  | 120s  | 120s |
+| Darks     | Master              |       |       |      |
+
+## Final Masters
+
+{% include elements/grid.html %}
+
+[//]: # (## Annotated Masters)
+
+[//]: # (![]&#40;/assets/img/M101_SN2023ixf.jpg&#41;)
+
+[//]: # (*SN 2023ixf, annotated*)
+
+
+## Description
+Another run on M42 after a full strip down of the HEQ5 Pro and applying some thorough maintenance. 
+Shot this new footage of M42 together with some new flat frames since my master flat frame had some banding issues. 
+Luckily this could be fixed easily by making new ones with longer exposures.
+
+Maybe time for an Hα-filter? 🙃
+
+The image below shows a high contrast visual of the annotated M42.
+
+![](/assets/img/M42_WB.jpg)
+*M42, annotated, high contrast*
+
+## Astrometry Calibration
+
+|-------------------|----------------------------------------------------------------------|
+| Astrometry Job    | [7292529](http://nova.astrometry.net/status/7292529) |
+| Center (Dec, dms) | -05° 17' 31.781"                                                     |
+| Center (RA, Dec)  | (83.785, -5.292)                                                    |
+| Center (RA, hms)  | 05h 35m 08.351s                                                      |
+| Pixel Scale       | 1.56 arcsec/pixel                                                    |
+| Radius            | 1.694 deg                                                           |
+| Size              | 2.39 x 2.4 deg                                                      |
+
+## Data Processing
+
+Processing was done in PixInsight only. Steps of the process are listed below:
+
+1. Weighted Batch PreProcessing,
+2. DynamicBackgroundExtraction,
+3. [ChannelCombination](https://pixinsight.com/doc/tools/ChannelCombination/ChannelCombination.html){:target="_blank"}, 
+4. ImageSolver, 
+5. PhotometricColorCalibration with background neutralization, 
+6. BackgroundNeutralization, 
+7. HistogramTransformation, 
+8. Masked appliance of NoiseXTerminator and BlurXTerminator. 
+9. Final adjustments (LRGB merging color and saturation) done in in Photoshop.

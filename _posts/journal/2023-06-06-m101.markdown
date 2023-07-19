@@ -11,7 +11,7 @@ captures: [
     {label: "B, pretty out of focus", "url": "/assets/img/M101_B.jpg"}
 ]
 #heroImagePosition: 'bottom'
-categories: messier journal
+categories: messier ngc journal
 tags:  mono broadband nebula
 toc: true
 m: 101
