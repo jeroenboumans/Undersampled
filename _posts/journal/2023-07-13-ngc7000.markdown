@@ -4,6 +4,7 @@ title:  "NGC 7000, The America Nebula"
 date: 2023-07-13 11:40:16 +0200
 thumbnail: "/assets/img/thumbnails/ngc7000.jpg"
 heroImage: "/assets/img/ngc7000/ngc7000.jpg"
+heroImageSource: "https://www.astrobin.com/eboy9i/C/"
 captures: [
   {label: "Sulfur (SII)", "url": "/assets/img/NGC7000/S.webp"},
   {label: "Hydrogen (Hα)", "url": "/assets/img/NGC7000/H.webp"},

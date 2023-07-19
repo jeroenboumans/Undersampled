@@ -4,11 +4,12 @@ title:  "M101, Pinwheel Galaxy & SN 2023ixf (supernova)"
 date: 2023-06-06 12:17:32 +0200
 thumbnail: "/assets/img/thumbnails/m101.jpg"
 heroImage: "/assets/img/M101/M101.jpg"
+heroImageSource: "https://www.astrobin.com/2nxqay/"
 captures: [
-    {label: "L", "url": "/assets/img/M101/L.jpg"},
-    {label: "R", "url": "/assets/img/M101/R.jpg"},
-    {label: "G", "url": "/assets/img/M101/G.jpg"},
-    {label: "B, pretty out of focus", "url": "/assets/img/M101/B.jpg"}
+    {label: "Luminance", "url": "/assets/img/M101/L.jpg"},
+    {label: "Red", "url": "/assets/img/M101/R.jpg"},
+    {label: "Green", "url": "/assets/img/M101/G.jpg"},
+    {label: "Blue, pretty out of focus", "url": "/assets/img/M101/B.jpg"}
 ]
 #heroImagePosition: 'bottom'
 categories: messier ngc journal

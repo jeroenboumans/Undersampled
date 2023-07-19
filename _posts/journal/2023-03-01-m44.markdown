@@ -4,10 +4,11 @@ title:  "M44, Beehive Cluster"
 date: 2023-03-01 23:52:59 +0200
 thumbnail: "/assets/img/thumbnails/M44.jpg"
 heroImage: "/assets/img/M44/M44.jpg"
+heroImageSource: "https://www.astrobin.com/a6iv4f/"
 captures: [
-    {label: "R", "url": "/assets/img/M44/R.jpg"},
-    {label: "G", "url": "/assets/img/M44/G.jpg"},
-    {label: "B", "url": "/assets/img/M44/B.jpg"}
+    {label: "Red", "url": "/assets/img/M44/R.jpg"},
+    {label: "Green", "url": "/assets/img/M44/G.jpg"},
+    {label: "Blue", "url": "/assets/img/M44/B.jpg"}
 ]
 #heroImagePosition: 'bottom'
 categories: messier ngc journal
