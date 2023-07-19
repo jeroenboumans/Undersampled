@@ -4,7 +4,8 @@
 
 layout: default
 title: "Equipment"
-
+heroImage: "/assets/img/equipment.jpg"
+heroImagePosition: 'bottom'
 ---
 
 ## Main Hardware
