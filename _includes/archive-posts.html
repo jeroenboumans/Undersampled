@@ -17,10 +17,10 @@
             {% for item in items  %}
             <div class="journal-item w-full md:flex md:gap-[40px]">
                 {% if item.thumbnail %}
-                <div style="background-image: url('{{ item.thumbnail }}'); background-size: {{ item.heroImageSize | default: 'cover' }}"
+                <a href="{{item.url}}"  style="background-image: url('{{ item.thumbnail }}'); background-size: {{ item.heroImageSize | default: 'cover' }}"
                      class=" flex flex-col w-full h-[250px] md:w-[150px] h-[300px] md:h-[150px] rounded-lg bg-no-repeat bg-center mb-[20px] md:mb-0]
                         border-[1px] border-[rgba(255,255,255,0.075)]">
-                </div>
+                </a>
                 {% endif %}
                 <div class="description flex flex-col self-stretch items-start flex-1 gap-[20px]">
                     <a href="{{item.url}}" class="flex flex-col items-start gap-[10px] " >
