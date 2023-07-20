@@ -555,8 +555,7 @@ em {
     margin-top: 10px;
     border-radius: 16px;
     display: block;
-    @apply bg-white dark:bg-gray-near-darkest
-    shadow-[0_10px_120px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_10px_120px_-15px_rgba(255,16,0,0.2)];
+    @apply bg-white dark:bg-gray-near-darkest shadow-[0_10px_120px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_10px_120px_-15px_rgba(255,16,0,0.2)];
 }
 
 /* Links inside the dropdown */
@@ -571,4 +570,16 @@ em {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.profile {
+    & > div {
+        margin: 20px;
+        padding: 0;
+        @apply bg-gray max-w-[600px] dark:bg-gray-dark-20%  w-full aspect-square
+ rounded-full
+        bg-[url('/assets/img/profile.png')]
+        dark:bg-[url('/assets/img/profile.png'),_url('/assets/img/profile.gif')];
+
+      }
 }
