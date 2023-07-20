@@ -1,0 +1,67 @@
+---
+layout: post
+title:  "NGC 2237, The Rosette Nebula"
+date: 2023-02-16 09:59:21 +0200
+thumbnail: "/assets/img/thumbnails/NGC2237.jpg"
+heroImage: "/assets/img/NGC2237/NGC2237.jpg"
+heroImageSource: "https://www.astrobin.com/hxqko9/"
+captures: [
+  {label: "Luminance", "url": "/assets/img/NGC2237/L.jpg"},
+  {label: "Red", "url": "/assets/img/NGC2237/R.jpg"},
+  {label: "Green", "url": "/assets/img/NGC2237/G.jpg"},
+  {label: "Blue", "url": "/assets/img/NGC2237/B.jpg"}
+]
+heroImagePosition: 'center'
+categories: ngc ic journal
+tags: mono broadband nebula
+toc: true
+m: 
+ngc: 2237
+ic: 
+description: "The North America Nebula, also ✨ NGC 7000 ✨. I captured it about a year ago using DSLR but decided to finally pull the trigger and get some narrowband filters."
+---
+## Acquisition Details
+
+| NGC 2237  | Luminance | Red  | Green | Blue |
+|-----------|------------|------|------|------|
+| Frames    | 95         | 27   | 20   | 29   |
+| Exp. Time | 120s       | 120s | 120s | 120s |
+| Darks     | master     |      |      |      |
+
+## Final Masters
+
+{% include elements/grid.html %}
+
+## Description
+Roses are red and violets are blue, this rose-like nebula's glowing a very red hue; Rosette Nebula (also known as Caldwell 49). 
+Shot it without an Hα-filter so it took me some more hours of integration. 
+Wasn't the warmest type of weather but I'm glad we're having clear skies again! 
+
+Shot this one is for my girl and our 11 years together.
+
+## Astrometry Calibration 
+
+|-------------------|----------------------------------------------------------------------|
+| Astrometry Job    | [7186559](http://nova.astrometry.net/status/7186559)                 |
+| Center (Dec, dms) | 	+04° 54' 10.225"                                                   |
+| Center (RA, Dec)  | (97.964, 4.903)                                                      |
+| Center (RA, hms)  | 06h 31m 51.314s                                                      |
+| Pixel Scale       | 3.12 arcsec/pixel                                                    |
+| Radius            | 1.745 deg                                                            |
+| Size              | 2.39 x 2.54 deg                                                      |
+
+## Data Processing
+
+Processing was done in PixInsight only. Steps of the process are listed below:
+
+1. Weighted Batch PreProcessing,
+2. DynamicBackgroundExtraction, 
+3. MultiscaleLinearTransform (using star masks),
+4[ChannelCombination](https://pixinsight.com/doc/tools/ChannelCombination/ChannelCombination.html){:target="_blank"} (RGB),
+5. ImageSolver,
+6. PhotometricColorCalibration,
+7. BlurXTerminator,
+8. HistogramTransformation
+9. RGB + Luminance merging and curves adjustments were done in Photoshop. No color adjustments applied, only vibrance and saturation.
+
+

@@ -2,8 +2,8 @@
 layout: post
 title:  "NGC 7000, The America Nebula"
 date: 2023-07-13 11:40:16 +0200
-thumbnail: "/assets/img/thumbnails/ngc7000.jpg"
-heroImage: "/assets/img/ngc7000/ngc7000.jpg"
+thumbnail: "/assets/img/thumbnails/NGC7000.jpg"
+heroImage: "/assets/img/ngc7000/NGC7000.jpg"
 heroImageSource: "https://www.astrobin.com/eboy9i/C/"
 captures: [
   {label: "Sulfur (SII)", "url": "/assets/img/NGC7000/S.webp"},
@@ -37,8 +37,6 @@ I captured it about a year ago using my Canon 70D DSLR but decided to finally pu
 
 Shooting targets like this with narrowband filters will create the posibility to create images with a more Hubble-like color palette than shooting broadband
 (visual spectrum; what you see is what you get) images which result in a more red'ish looking image.
-
-🔭 Hope you guys like it. Clear skies!
 
 > ## Hubble Color Palette
 > ![Pillars of Creation](/assets/img/pillars.jpg "Pillars of Creation")
