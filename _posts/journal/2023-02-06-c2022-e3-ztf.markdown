@@ -1,0 +1,85 @@
+---
+layout: post
+title:  "C/2022 E3 (ZTF)"
+date: 2023-02-06 14:32:55 +0200
+thumbnail: "/assets/img/thumbnails/C2022E3ZTF.jpg"
+heroImage: "/assets/img/C2022E3ZTF/C2022E3ZTF.jpg"
+heroImageSource: "https://www.astrobin.com/eboy9i/C/"
+captures: [
+  {label: "Luminance (starless)", "url": "/assets/img/C2022E3ZTF/L.jpg"},
+  {label: "RGB (starless)", "url": "/assets/img/C2022E3ZTF/RGB.jpg"},
+  {label: "Luminance (stars, unused)", "url": "/assets/img/C2022E3ZTF/L_STARS.jpg"},
+  {label: "RGB (stars)", "url": "/assets/img/C2022E3ZTF/RGB_STARS.jpg"}
+]
+heroImagePosition: 'center'
+categories: comet ic journal
+tags: mono broadband comet
+toc: true
+m: ''
+ngc:
+ic:
+c: '2022 E3 (ZTF)'
+description: 'As you might have seen "elsewhere" ... this is C/2022 E3 (ZTF)'
+---
+## Acquisition Details
+
+| C/2022 E3 (ZTF) | L      | R / G / B |
+|-----------------|--------|-----------|
+| Frames          | 45     | 15        |
+| Exp. Time       | 30s    | 30s       |
+| Dark Frames     | master | master    |
+
+## Final Masters
+
+{% include elements/grid.html %}
+
+## Description
+As you might have seen "elsewhere" ... this is ☄️ **C/2022 E3 (ZTF)** 
+
+This is my first comet since I started astrophotography this year, which is a bit more difficult to process since it's a moving target and therefor needed a different approach.
+Its closest approach was on feb 1st but took some shots earlier that week on jan 28th since we're dealing with a lot of dutch weather here and I didn't want to miss out; 
+next opportunity is somewhere within the next **50.000** years(!).
+
+> ## Horizontal banding
+> **Note (added on 27 jul '23):** As can be seen on the images there is some horizontal banding visible. It seems that the flat frames were causing this due to the short exposure times.
+> Because of this stretching was possible only very limited. One way to prevent this is making sure you're exposing a couple of seconds per calibration frame instead. You can add another layer of "t-shirt" or
+> capture your flat frames using a backlit panel, a tablet or during dusk.
+
+## Astrometry Calibration
+
+|-------------------|----------------------------------------------------------------------|
+| Astrometry Job    | [7126776](http://nova.astrometry.net/status/7126776)                 |
+| Center (Dec, dms) | +76° 59' 25.240"                                                     |
+| Center (RA, Dec)  | (190.256, 76.990)                                                    |
+| Center (RA, hms)  | 12h 41m 01.384s                                                      |
+| Pixel Scale       | 3.12 arcsec/pixel                                                    |
+| Radius            | 1.349 deg                                                            |
+| Size              | 1.91 x 1.91 deg                                                      |
+
+[//]: # (## Data Processing)
+
+[//]: # ()
+[//]: # (Processing was done in PixInsight only. Steps of the process are listed below:)
+
+[//]: # ()
+[//]: # (1. [ChannelCombination]&#40;https://pixinsight.com/doc/tools/ChannelCombination/ChannelCombination.html&#41;{:target="_blank"} &#40;SHO&#41;,)
+
+[//]: # (2. BlurXTerminator,)
+
+[//]: # (3. [SPCC]&#40;https://pixinsight.com/doc/docs/SPCC/SPCC.html#__Applying_SPCC_to_Narrowband_Images__&#41;{:target="_blank"},)
+
+[//]: # (4. [ Color Calibration]&#40;https://pixinsight.com/doc/tools/ColorCalibration/ColorCalibration.html&#41;{:target="_blank"} for evening the SHO levels,)
+
+[//]: # (5. DarkStructureEnhance,)
+
+[//]: # (6. StarXTerminator &#40;splitting stars and background&#41;,)
+
+[//]: # (7. Masking and denoising applied to background layer using NoiseXTerminator,)
+
+[//]: # (8. Boosting and adjusting colors and saturation,)
+
+[//]: # (9. Recombining front and background using PixelMath,)
+
+[//]: # (10. EZ Star Reduction,)
+
+[//]: # (11. Final tweaks...)

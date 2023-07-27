@@ -185,9 +185,6 @@ body {
                      max-width: 960px;
                  }
 
-                &.collection {
-                    /*max-width: 960px;*/
-                 }
 
                 & > p, & > h2, & > table, & > ul, & > ol  {
                     @apply mx-0;
@@ -292,7 +289,8 @@ body {
                     align-items: flex-start;
                     gap: 20px;
                     align-self: stretch;
-                    @apply p-[20px] sm:p-[40px] bg-gray dark:bg-gray-dark-20%;
+                    @apply p-[20px] sm:p-[40px] bg-gray dark:bg-gray-dark-20% mt-[30px];
+                    /*my-[40px]*/
 
                     /*font-style: italic;*/
                     & img {
@@ -570,6 +568,17 @@ em {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+form, form#contact {
+    @apply flex flex-col items-start rounded-xl bg-gray gap-[20px] w-full;
+
+    & > input, textarea {
+        @apply  px-[20px] py-[10px] rounded-md w-full;
+    }
+    button {
+        @apply w-fit;
+    }
 }
 
 .profile {
