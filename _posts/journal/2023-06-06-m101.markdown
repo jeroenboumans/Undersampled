@@ -13,7 +13,7 @@ captures: [
 ]
 #heroImagePosition: 'bottom'
 categories: messier ngc journal
-tags:  mono broadband nebula
+tags:  mono broadband galaxy
 toc: true
 m: 101
 ngc: 5457
