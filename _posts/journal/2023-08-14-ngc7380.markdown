@@ -1,0 +1,70 @@
+---
+layout: post
+title:  "NGC 7380, The Wizard Nebula"
+date: 2023-08-14 23:23:55 +0200
+thumbnail: "/assets/img/thumbnails/NGC7380.jpg"
+heroImage: "/assets/img/NGC7380/NGC7380.jpg"
+heroImageSource: "https://www.astrobin.com/xkrjxl"
+captures: [
+  {label: "Sulfur (SII)", "url": "/assets/img/NGC7380/S.jpg"},
+  {label: "Hydrogen (Hα)", "url": "/assets/img/NGC7380/H.jpg"},
+  {label: "Oxygen (OIII)", "url": "/assets/img/NGC7380/O.jpg"}
+]
+heroImagePosition: 'center'
+categories: ngc journal
+tags: mono narrowband nebula
+toc: true
+m: 
+ngc: 7380
+ic: 
+description: "The North America Nebula, also ✨ NGC 7000 ✨. I captured it about a year ago using DSLR but decided to finally pull the trigger and get some narrowband filters."
+---
+## Acquisition Details
+
+| NGC 7380  | SII  | Hα    | OIII |
+|-----------|------|-------|------|
+| Frames    | 62   | 49    | 66   |
+| Palette   | Red  | Green | Blue |
+| Exp. Time | 180s | 180s  | 180s |
+
+## Final Masters
+
+{% include elements/grid.html %}
+
+## Description
+The Wizard Nebula 🧙, also catalogued as NGC 7000. I captured it in "only" 8h48m during not so great "seeing". 
+This target is almost twice as dim (magnitude 7.2) than my previous image ([NGC 7000](/NGC7000), magnitude 4.0), 
+but had to capture it quickly since we're dealing with dutch weather again. 
+It is shot in Narrowband and ditched the greenish look for now. Might re-edit it in the future for a more Hubble'ish look.
+
+The final image looks noisy so I might add more data in the future and/or create a revision.
+Shooting targets like this with narrowband filters will create the posibility to create images with a more Hubble-like color palette than shooting broadband
+(visual spectrum; what you see is what you get) images which result in a more red'ish looking image.
+
+## Astrometry Calibration 
+
+|-------------------|----------------------------------------------------------------------|
+| Astrometry Job    | [9034053](https://nova.astrometry.net/user_images/8462770#annotated) |
+| Center (Dec, dms) | +58° 10' 07.333"                                                     |
+| Center (RA, Dec)  | (341.798, 58.169)                                                    |
+| Center (RA, hms)  | 22h 47m 11.501s                                                      |
+| Pixel Scale       | 1.56 arcsec/pixel                                                    |
+| Radius            | 1.780 deg                                                           |
+| Size              | 2.51 x 2.53 deg                                                      |
+
+## Data Processing
+
+Processing was done in PixInsight only. Steps of the process are listed below:
+
+1. [ChannelCombination](https://pixinsight.com/doc/tools/ChannelCombination/ChannelCombination.html){:target="_blank"} (SHO),
+2. [SPCC](https://pixinsight.com/doc/docs/SPCC/SPCC.html#__Applying_SPCC_to_Narrowband_Images__){:target="_blank"}, 
+3. [ Color Calibration](https://pixinsight.com/doc/tools/ColorCalibration/ColorCalibration.html){:target="_blank"} for evening the SHO levels, 
+4. DarkStructureEnhance, 
+5. BlurXTerminator,
+6. StarXTerminator (splitting stars and background), 
+7. Masking and denoising applied to background layer using NoiseXTerminator, 
+8. Boosting and adjusting colors and saturation, 
+9. Recombining front and background using PixelMath, 
+10. EZ Star Reduction, 
+11. Final tweaks...
+

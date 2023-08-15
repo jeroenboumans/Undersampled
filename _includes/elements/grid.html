@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    <div class="grid grid-cols-2 sm:grid-cols-2 {{page.captures | size | at_most:3}} gap-[20px] md:gap-[40px] mt-[20px]">
+    <div class="grid grid-cols-2 sm:grid-cols-3 {{page.captures | size | at_most:3}} gap-[20px] md:gap-[40px] mt-[20px]">
         {% for frame in page.captures %}
         <div>
             <div class="flex w-full items-end justify-end aspect-square rounded-lg border-[1px] border-[rgba(255,255,255,0.075)] cursor-pointer "
