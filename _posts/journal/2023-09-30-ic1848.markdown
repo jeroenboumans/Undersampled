@@ -1,0 +1,70 @@
+---
+layout: post
+title:  "IC1848, The Soul Nebula"
+date: 2023-09-30 15:56:16 +0200
+thumbnail: "/assets/img/thumbnails/IC1848.jpg"
+heroImage: "/assets/img/ic1848/IC1848.jpeg"
+heroImageSource: "https://www.astrobin.com/wlvksi/C/"
+captures: [
+  {label: "Sulfur (SII)", "url": "/assets/img/IC1848/S.jpg"},
+  {label: "Hydrogen (Hα)", "url": "/assets/img/IC1848/H.jpg"},
+  {label: "Oxygen (OIII)", "url": "/assets/img/IC1848/O.jpg"}
+]
+heroImagePosition: 'center'
+categories: ic journal
+tags: mono narrowband nebula
+toc: true
+m:
+ngc: 
+ic: 1848
+description: "This is the Soul Nebula or 👻 IC1848 👻. This image is a compilation of three narrowband channels (7nm): Sulfur-2, Hydrogen-alpha and Oxygen-3."
+---
+## Acquisition Details
+
+| IC1848    | SII  | Hα    | OIII |
+|-----------|------|-------|------|
+| Frames    | 102  | 60    | 164  |
+| Palette   | Red  | Green | Blue |
+| Exp. Time | 180s | 180s  | 180s |
+
+## Final Masters
+
+{% include elements/grid.html %}
+
+## Description
+
+This is the Soul Nebula or 👻 IC1848 👻. This image is a compilation of three narrowband channels (7nm): Sulfur-2, Hydrogen-alpha and Oxygen-3. 
+
+It is shot over five nights during full moon. The refraction of moonlight causes more background noise to be visible, even with an integration time of about 16.5 hours! 
+
+By assigning each of the three narrowband channels to a color (RGB) it allowed me to recreate that iconic Hubble palette.
+
+## Astrometry Calibration
+
+|-------------------|----------------------------------------------------------------------|
+| Astrometry Job    | [8523967](https://nova.astrometry.net/user_images/8682486#annotated) |
+| Center (RA, Dec)  | (43.865, 60.472)                                                    |
+| Center (RA, hms)  | 02h 55m 27.528s                                                      |
+| Center (Dec, dms) | +60° 28' 18.197"                                                     |
+| Size              | 2.41 x 2.53 deg                                                      |
+| Radius            | 1.750 deg                                                           |
+| Pixel Scale       | 1.56 arcsec/pixel                                                    |
+
+## Data Processing
+
+Processing was done in PixInsight only. Steps of the process are listed below:
+
+1. DynamicBackgroundExtraction on separate channels,
+2. [SPCC](https://pixinsight.com/doc/docs/SPCC/SPCC.html#__Applying_SPCC_to_Narrowband_Images__){:target="_blank"},
+3. [Color Calibration](https://pixinsight.com/doc/tools/ColorCalibration/ColorCalibration.html){:target="_blank"} for evening the SHO levels, 
+4. DarkStructureEnhance,
+5. StarXTerminator (splitting stars and background),
+6. BlurXTerminator on seperate stars and starless image,
+7. HistogramTransformation, a.k.a. stretching
+7. Masking and denoising applied to background layer using NoiseXTerminator,
+8. Boosting and adjusting colors and saturation using CurvesTransformation,
+9. PixelMath for merging the stars image back,
+10. Final color adjustments
+11. Star reduction/resizing using BlurXTerminator (stellar only)
+
+
