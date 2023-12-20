@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "IC1848, The Soul Nebula"
+titleShort: "IC1848"
 date: 2023-09-30 15:56:16 +0200
 thumbnail: "/assets/img/thumbnails/IC1848.jpg"
-heroImage: "/assets/img/ic1848/IC1848.jpeg"
+heroImage: "/assets/img/IC1848/IC1848.jpeg"
 heroImageSource: "https://www.astrobin.com/wlvksi/C/"
 captures: [
   {label: "Sulfur (SII)", "url": "/assets/img/IC1848/S.jpg"},
@@ -11,7 +12,7 @@ captures: [
   {label: "Oxygen (OIII)", "url": "/assets/img/IC1848/O.jpg"}
 ]
 heroImagePosition: 'center'
-categories: ic journal
+categories: ic journal nebula
 tags: mono narrowband nebula
 toc: true
 m:

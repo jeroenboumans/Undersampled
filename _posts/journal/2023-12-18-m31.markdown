@@ -1,0 +1,85 @@
+---
+layout: post
+title:  "M31, Andromeda Galaxy"
+titleShort: "M31"
+date: 2023-12-16 22:50:26 +0200
+thumbnail: "/assets/img/thumbnails/m31.jpg"
+heroImage: "/assets/img/M31/M31.jpg"
+heroImageSource: "https://www.astrobin.com/ywqcwo/0/"
+captures: [
+  {label: "Luminance", "url": "/assets/img/M31/L.jpg"},
+  {label: "Red", "url": "/assets/img/M31/R.jpg"},
+  {label: "Green", "url": "/assets/img/M31/G.jpg"},
+  {label: "Blue", "url": "/assets/img/M31/B.jpg"}
+]
+heroImagePosition: 'center'
+categories: messier journal galaxy
+tags: mono broadband galaxy
+toc: true
+m: 31
+ngc: 
+ic:
+description: "The weather is nothing but cloudy these days. Yesterday we've had one night of clear sky and M31 in Zenit. Guess what the target was..."
+---
+## Acquisition Details
+
+| IC1848    | L      | R    | G    | B    |
+|-----------|--------|------|------|------|
+| Frames    | 76     | 102  | 60   | 164  |
+| Exp. time | 120s   | 120s | 120s | 120s |
+| Flats     | 20     | 20   | 20   | 20   | 
+| Darks     | Master |      |      |      |
+| Bias      | Master |      |      |      |
+
+## Final Masters
+
+{% include elements/grid.html %}
+
+## Description
+
+Normally, I am very critical of my work, but I am secretly quite proud of this result.
+
+The weather is nothing but cloudy these days. Yesterday we've had one night of clear sky and M31 in Zenit. Guess what the target was...
+
+This is my third attempt to capture M31, our closest neighboring galaxy. Its distance from us is "only" 2.5 million light years, which is relatively close in astronomical terms. Wanted to shoot H-alpha channel as well but trees were blocking the view by then. Might add those later.
+
+
+> ## M110, Andromeda's satellite galaxy
+> ![M110](/assets/img/M31/M110.jpg "M110 Galaxy")
+> *M110 Galaxy*
+>
+> Another thing to keep in mind during the processing of this image was to make sure enough details 
+> of M110 remained visible. As you look closer, some dust cloud are visible.
+>
+
+
+## Astrometry Calibration
+
+|-------------------|----------------------------------------------------------------------|
+| Astrometry Job    | [8927496](https://nova.astrometry.net/user_images/9080942#annotated) |
+| Center (RA, Dec)  | (10.716, 41.263) |
+| Center (RA, hms)  | 00h 42m 51.856s |
+| Center (Dec, dms) | +41° 15' 46.807" |
+| Size              | 2.55 x 2.56 deg |
+| Radius            | 1.807 deg |
+| Pixel Scale       | 1.56 arcsec/pixel |
+
+## Data Processing
+
+Processing was done in PixInsight only. Steps of the process are listed below:
+
+1. DynamicBackgroundExtraction on separate channels,
+2. LRGBCombination on only RGB channels
+3. [SPCC](https://pixinsight.com/doc/docs/SPCC/SPCC.html#__Applying_SPCC_to_Narrowband_Images__){:target="_blank"},
+4. [SNCR](https://www.pixinsight.com/doc/legacy/LE/21_noise_reduction/scnr/scnr.html){:target="_blank"} noise reduction (0,70) to reduce green noise,
+5. [ArcsinhStretch](https://pixinsight.com/doc/tools/ArcsinhStretch/ArcsinhStretch.html){:target="_blank"} a couple of times to stretch the RGB image where colors remain having their calibrated color value, 
+6. [BlurXTerminator](https://www.rc-astro.com/software/bxt/){:target="_blank"} on the L-channel for correcting stars and nebulae 
+7. LRGBCombination to merge the noise L-image on the RGB-image 
+8. [StarXTerminator](https://www.rc-astro.com/software/sxt/){:target="_blank"} (splitting stars and background), 
+9. Color adjustments on the starless image 
+10. [NoiseXTerminator](https://www.rc-astro.com/software/nxt/){:target="_blank"} on the starless image using masks for separate background and galaxy noise reduction 
+11. Merging of the stars and starless image using PixelMath, expression: $T + STARS 
+12. DarkStructureEnhance on the image (0,40) to enhance galaxy dust bands 
+13. Final adjustments with [CurvesTransformation](https://pixinsight.com/doc/tools/CurvesTransformation/CurvesTransformation.html){:target="_blank"} 
+14. Last small bit of noise reduction using [NoiseXTerminator](https://www.rc-astro.com/software/nxt/){:target="_blank"} 
+15. Star reduction/resizing using the StarDe-emphasis script (add the url https://pixinsight-updates.astroswell.com/ to your repositories)
