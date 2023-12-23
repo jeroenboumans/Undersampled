@@ -3,8 +3,8 @@ layout: post
 title:  "M42, the Orion Nebula"
 titleShort: "M42"
 date: 2023-03-05 20:16:17 +0200
-thumbnail: "/assets/img/thumbnails/M42.jpg"
-heroImage: "/assets/img/M42/M42.jpg"
+thumbnail: "https://res.cloudinary.com/undersampled/image/upload/t_Thumbnail/v1703341283/Scherm_afbeelding_2023-12-23_om_15.21.04_mvjfnn.png"
+heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1703341167/M42_V2_nkpl72.jpg"
 heroImageSource: "https://www.astrobin.com/7fsx1t/"
 captures: [
   {label: "Luminance", "url": "/assets/img/M42/L_30.jpg"},
