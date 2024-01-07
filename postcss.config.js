@@ -4,6 +4,13 @@ module.exports = {
 
         require('tailwindcss/nesting'),
         require('tailwindcss'),
-        require('autoprefixer')
+        require('autoprefixer'),
+        ...(process.env.NODE_ENV === 'production'
+            ? [require('@fullhuman/postcss-purgecss')({
+                content: ['./_site/**/*.html'],
+                defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+            })
+            ]
+            : [])
     ]
 }
