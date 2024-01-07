@@ -1,13 +1,15 @@
 ---
 layout: post
-title:  "M42, the Orion Nebula"
+title:  "M42, the Orion Nebula, Rev."
 titleShort: "M42"
-date: 2023-03-05 20:16:17 +0200
-thumbnail: "https://res.cloudinary.com/undersampled/image/upload/v1703774699/Scherm_afbeelding_2023-12-23_om_15.21.04_mvjfnn.jpg"
-heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1703341167/M42_V2_nkpl72.jpg"
+#create-date: 2023-03-05 20:16:17 +0200
+date: 2023-12-28 20:16:17 +0200
+thumbnail: "https://res.cloudinary.com/undersampled/image/upload/v1703774699/M42/Scherm_afbeelding_2023-12-23_om_15.21.04_mvjfnn.jpg"
+heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1703341167/M42/M42_V2_nkpl72.jpg"
 heroImageSource: "https://www.astrobin.com/7fsx1t/"
 captures: [
-  {label: "Luminance", "url": "/assets/img/M42/L_30.jpg"},
+  {label: "L, 300s", "url": "/assets/img/M42/L_30.jpg"},
+  {label: "L, HDR", "url": "https://res.cloudinary.com/undersampled/image/upload/v1704642381/M42/L_HDR_8L_1I_soxfub.jpg"},
   {label: "Red", "url": "/assets/img/M42/R.jpg"},
   {label: "Green", "url": "/assets/img/M42/G.jpg"},
   {label: "Blue", "url": "/assets/img/M42/B.jpg"}
@@ -21,6 +23,22 @@ ngc: 1976
 ic:
 description: "Another run on M42 after a full strip down of the HEQ5 Pro and applying some thorough maintenance."
 ---
+
+> ## Update: 28 Dec 23
+> ### Removing flat frames
+> After almost a year I've updated the M42 image with another revision of the same data. I ditched the flat frames
+> since these where taken with a way too short exposure time creating bands of read noise. The ideal exposure time for
+> flat frames is **3+ sec** for astro cameras.
+>
+> ### Adding High Dynamic Range (HDR)
+> I'd taken 30 sec exposures as well so I decided to try and test out the HDR workflow. This includes a combination
+> of both **HDRComposition** (for merging the two luminance images masters to a high dynamic range image) and the **HDRMultiscaleTransform**.
+>
+> A great workflow of creating HDR images in PixInsight can be seen on the video below:
+> <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/LdCm9Ack8KI" frameborder="0" allow="" allowfullscreen></iframe>
+> *PixInsight Wokflows: instructions on how to process images as HDR*
+>
+
 
 ## Acquisition Details
 
@@ -39,7 +57,6 @@ description: "Another run on M42 after a full strip down of the HEQ5 Pro and app
 [//]: # (![]&#40;/assets/img/M101/SN2023ixf.jpg&#41;)
 
 [//]: # (*SN 2023ixf, annotated*)
-
 
 ## Description
 Another run on M42 after a full strip down of the HEQ5 Pro and applying some thorough maintenance. 

@@ -35,7 +35,6 @@ github_username:  jeroenboumans
 plugins:
   - jekyll-feed
   - jekyll-toc
-#  - jekyll-postcss
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -68,9 +67,6 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-
-#postcss:
-#  cache: false
 
 permalink: /:title/
 

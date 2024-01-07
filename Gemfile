@@ -38,4 +38,6 @@ gem "rouge", "~> 4.1"
 
 gem "jekyll-toc", "~> 0.18.0"
 
+gem "webrick", "~> 1.8"
+
 gem "jekyll-postcss", "~> 0.5.0"
