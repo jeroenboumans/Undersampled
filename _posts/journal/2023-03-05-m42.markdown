@@ -67,8 +67,8 @@ Maybe time for an Hα-filter? 🙃
 
 The image below shows a high contrast visual of the annotated M42.
 
-![](/assets/img/M42/WB.jpg)
-*M42, annotated, high contrast*
+![](https://res.cloudinary.com/undersampled/image/upload/v1704644454/M42/WB_g5u6vc.jpg)
+*M42 Inversed, high contrast*
 
 ## Astrometry Calibration
 
