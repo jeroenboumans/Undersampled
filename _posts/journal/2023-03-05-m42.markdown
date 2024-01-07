@@ -35,7 +35,7 @@ description: "Another run on M42 after a full strip down of the HEQ5 Pro and app
 > of both **HDRComposition** (for merging the two luminance images masters to a high dynamic range image) and the **HDRMultiscaleTransform**.
 >
 > A great workflow of creating HDR images in PixInsight can be seen on the video below:
-> <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/LdCm9Ack8KI" frameborder="0" allow="" allowfullscreen></iframe>
+> <iframe class="w-full aspect-[16/9]" src="https://www.youtube.com/embed/LdCm9Ack8KI" frameborder="0" allow="" allowfullscreen></iframe>
 > *PixInsight Wokflows: instructions on how to process images as HDR*
 >
 
