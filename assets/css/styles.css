@@ -90,6 +90,11 @@ table {
     }
 }
 
+iframe[src*="youtube.com"] {
+    @apply w-full aspect-video;
+    aspect-ratio: 16/9;
+}
+
 ul {
     @apply list-disc;
 }
