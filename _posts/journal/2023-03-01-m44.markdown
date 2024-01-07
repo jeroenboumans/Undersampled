@@ -17,7 +17,7 @@ toc: true
 m: 44
 ngc: 2632
 ic:
-description: "This is the Pinwheel Galaxy. After the discovery of a recent supernova I decided to give this target a try."
+description: "This is the Beehive Cluster, also known as M44, is an open star cluster which is a cluster build of a minimum amount of stars."
 ---
 
 ## Acquisition Details

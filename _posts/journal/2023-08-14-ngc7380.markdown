@@ -17,7 +17,7 @@ toc: true
 m: 
 ngc: 7380
 ic: 
-description: "The North America Nebula, also ✨ NGC 7000 ✨. I captured it about a year ago using DSLR but decided to finally pull the trigger and get some narrowband filters."
+description: "The Wizard Nebula 🧙, also catalogued as NGC 7000. I captured it in \"only\" 8h48m during not so great \"seeing\"."
 ---
 ## Acquisition Details
 
