@@ -24,22 +24,6 @@ ic:
 description: "Another run on M42 after a full strip down of the HEQ5 Pro and applying some thorough maintenance."
 ---
 
-> ## Update: 28 Dec 23
-> ### Removing flat frames
-> After almost a year I've updated the M42 image with another revision of the same data. I ditched the flat frames
-> since these where taken with a way too short exposure time creating bands of read noise. The ideal exposure time for
-> flat frames is **3+ sec** for astro cameras.
->
-> ### Adding High Dynamic Range (HDR)
-> I'd taken 30 sec exposures as well so I decided to try and test out the HDR workflow. This includes a combination
-> of both **HDRComposition** (for merging the two luminance images masters to a high dynamic range image) and the **HDRMultiscaleTransform**.
->
-> A great workflow of creating HDR images in PixInsight can be seen on the video below:
-> <iframe src="https://www.youtube.com/embed/LdCm9Ack8KI" frameborder="0" allow="" allowfullscreen></iframe>
-> *PixInsight Wokflows: instructions on how to process images as HDR*
->
-
-
 ## Acquisition Details
 
 | M42        | Lum.                | Red   | Green | Blue |
@@ -57,6 +41,21 @@ description: "Another run on M42 after a full strip down of the HEQ5 Pro and app
 [//]: # (![]&#40;/assets/img/M101/SN2023ixf.jpg&#41;)
 
 [//]: # (*SN 2023ixf, annotated*)
+
+
+> ## Update: 28 Dec 23
+> ### Removing flat frames
+> After almost a year I've updated the M42 image with another revision of the same data. I ditched the flat frames
+> since these where taken with a way too short exposure time creating bands of read noise. The ideal exposure time for
+> flat frames is **3+ sec** for astro cameras.
+>
+> ### Adding High Dynamic Range (HDR)
+> I'd taken 30 sec exposures as well so I decided to try and test out the HDR workflow. This includes a combination
+> of both **HDRComposition** (for merging the two luminance images masters to a high dynamic range image) and the **HDRMultiscaleTransform**.
+>
+> A great workflow of creating HDR images in PixInsight can be seen on the video below:
+> <iframe src="https://www.youtube.com/embed/LdCm9Ack8KI" frameborder="0" allow="" allowfullscreen></iframe>
+> *PixInsight Wokflows: instructions on how to process images as HDR*
 
 ## Description
 Another run on M42 after a full strip down of the HEQ5 Pro and applying some thorough maintenance. 
