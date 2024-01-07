@@ -2,7 +2,7 @@
   "scripts": {
     "start": "concurrently \"bundle exec jekyll serve\" \"npm run watch:css\"",
     "build": "npm run build:css && jekyll build",
-    "build-css": "postcss ./assets/css/styles.css -o ./assets/dist-style.css",
+    "build:css": "postcss ./assets/css/styles.css -o ./assets/dist-style.css",
     "watch:css": "postcss ./assets/css/styles.css -o ./assets/dist-style.css --watch"
   },
   "devDependencies": {
