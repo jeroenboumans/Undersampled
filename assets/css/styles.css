@@ -391,8 +391,6 @@ h2 {
     margin: 30px 0 20px 0;
 }
 
-
-
 p > a.submit,
 form button[type=submit] {
     @apply font-noto-sans font-black text-white py-[12px] px-[32px] justify-center items-center gap-[10px] rounded-lg bg-red w-auto inline-block;
@@ -580,15 +578,16 @@ em {
 }
 
 form, form#contact {
-    @apply flex flex-col items-start rounded-xl bg-gray gap-[20px] w-full;
+    @apply flex flex-col items-start rounded-xl bg-gray dark:bg-opacity-0 gap-[20px] w-full;
 
     & > input, textarea {
-        @apply  px-[20px] py-[10px] rounded-md w-full;
+        @apply  px-[20px] py-[10px] rounded-md w-full dark:bg-gray-darked;
     }
     button {
         @apply w-fit;
     }
 }
+
 
 .profile {
     & > div {
