@@ -319,6 +319,7 @@ body {
 
                 & .highlighter-rouge  {
                     overflow: auto;
+                    width: 100%;
                     @apply bg-gray dark:bg-gray-dark-20%;
                     padding: 20px;
                     border-radius: 16px;

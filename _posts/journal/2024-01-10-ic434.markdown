@@ -1,0 +1,98 @@
+---
+layout: post
+title:  "IC434, Horsehead Nebula"
+titleShort: "IC434"
+date: 2024-01-10 14:05:44 +0200
+thumbnail: "https://res.cloudinary.com/undersampled/image/upload/ar_1:1,c_thumb,g_auto/ar_1:1,c_scale,w_400/v1705482584/IC434/IC434_thumb.jpg"
+heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1705482481/IC434/IC434_lojvyn_20041a_landscape.jpg"
+heroImageSource: "https://www.astrobin.com/l3r7q9/"
+captures: [
+  {label: "Ha", "url": "https://res.cloudinary.com/undersampled/image/upload/v1705482157/IC434/IC434-Ha_to2hrw.jpg"},
+  {label: "R", "url": "https://res.cloudinary.com/undersampled/image/upload/v1705952273/IC434/R_ydtsib.jpg"},
+  {label: "G", "url": "https://res.cloudinary.com/undersampled/image/upload/v1705952273/IC434/G_qeeijr.jpg"},
+  {label: "B", "url": "https://res.cloudinary.com/undersampled/image/upload/v1705952273/IC434/B_fpt6qz.jpg"}
+]
+heroImagePosition: 'center'
+categories: ic journal nebula
+tags: mono broadband nebula
+toc: true
+m:
+ngc: 
+ic: 434
+description: "Ever seen those three almost perfectly aligned stars in the night sky during winter? That area is filled with hydrogen..."
+---
+
+## Acquisition Details
+
+| IC1848    | Hα   | R    | G    | B    |
+|-----------|------|------|------|------|
+| Frames    | 53   | 19   | 17   | 17   |
+| Exp. time | 300s | 300s | 300s | 300s |
+| Flats     | 20   | 20   | 20   | 20   | 
+| Darks     | 20   |      |      |      |
+| Bias      | 15   |      |      |      |
+
+## Final Masters
+
+{% include elements/grid.html %}
+
+## Description
+
+This is 🐴 IC434 🐴 mostly known by its other name: the **Horsehead Nebula**.
+
+Ever seen those three almost perfectly aligned stars in the night sky during winter? The lowest star (seen from the northern hemisphere) is surrounded by a massive hydrogen cloud where stars can be formed and has a diameter of 1500 light years.
+
+Shot this image using a Hydrogen-alpha (Hα) filter and regular red, green and blue filters.
+
+## Merging H-alpha with RGB data
+This image needed a different approach. Since IC434 contains lots of Hydrogen, I shot with a Hydrogen filter rather than a Lumminance filter. This way I could filter out the 
+details of the nebulae. After combining **red**, **green** and **blue** channel data, normally, you'd merge it with **luminance** data. Instead, I merged the **hydrogen** data with the **red** channel using PixelMath. For this, the following statement was provided on the red channel:
+
+```
+# PixelMath
+B: $T
+G: $T
+R: $T * 0.05 + Hα * 0.95
+```
+
+Below you can see the H-alpha master file I used
+
+![M110](https://res.cloudinary.com/undersampled/image/upload/v1705482157/IC434/IC434-Ha_to2hrw.jpg "H-alpha inverted")
+
+## H-alpha Inverted
+
+For most of the narrowband images I create an inverted image as well. This way details are more visible than normal. Below is the inverted Hα-master. 
+
+![M110](https://res.cloudinary.com/undersampled/image/upload/v1705482003/IC434/IC434-inv_jfgvlm.jpg "H-alpha inverted")
+
+## Astrometry Calibration
+
+|-------------------|----------------------------------------------------------------------|
+| Astrometry Job    | [9023077](https://nova.astrometry.net/user_images/9175119#annotated) |
+| Center (RA, Dec)  | 	(84.980, -2.646) |
+| Center (RA, hms)  | 05h 39m 55.081s |
+| Center (Dec, dms) | -02° 38' 45.103" |
+| Size              | 2.57 x 2.57 deg |
+| Radius            | 1.819 deg |
+| Pixel Scale       | 1.56 arcsec/pixel |
+
+## Data Processing
+
+Processing was done in PixInsight only. Steps of the process are listed below:
+
+1. DynamicBackgroundExtraction on separate channels,
+2. LRGBCombination on only RGB channels
+3. [SPCC](https://pixinsight.com/doc/docs/SPCC/SPCC.html#__Applying_SPCC_to_Narrowband_Images__){:target="_blank"},
+4. Merging Ha with Red channel on RGB image using expression: **$T * 0.05 + Ha * 0.95**
+5. Rerunning [SPCC](https://pixinsight.com/doc/docs/SPCC/SPCC.html#__Applying_SPCC_to_Narrowband_Images__){:target="_blank"} again for exact spectral match of stars and therefor enhancing red channel,
+6. [BlurXTerminator](https://www.rc-astro.com/software/bxt/){:target="_blank"} on the HaRGB-channel for correcting stars and nebulae
+7. [SNCR](https://www.pixinsight.com/doc/legacy/LE/21_noise_reduction/scnr/scnr.html){:target="_blank"} noise reduction (0,70) to reduce green noise,
+8. BackgroundNeutralization to make sure background is correctly calibrated
+9. Stretched the image using HistogramTransformation
+10. DarkStructureEnhance on the image (0,40) to enhance horsehead nebula
+11. [StarXTerminator](https://www.rc-astro.com/software/sxt/){:target="_blank"} (splitting stars and background),
+12. Adjustments with [CurvesTransformation](https://pixinsight.com/doc/tools/CurvesTransformation/CurvesTransformation.html){:target="_blank"}
+13. [NoiseXTerminator](https://www.rc-astro.com/software/nxt/){:target="_blank"} on the starless image using masks for separate background and galaxy noise reduction
+14. Merging of the stars and starless image using PixelMath, expression: **$T + HaRGB_stars**
+15. Final adjustments with [CurvesTransformation](https://pixinsight.com/doc/tools/CurvesTransformation/CurvesTransformation.html){:target="_blank"} 
+16. [BlurXTerminator](https://www.rc-astro.com/software/bxt/){:target="_blank"} for reducing star size a bit
