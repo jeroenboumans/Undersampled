@@ -69,7 +69,7 @@ For most of the narrowband images I create an inverted image as well. This way d
 
 |-------------------|----------------------------------------------------------------------|
 | Astrometry Job    | [9023077](https://nova.astrometry.net/user_images/9175119#annotated) |
-| Center (RA, Dec)  | 	(84.980, -2.646) |
+| Center (RA, Dec)  | (84.980, -2.646) |
 | Center (RA, hms)  | 05h 39m 55.081s |
 | Center (Dec, dms) | -02° 38' 45.103" |
 | Size              | 2.57 x 2.57 deg |
