@@ -44,16 +44,16 @@ Ever seen those three almost perfectly aligned stars in the night sky during win
 
 Shot this image using a Hydrogen-alpha (Hα) filter and regular red, green and blue filters.
 
-## Merging H-alpha with RGB data
-This image needed a different approach. Since IC434 contains lots of Hydrogen, I shot with a Hydrogen filter rather than a Lumminance filter. This way I could filter out the 
-details of the nebulae. After combining **red**, **green** and **blue** channel data, normally, you'd merge it with **luminance** data. Instead, I merged the **hydrogen** data with the **red** channel using PixelMath. For this, the following statement was provided on the red channel:
-
-```
-# PixelMath
-B: $T
-G: $T
-R: $T * 0.05 + Hα * 0.95
-```
+> ## Merging H-alpha with RGB data
+> This image needed a different approach. Since IC434 contains lots of Hydrogen, I shot with a Hydrogen filter rather than a Lumminance filter. This way I could filter out the
+> details of the nebulae. After combining **red**, **green** and **blue** channel data, normally, you'd merge it with **luminance** data. Instead, I merged the **hydrogen** data with the **red** channel using PixelMath. For this, the following statement was provided on the red channel:
+>
+> ```
+> # PixelMath
+> B: $T
+> G: $T
+> R: $T * 0.05 + Hα * 0.95
+> ```
 
 Below you can see the H-alpha master file I used
 
