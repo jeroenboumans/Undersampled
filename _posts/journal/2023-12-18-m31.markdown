@@ -3,14 +3,14 @@ layout: post
 title:  "M31, Andromeda Galaxy"
 titleShort: "M31"
 date: 2023-12-16 22:50:26 +0200
-thumbnail: "/assets/img/thumbnails/m31.jpg"
-heroImage: "/assets/img/M31/M31.jpg"
+thumbnail: "https://res.cloudinary.com/undersampled/image/upload/v1707295576/M31/thumbnail.jpg"
+heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1707295194/M31/M31-RESIZED_xwjcfl.jpg"
 heroImageSource: "https://www.astrobin.com/ywqcwo/0/"
 captures: [
-  {label: "Luminance", "url": "/assets/img/M31/L.jpg"},
-  {label: "Red", "url": "/assets/img/M31/R.jpg"},
-  {label: "Green", "url": "/assets/img/M31/G.jpg"},
-  {label: "Blue", "url": "/assets/img/M31/B.jpg"}
+  {label: "Luminance", "url": "https://res.cloudinary.com/undersampled/image/upload/v1703147206/M31/G_g96obh.jpg"},
+  {label: "Red", "url": "https://res.cloudinary.com/undersampled/image/upload/v1703147205/M31/R_l3bs0c.jpg"},
+  {label: "Green", "url": "https://res.cloudinary.com/undersampled/image/upload/v1703147206/M31/G_g96obh.jpg"},
+  {label: "Blue", "url": "https://res.cloudinary.com/undersampled/image/upload/v1703147205/M31/R_l3bs0c.jpg"}
 ]
 heroImagePosition: 'center'
 categories: messier journal galaxy
@@ -45,7 +45,7 @@ This is my third attempt to capture M31, our closest neighboring galaxy. Its dis
 
 
 > ## M110, Andromeda's satellite galaxy
-> ![M110](/assets/img/M31/M110.jpg "M110 Galaxy")
+> ![M110](https://res.cloudinary.com/undersampled/image/upload/v1703147224/M31/M110_scvvmv.jpg "M110 Galaxy")
 > *M110 Galaxy*
 >
 > Another thing to keep in mind during the processing of this image was to make sure enough details 
