@@ -1,0 +1,119 @@
+---
+layout: post
+title:  "NGC6992, Eastern Veil Nebula in OSH"
+titleShort: "NGC6992"
+date: 2024-01-10 14:05:44 +0200
+thumbnail: "https://res.cloudinary.com/undersampled/image/upload/ar_1:1,c_thumb,g_auto/ar_1:1,c_scale,w_400/v1728411704/EASTERN_VEIL_OSH_thumb_eaaaa3_269486.jpg"
+heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1728411704/EASTERN_VEIL_OSH_thumb_eaaaa3.jpg"
+heroImageSource: "https://www.astrobin.com/yvrrup/"
+captures: [
+  {label: "O", "url": "https://res.cloudinary.com/undersampled/image/upload/v1728413315/O_ynpgrk.jpg"},
+  {label: "S", "url": "https://res.cloudinary.com/undersampled/image/upload/v1728413319/S_dhbpot.jpg"},
+  {label: "H", "url": "https://res.cloudinary.com/undersampled/image/upload/v1728413320/H_zxycft.jpg"},
+]
+heroImagePosition: 'top'
+categories: ngc journal nebula
+tags: mono narrowband nebula
+toc: true
+m:
+ngc: 6992 
+ic:
+description: "Ever seen those three almost perfectly aligned stars in the night sky during winter? That area is filled with hydrogen..."
+---
+
+## Acquisition Details
+
+| IC1848    | OIII | SII  | Hα   |
+|-----------|------|------|------|
+| Frames    | 49   | 47   | 56   |
+| Exp. time | 300s | 300s | 300s |
+| Flats     | 20   | 20   | 20   | 
+| Darks     |      |      | 20   |
+| Bias      |      |      | 15   |
+
+## Final Masters
+
+{% include elements/grid.html %}
+
+## Description
+
+So here it is… I present to you: my tri-band image of the ✨ Eastern Veil Nebula ✨!
+
+This weekend, I captured the final set of data using the Sulfur (S-II) filter, completing my final image.
+
+## Astrometry Calibration
+
+|--------------|-------------------|
+| RA center    | 20h53m49s.4       |
+| DEC Center   | +31°28′12″        |
+| Pixel Scale  | 1.56 arcsec/pixel |
+| Orientation  | 290.615 degrees   |
+| Field radius | 1.766 degrees     |
+
+## HSO, SHO, HOO, OSH?
+When using narrowband filters, which isolate specific wavelengths of light, you create
+images similar to Hubble’s famous ‘Pillars of Creation.’ Typically,
+the filters are assigned as follows: **Sulfur** (S-II) to red, **Hydrogen** (H-alpha) to green,
+and **Oxygen** (O-III) to blue—also known as the Hubble Palette (SHO).
+
+When shooting dual-band filters, like Hα and OIII, you can create a different palette. The mose common palette in this case is the **HOO** palette, where **Hydrogen** (Hα) is assigned to red, **Oxygen** (OIII) to green, and **Oxygen** (OIII) to blue.
+If I'd only applied two channels of data (dual-band) the image would look like the following:
+
+![](https://res.cloudinary.com/undersampled/image/upload/t_Banner%2016:9/v1728414347/NGC6960_fzihbt.jpg "NGC6992 in HOO")
+
+You often see images of the Veil Nebula in this blue-green and red palette, looking like an old-school 3D glasses picture.
+However, depending on how the data is applied, the results can vary. For this image,
+I aimed for a more 'realistic' look, similar to how you might perceive it with the naked eye.
+I found that the OSH palette (Oxygen, Sulfur, Hydrogen) worked best for me. Of course, it all comes down to personal preference!
+
+
+## Noise reduction (new approach)
+
+I've been working on noise reduction techniques for most of my images and found out there is a better way on reducing noise on narrowband images.
+With LRGB data you could use the Lumminance channel for noise reduction. However, with narrowband data, you don't have a Lumminance channel.
+
+For this problem you could create a so-called synthetic lumminance channel by combining the three narrowband channels.
+This can be created in Pixinsight using the **ImageIntegration** tool. Just add the three masters (S, H, O) as **Input Images** and set the weights for the **Image Integration** setting to **SNR**.
+
+Hit the **Apply Global** (cirkel) button and you're done. You now created an image with the best signal-to-noise ratio of the three channels combined.
+This image can now be applied as lumminance channel on the narrowband image by merging it on **CIE L a b mode** using **ChannelCombination**.
+
+![](https://res.cloudinary.com/undersampled/image/upload/v1728416421/Scherm_afbeelding_2024-10-08_om_21.39.57_yjy5mo.png "SNR Image")
+*Pixinsight, ChannelCombination settings*
+
+As you can see, by default, the image both contains less noise and more detail!
+
+![](https://res.cloudinary.com/undersampled/image/upload/v1728417158/before_after_snr_jqsxta.jpg "Before - After")
+*Before - After applying the SNR image as lumminance channel*
+
+
+## SNR Image
+
+Below is the final result for the SNR image:
+
+![SNR](https://res.cloudinary.com/undersampled/image/upload/v1728413574/OSH_DETAIL_DARK_kopie_xk2tzg.jpg "SNR image")
+
+## Data Processing
+
+Processing was done in PixInsight only. Steps of the process are listed below:
+
+1. FastRotation on the OSH image (180 degrees),
+2. DynamicBackgroundExtraction on the OSH image,
+3. ImageSolver for preparing the image for correction in SPCC,
+4. [SPCC](https://pixinsight.com/doc/docs/SPCC/SPCC.html#__Applying_SPCC_to_Narrowband_Images__){:target="_blank"},
+5. [BlurXTerminator](https://www.rc-astro.com/software/bxt/){:target="_blank"} on the OSH image with values: **0.5** sharpening stars, **-0.1** halo adjustment and **0.7** non-stellar sharpening
+6. Stretched the image using HistogramTransformation
+7. Prepared an OSH SNR image using ImageIntegration and ChannelCombination as described above and applied it as lumminance channel
+8. [StarXTerminator](https://www.rc-astro.com/software/sxt/){:target="_blank"} (splitting stars and background),
+9. Adjustments with [CurvesTransformation](https://pixinsight.com/doc/tools/CurvesTransformation/CurvesTransformation.html){:target="_blank"}
+10. [NoiseXTerminator](https://www.rc-astro.com/software/nxt/){:target="_blank"} on the starless image using masks for separate background and galaxy noise reduction
+11. Star intensity control and (size) reduction using only the brightness curve in the CurvesTransformation tool. Also pumped up the saturation a bit. 
+12. Merging of the stars and starless image using PixelMath, expression: **$T + OSH_STARS**
+13. Final contrast adjustments with [CurvesTransformation](https://pixinsight.com/doc/tools/CurvesTransformation/CurvesTransformation.html){:target="_blank"}
+
+## Final Result
+
+Please check the image in full resolution on my [Astrobin](https://www.astrobin.com/yvrrup/) post.
+
+![](https://res.cloudinary.com/undersampled/image/upload/v1728418462/EASTERN_VEIL_OSH_thumb_znvqrs.jpg "NGC6992, Eastern Veil Nebula in OSH")
+

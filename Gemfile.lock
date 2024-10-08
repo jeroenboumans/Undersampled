@@ -12,6 +12,7 @@ GEM
     eventmachine (1.2.7)
     ffi (1.15.5)
     forwardable-extended (2.6.0)
+    google-protobuf (3.23.3-aarch64-linux)
     google-protobuf (3.23.3-arm64-darwin)
     http_parser.rb (0.8.0)
     i18n (1.14.1)
@@ -60,6 +61,8 @@ GEM
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
+    nokogiri (1.15.3-aarch64-linux)
+      racc (~> 1.4)
     nokogiri (1.15.3-arm64-darwin)
       racc (~> 1.4)
     pathutil (0.16.2)
@@ -72,6 +75,8 @@ GEM
     rexml (3.2.5)
     rouge (4.1.2)
     safe_yaml (1.0.5)
+    sass-embedded (1.63.6-aarch64-linux-gnu)
+      google-protobuf (~> 3.23)
     sass-embedded (1.63.6-arm64-darwin)
       google-protobuf (~> 3.23)
     terminal-table (3.0.2)
@@ -80,6 +85,7 @@ GEM
     webrick (1.8.1)
 
 PLATFORMS
+  aarch64-linux
   arm64-darwin-22
 
 DEPENDENCIES
