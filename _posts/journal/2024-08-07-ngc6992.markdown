@@ -2,7 +2,7 @@
 layout: post
 title:  "NGC6992, Eastern Veil Nebula in OSH"
 titleShort: "NGC6992"
-date: 2024-01-10 14:05:44 +0200
+date: 2024-07-10 21:37:44 +0200
 thumbnail: "https://res.cloudinary.com/undersampled/image/upload/ar_1:1,c_thumb,g_auto/ar_1:1,c_scale,w_400/v1728411704/EASTERN_VEIL_OSH_thumb_eaaaa3_269486.jpg"
 heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1728411704/EASTERN_VEIL_OSH_thumb_eaaaa3.jpg"
 heroImageSource: "https://www.astrobin.com/yvrrup/"
