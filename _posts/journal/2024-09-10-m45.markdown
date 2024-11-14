@@ -1,0 +1,78 @@
+---
+layout: post
+title:  "M45, The Pleiades"
+date: 2024-09-10 21:10:20 +0200
+thumbnail: "https://res.cloudinary.com/undersampled/image/upload/t_Thumbnail/v1731615726/thumnail_pigojq.jpg"
+heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1731615519/M45_rev2_80_v9kl4d.jpg"
+heroImageSource: "https://www.astrobin.com/bd8nni/"
+captures: [
+    {label: "Synthetic Luminance", "url": "https://res.cloudinary.com/undersampled/image/upload/v1731616766/L_dqgjai.jpg"},
+    {label: "RGB Combined", "url": "https://res.cloudinary.com/undersampled/image/upload/v1731616767/RGB_jpa4xl.jpg"}
+]
+#heroImagePosition: 'bottom'
+categories: messier ngc journal
+tags:  mono broadband reflection nebula
+toc: true
+m: 45
+ngc: 1432
+ic:
+description: "You might think you recognize this image. And you're absolutely right!
+  Time to put my new Pixinsight workflow to the test!"
+---
+
+## Acquisition Details
+
+| M44       | Luminance | Red | Green | Blue | Blue |
+|-----------|-----------|-----|-------|------|------|
+| Frames    | 17        | 16  | 17    | 10   | 3    |
+| Exp. Time | 60s       | 60s | 60s   | 60s  | 120s |
+| Darks     | master dark | 
+
+## Final Masters
+
+{% include elements/grid.html %}
+
+[//]: # (## Annotated Masters)
+
+[//]: # (![]&#40;/assets/img/M101/SN2023ixf.jpg&#41;)
+
+[//]: # (*SN 2023ixf, annotated*)
+
+
+## Description
+You might think you recognize this image. And you're absolutely right!
+
+I've posted an image with the same object, the Pleiades (M45), back in September 2022 on Instagram, just when I started my astrophotography journey.
+Since we're dealing with rain again and the Pleiades season is upcoming, I decided to put my new Pixinsight workflow to the test on this older dataset.
+
+## Astrometry Calibration
+
+|--------------|--------------------|
+| RA center    | 03h47m01s.2        |
+| DEC Center   | +24°07′04″         |
+| Pixel Scale  | 1.561 arcsec/pixel |
+| Orientation  | 311.827 degrees    |
+| Field radius | 1.830 degrees      |
+
+## Data Processing
+
+Processing was done in PixInsight only. Steps of the process are listed below:
+
+1. Weighted Batch PreProcessing,
+2. DynamicBackgroundExtraction,
+3. ImageSolver,
+4. SpectrometricColorCalibration,
+5. BlurXTerminator,
+6. HistogramTransformation,
+7. ChannelCombination for merging a SYnthethic Luminance with RGB data,
+8. StarXterminator,
+9. CurvesTransformation on the background image
+10. NoiseXTerminator on the image. `0.8:0.23` (Denoise:Detail) applied to the background and `0.64:0.30` to the reflection nebulae using masks.
+11. PixelMath for merging the starless image with the stars.
+
+## Final Result
+
+Please check the image in full resolution on my [Astrobin](https://www.astrobin.com/bd8nni/) post.
+
+![](https://res.cloudinary.com/undersampled/image/upload/v1731615519/M45_rev2_80_v9kl4d.jpg "M45, The Pleiades")
+
