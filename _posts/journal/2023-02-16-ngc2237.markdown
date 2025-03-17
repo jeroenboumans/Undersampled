@@ -12,7 +12,7 @@ captures: [
   {label: "Blue", "url": "/assets/img/NGC2237/B.jpg"}
 ]
 heroImagePosition: 'center'
-categories: ngc ic journal
+categories: ngc journal
 tags: mono broadband nebula
 toc: true
 m: 

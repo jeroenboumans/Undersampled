@@ -12,12 +12,12 @@ captures: [
   {label: "H", "url": "https://res.cloudinary.com/undersampled/image/upload/v1728413320/H_zxycft.jpg"},
 ]
 heroImagePosition: 'top'
-categories: ngc journal nebula
+categories: ngc ic journal nebula
 tags: mono narrowband nebula
 toc: true
 m:
 ngc: 6992 
-ic:
+ic: 1340
 description: "Ever seen those three almost perfectly aligned stars in the night sky during winter? That area is filled with hydrogen..."
 ---
 

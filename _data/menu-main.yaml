@@ -7,6 +7,8 @@ links:
         link: /messier
       - title: NGC
         link: /ngc
+      - title: IC
+        link: /ic
       - title: Comets
         link: /comets
 #  - title: Reference

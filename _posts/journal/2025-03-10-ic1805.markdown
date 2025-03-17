@@ -1,0 +1,90 @@
+---
+layout: post
+title:  "IC 1805, Melotte 15"
+date: 2025-03-10 20:33 +0200
+thumbnail: "https://res.cloudinary.com/undersampled/image/upload/c_pad,w_400,h_400,ar_1:1/v1742241343/instagram-melotte15-core_lht8n9.png"
+heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1742241347/instagram-melotte15_bz93ar.png"
+heroImageSource: "https://app.astrobin.com/i/2lj3z6"
+captures: [
+    {label: "Synthetic Luminance", url: "https://res.cloudinary.com/undersampled/image/upload/v1742242461/instagram-melotte15-synth-luminance_egppqq.jpg"},
+    {label: "Ha", url: "https://res.cloudinary.com/undersampled/image/upload/v1742241343/instagram-melotte15-ha_zjeczf.png"},
+    {label: "SHO Combined", url: "https://res.cloudinary.com/undersampled/image/upload/v1742242197/instagram-melotte15-sho_brgnrw.jpg"},
+    {label: "RGB Combined", url: "https://res.cloudinary.com/undersampled/image/upload/v1742242201/instagram-melotte15-rgb_xaa9mv.jpg"}
+]
+#heroImagePosition: 'bottom'
+categories: ic nebula journal
+tags:  mono narrowband nebula
+toc: true
+m: 
+ngc: 
+ic: 1805
+description: "You might think you recognize this image. And you're absolutely right!
+  Time to put my new Pixinsight workflow to the test!"
+---
+
+## Acquisition Details
+
+| IC 1805   | SII          | Hα   | OIII | Red | Green | Blue |
+|-----------|--------------|------|------|-----|-------|------|
+| Frames    | 64           | 51   | 75   | 59  | 60    | 60   |
+| Exp. Time | 300s         | 300s | 300s | 30s | 30s   | 30s  |
+| Darks     | master darks |
+| Total     | 17h 19m 30s  |
+
+## Final Masters
+
+{% include elements/grid.html %}
+
+[//]: # (## Annotated Masters)
+
+[//]: # (![]&#40;/assets/img/M101/SN2023ixf.jpg&#41;)
+
+[//]: # (*SN 2023ixf, annotated*)
+
+
+## Description
+I present to you, the heart of the Heart Nebula: Melotte 15 ❤️. After weeks of cloudy skies, 
+I finally had four clear nights to collect data for this image! This deep exposure combines narrowband 
+data (SHO) with broadband (RGB) star data. The final integration time adds up to 17h 20m, making this my longest project in a while!
+
+Processing was done in PixInsight, focusing on balancing the faint structures while keeping a natural starfield. 
+The RGB stars were captured separately on the last night to prevent stars from becoming purple in the calibration process.
+## Astrometry Calibration
+
+|--------------|--------------------|
+| RA center    | 02h33m22s.8        |
+| DEC Center   | +61°20′38″         |
+| Pixel Scale  | 1.584 arcsec/pixel |
+| Orientation  | 338.738 degrees    |
+| Field radius | 0.885 degrees      |
+
+## Data Processing
+
+Processing was done in PixInsight only. Steps of the process are listed below:
+
+1. SpectrophotometricFluxCalibration,
+2. DynamicBackgroundExtraction,
+3. BlurXTerminator,
+5. SpectrophotometricColorCalibration,
+6. ColorCalibration on Melotte 15 to match the RGB channels levels,
+7. ChannelCombination for merging a SYnthethic Luminance with RGB data,
+8. MaskedStretch for stretching and keeping the bright parts of the nebula under control,
+9. StarXTerminator for removing stars from the SHO data,
+10. Final stretch with HistogramTransformation,
+9. Creation of a so called 'synthetic luminance' by combining the SHO data with SNR as the weighting factor. The synthetic luminance was
+then combined as the CIELab L channel on the SHO data.
+10. NoiseXTerminator on the image using denoise: **1.00:0.91** (color:luminance), low frequency denoise: **1.00:0.80** (color:luminance), frequency scale: **6.6**, and **5** iterations.
+11. Used [NarrowbandNormalization](https://www.cosmicphotons.com/pi-modules/narrowbandnormalization/) to balance the SHO data.
+12. Color correction with CurvesTransformation on the background image
+13. Sharpening with UnsharpMask on the background image
+14. Noise reduction with NoiseXTerminator on the background image
+15. Adding the RGB stars on top of the SHO data with PixelMath to prevent purple stars.
+16. FastRotation for better angle :)
+17. ImageSolver for adding the astrometry data to the image.
+
+## Final Result
+
+Please check the image in full resolution on my [Astrobin](https://app.astrobin.com/i/2lj3z6) post.
+
+![](https://res.cloudinary.com/undersampled/image/upload/v1742241347/instagram-melotte15_bz93ar.png "IC 1805, Melotte 15")
+

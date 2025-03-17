@@ -12,7 +12,7 @@ captures: [
   {label: "RGB (stars)", "url": "/assets/img/C2022E3ZTF/RGB_STARS.jpg"}
 ]
 heroImagePosition: 'center'
-categories: comet ic journal
+categories: comet journal
 tags: mono broadband comet
 toc: true
 m: ''

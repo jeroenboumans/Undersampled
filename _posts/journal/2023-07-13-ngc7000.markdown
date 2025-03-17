@@ -11,7 +11,7 @@ captures: [
   {label: "Oxygen (OIII)", "url": "/assets/img/NGC7000/O.webp"}
 ]
 heroImagePosition: 'bottom'
-categories: ngc ic journal
+categories: ngc journal
 tags: mono narrowband nebula
 toc: true
 m: 
