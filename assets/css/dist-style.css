@@ -2021,7 +2021,7 @@ form, form#contact {
     background-color: rgb(245 245 245 / var(--tw-bg-opacity));
   }
   & > div {
-    background-image: url('/assets/img/me.jpg');
+    background-image: url('/assets/img/me.png');
   }
   :is(.dark & > div) {
     background-color: rgba(56,56,56,0.2);
