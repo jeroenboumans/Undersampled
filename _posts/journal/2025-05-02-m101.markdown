@@ -2,7 +2,7 @@
 layout: post
 title:  "M101, Pinwheel Galaxy in LHaRGB"
 date: 2025-05-02 10:30:00 +0200
-thumbnail: "/assets/img/thumbnails/m101.jpg"
+thumbnail: "https://res.cloudinary.com/undersampled/image/upload/v1753113634/M101/m101-thumbnail_wdb6n1.jpg"
 heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1753111411/M101/M101_LHaRGB_lp9ekd.jpg"
 heroImageSource: "https://www.astrobin.com/b6hfqd/"
 captures: [
