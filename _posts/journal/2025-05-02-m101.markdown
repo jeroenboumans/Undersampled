@@ -17,6 +17,7 @@ categories: messier ngc journal
 tags:  mono galaxy l-ha-rgb
 toc: true
 m: 101-2
+slug: m101-lhargb
 ngc: 5457
 ic:
 description: "I present to you my very first dark sky image: Messier 101, the Pinwheel Galaxy ✨❤️ — captured under Bortle class 3 skies using remote observatory data in collaboration with Joep van der Heiden. This project totals a whopping 25 hours of integration, combining broadband (LRGB) and narrowband (Hα) to reveal the galaxy’s sweeping spiral arms and faint outer halo."
