@@ -20,7 +20,7 @@ m: 101-2
 slug: m101-lhargb
 ngc: 5457
 ic:
-description: "I present to you my very first dark sky image: Messier 101, the Pinwheel Galaxy ✨❤️ — captured under Bortle class 3 skies using remote observatory data in collaboration with Joep van der Heiden. This project totals a whopping 25 hours of integration, combining broadband (LRGB) and narrowband (Hα) to reveal the galaxy’s sweeping spiral arms and faint outer halo."
+description: "I present to you my very first dark sky image: Messier 101, the Pinwheel Galaxy ✨❤️ — captured under Bortle class 3 skies using remote observatory data in collaboration with [JoepsAstronomy](https://app.astrobin.com/u/JoepsAstronomy). This project totals a whopping 25 hours of integration, combining broadband (LRGB) and narrowband (Hα) to reveal the galaxy’s sweeping spiral arms and faint outer halo."
 ---
 
 ## Acquisition Details
@@ -44,7 +44,7 @@ description: "I present to you my very first dark sky image: Messier 101, the Pi
 
 
 ## Description
-I present to you my very first dark sky image: Messier 101, the Pinwheel Galaxy ✨️ — captured under Bortle class 3 skies using remote observatory data in collaboration with Joep van der Heiden. This project totals a whopping 25 hours of integration, combining broadband (LRGB) and narrowband (Hα) to reveal the galaxy’s sweeping spiral arms and faint outer halo.
+I present to you my very first dark sky image: Messier 101, the Pinwheel Galaxy ✨️ — captured under Bortle class 3 skies using remote observatory data in collaboration with [JoepsAstronomy](https://app.astrobin.com/u/JoepsAstronomy). This project totals a whopping 25 hours of integration, combining broadband (LRGB) and narrowband (Hα) to reveal the galaxy’s sweeping spiral arms and faint outer halo.
 
 The pink patches scattered across M101’s arms are Hα regions—massive clouds of hydrogen where new stars are born. Even more amazing: while M101 lies roughly 21 million light-years away in Ursa Major, all the bright foreground stars in this image belong to our own Milky Way. Two galaxies, one frame.
 
