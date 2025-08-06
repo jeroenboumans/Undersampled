@@ -21,23 +21,19 @@
     mb-0 md:dark:mb-[60px]"
      style="
      background-image: url({{page.heroImage}});
-    {% if page.heroImageSize %}
-        background-size: {{page.heroImageSize}};
-    {% endif %}
+     background-size: {{page.heroImageSize | default: 'cover'}};
 
     {% if page.heroImagePosition %}
         background-position: {{page.heroImagePosition}};
     {% endif %}
 ">
     {% if page.heroImageSource %}
-    <div class="absolute w-full h-full left-0 top-0 right-0 bottom-0 blur-[50px] opacity-20 md:opacity-40 saturate-[3]"
+    <div class="absolute w-full h-full left-0 top-0 right-0 bottom-0 blur-[50px] opacity-80 md:opacity-80 saturate-[3]"
          style="
             z-index: -10;
             background-image: url({{page.heroImage}});
+            background-size: {{page.heroImageSize | default: 'cover'}};
 
-            {% if page.heroImageSize %}
-                background-size: {{page.heroImageSize}};
-            {% endif %}
 
             {% if page.heroImagePosition %}
                 background-position: {{page.heroImagePosition}};
