@@ -2011,7 +2011,7 @@ form, form#contact {
     width: 100%;
   }
   & > div {
-    max-width: 400px;
+    max-width: 200px;
   }
   & > div {
     border-radius: 9999px;
