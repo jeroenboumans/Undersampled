@@ -18,8 +18,8 @@ toc: true
 m: 
 ngc: 
 ic: 1805
-description: "You might think you recognize this image. And you're absolutely right!
-  Time to put my new Pixinsight workflow to the test!"
+description: "I present to you, the heart of the Heart Nebula: Melotte 15 ❤️. After weeks of cloudy skies, 
+I finally had four clear nights to collect data for this image!"
 ---
 
 ## Acquisition Details

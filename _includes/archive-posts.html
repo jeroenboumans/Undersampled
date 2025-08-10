@@ -19,7 +19,7 @@
 
         <div class="description flex flex-col self-stretch items-start flex-1 gap-[20px] relative">
             {% if item.heroImage %}
-            
+
             <a href="{{item.url}}" style="background-image: url('{{ item.heroImage }}'); background-size: {{ item.heroImageSize | default: 'cover' }}; background-position: {{item.heroImagePosition | default: 'center'}};"
                class="flex flex-col  aspect-video w-full h-auto md:h-max-[150px] rounded-lg bg-no-repeat bg-center mb-[20px] md:mb-0]
                                             border-[1px] border-[rgba(255,255,255,0.075)]">
