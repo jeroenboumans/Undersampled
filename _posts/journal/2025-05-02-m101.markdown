@@ -1,0 +1,81 @@
+---
+layout: post
+title:  "M101, Pinwheel Galaxy in LHaRGB"
+date: 2025-05-02 10:30:00 +0200
+thumbnail: "https://res.cloudinary.com/undersampled/image/upload/v1753113634/M101/m101-thumbnail_wdb6n1.jpg"
+heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1753111411/M101/M101_LHaRGB_lp9ekd.jpg"
+heroImageSource: "https://www.astrobin.com/b6hfqd/"
+captures: [
+    {label: "Luminance", "url": "https://res.cloudinary.com/undersampled/image/upload/v1753112249/M101/L_azuvfu.jpg"},
+    {label: "H-alpha", "url": "https://res.cloudinary.com/undersampled/image/upload/v1753112246/M101/Ha_xqdnaz.jpg"},
+    {label: "Red", "url": "https://res.cloudinary.com/undersampled/image/upload/v1753112249/M101/R_hk9djr.jpg"},
+    {label: "Green", "url": "https://res.cloudinary.com/undersampled/image/upload/v1753112249/M101/G_m0czxk.jpg"},
+    {label: "Blue", "url": "https://res.cloudinary.com/undersampled/image/upload/v1753112249/M101/B_hz6pzj.jpg"}
+]
+#heroImagePosition: 'bottom'
+categories: messier ngc journal
+tags:  mono galaxy l-ha-rgb
+toc: true
+m: 101-2
+slug: m101-lhargb
+ngc: 5457
+ic:
+description: "I present to you my very first dark sky image: Messier 101, the Pinwheel Galaxy ✨❤️ — captured under Bortle class 3 skies using remote observatory data in collaboration with [JoepsAstronomy](https://app.astrobin.com/u/JoepsAstronomy). This project totals a whopping 25 hours of integration, combining broadband (LRGB) and narrowband (Hα) to reveal the galaxy’s sweeping spiral arms and faint outer halo."
+---
+
+## Acquisition Details
+
+| M101       | Ha   | Lum. | Red  | Green | Blue |
+|------------|------|------|------|-------|------|
+| Frames     | 75   | 95   | 45   | 40    | 45   |
+| Exp. Time  | 300s | 300s | 300s | 300s  | 300s |
+| Flats      | 20   | 20   | 20   | 20    | 20   |
+| Flat Darks | 20   | 20   | 20   | 20    | 20   |
+| Darks      | 20   | 20   | 20   | 20    | 20   |
+
+## Final Masters
+
+{% include elements/grid.html %}
+
+## Processed Luminance
+
+![](https://res.cloudinary.com/undersampled/image/upload/v1753112486/M101/L-processed_dakxsu.jpg) *Processed luminance*
+
+
+
+## Description
+I present to you my very first dark sky image: Messier 101, the Pinwheel Galaxy ✨️ — captured under Bortle class 3 skies using remote observatory data in collaboration with [JoepsAstronomy](https://app.astrobin.com/u/JoepsAstronomy). This project totals a whopping 25 hours of integration, combining broadband (LRGB) and narrowband (Hα) to reveal the galaxy’s sweeping spiral arms and faint outer halo.
+
+The pink patches scattered across M101’s arms are Hα regions—massive clouds of hydrogen where new stars are born. Even more amazing: while M101 lies roughly 21 million light-years away in Ursa Major, all the bright foreground stars in this image belong to our own Milky Way. Two galaxies, one frame.
+
+This was a true processing challenge, balancing the rich LRGB data with the more intense Hα signal, done in PixInsight. I focused on enhancing the fine structures without over-emphasizing noise or losing the galaxy’s natural colors. Especially the core needed some final tweaking to make the dust swirls stand out more since it is pretty bright.
+
+Captured remotely with the same setup as my own: ASI533MM Pro and the small but powerful Askar 71F. Each frame was 300 seconds long, collected over multiple nights.
+
+🔭 Clear skies!
+## Astrometry Calibration
+
+|--------------|--------------------|
+| RA center    | 14h03m01s.4        |
+| DEC Center   | +54°19′37″         |
+| Pixel Scale  | 1.981 arcsec/pixel |
+| Orientation  | 356.768 degrees    |
+| Field radius | 0.883 degrees      |
+
+## Data Processing
+
+Processing was done in PixInsight only. Steps of the process are listed below:
+
+1. SpectrophotometricFluxCalibration,
+2. DynamicBackgroundExtraction,
+3. PixelMath to combine the RGB data with the Hα: $T * 0.2 + Ha * 0.8 (yep, should have used median instead),
+4. ImageIdentifier
+5. SpectrophotometricColorCalibration,
+6. BlurXTerminator,
+7. MaskedStretch for stretching the image while keeping the bright parts of the galaxy under control,
+8. HistogramTransformation for final stretches
+9. NoiseXTerminator on the image using settings: HF: **0.95**, LF: **0.70**, Scale: **7.4**, Iterations: **5**,
+10. DynamicBackgroundExtraction to remove the background gradients,
+11. CurvesTransformation for color correction,
+12. ChannelCombination to merge the Luminance data with the HaRGB data,
+13. UnsharpMask for sharpening the image a bit
