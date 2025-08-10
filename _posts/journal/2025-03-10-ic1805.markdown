@@ -2,7 +2,7 @@
 layout: post
 title:  "IC 1805, Melotte 15"
 date: 2025-03-10 20:33 +0200
-thumbnail: "https://res.cloudinary.com/undersampled/image/upload/c_pad,w_400,h_400,ar_1:1/v1742241343/instagram-melotte15-core_lht8n9.png"
+thumbnail: "https://res.cloudinary.com/undersampled/image/upload/t_Thumbnail/v1742244693/instagram-melotte15-core_lht8n9.png"
 heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1742241347/instagram-melotte15_bz93ar.png"
 heroImageSource: "https://app.astrobin.com/i/2lj3z6"
 captures: [

@@ -1,5 +1,7 @@
 <div class="body">
     {% include title.html %}
+
+
     <div class="content collection gap-[30px] md:gap-[60px]">
 
         {% assign items = site.categories[page.category] %}
@@ -10,11 +12,40 @@
             <p class="mx-[10px]">Nothing to se here yet, please come back in a while. :)</div>
         {% else %}
 
+
+
             {% if page.sort %}
                 {% assign items = items | sort: page.sort %}
             {% endif %}
 
+
             {% for item in items  %}
+
+                {% if forloop.first %}
+                    <div class="journal-item journal-first w-full md:flex md:gap-[40px]">
+
+                        <div class="description flex flex-col self-stretch items-start flex-1 gap-[20px]">
+                        {% if item.heroImage %}
+                        <a href="{{item.url}}" style="background-image: url('{{ item.heroImage }}'); background-size: {{ item.heroImageSize | default: 'cover' }}"
+                           class=" flex flex-col  aspect-video w-full h-auto md:h-max-[150px] rounded-lg bg-no-repeat bg-center mb-[20px] md:mb-0]
+                                        border-[1px] border-[rgba(255,255,255,0.075)]">
+                        </a>
+                        {% endif %}
+                            <a href="{{item.url}}" class="flex flex-col items-start gap-[10px] " >
+                                <h2 class="hover:text-red m-0 ">{{ item.title }}</h2>
+                                <h6>{{ item.date  | date: "%-d %B, %Y" }}</h6>
+                                {% include tags.html tags=item.tags %}
+                                <p class="md:mt-[20px]">{{ item.description | truncatewords: 25 }}</p>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+    {% include elements/divider.html %}
+
+
+                    {% else %}
             <div class="journal-item w-full md:flex md:gap-[40px]">
                 {% if item.thumbnail %}
                 <a href="{{item.url}}"  style="background-image: url('{{ item.thumbnail }}'); background-size: {{ item.heroImageSize | default: 'cover' }}"
@@ -32,9 +63,11 @@
                 </div>
 
             </div>
+
             {% if forloop.last == false %}
                 {% include elements/divider.html %}
             {% endif %}
+    {% endif %}
             {% endfor %}
         {% endif %}
     </div>

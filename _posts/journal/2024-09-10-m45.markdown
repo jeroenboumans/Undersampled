@@ -2,7 +2,7 @@
 layout: post
 title:  "M45, The Pleiades"
 date: 2024-09-10 21:10:20 +0200
-thumbnail: "https://res.cloudinary.com/undersampled/image/upload/v1731615726/thumnail_pigojq.jpg"
+thumbnail: "https://res.cloudinary.com/undersampled/image/upload/t_Thumbnail/v1731615726/thumnail_pigojq.jpg"
 heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1731615519/M45_rev2_80_v9kl4d.jpg"
 heroImageSource: "https://www.astrobin.com/bd8nni/"
 captures: [
