@@ -5,9 +5,9 @@
 
 
 
-    {% comment %}
-    ## include title.html ##
-{% endcomment %}
+
+    {% include title.html %}
+
     {% assign items = site.categories[page.category] %}
 
     {% assign count = items | size %}
@@ -15,11 +15,10 @@
     {% for item in items  %}
 
     {% if forloop.first %}
-    <div class="journal-item journal-first mt-[30px] md:mt-[80px] w-full md:w-full lg:w-3/4 xxl:w-full md:flex md:gap-[40px]">
+    <div class="journal-item journal-first  w-full md:w-full lg:w-3/4 xxl:w-full md:flex md:gap-[40px]">
 
         <div class="description flex flex-col self-stretch items-start flex-1 gap-[20px] relative">
             {% if item.heroImage %}
-
             <a href="{{item.url}}" style="background-image: url('{{ item.heroImage }}'); background-size: {{ item.heroImageSize | default: 'cover' }}; background-position: {{item.heroImagePosition | default: 'center'}};"
                class="flex flex-col  aspect-video w-full h-auto md:h-max-[150px] rounded-lg bg-no-repeat bg-center mb-[20px] md:mb-0]
                                             border-[1px] border-[rgba(255,255,255,0.075)]">
