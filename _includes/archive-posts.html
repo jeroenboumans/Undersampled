@@ -1,12 +1,52 @@
-<div class="body">
-    {% include title.html %}
 
+
+<div class="body">
+
+
+
+
+    {% comment %}
+    ## include title.html ##
+{% endcomment %}
+    {% assign items = site.categories[page.category] %}
+
+    {% assign count = items | size %}
+
+    {% for item in items  %}
+
+    {% if forloop.first %}
+    <div class="journal-item journal-first mt-[30px] md:mt-[80px] w-full md:w-full lg:w-3/4 xxl:w-full md:flex md:gap-[40px]">
+
+        <div class="description flex flex-col self-stretch items-start flex-1 gap-[20px] relative">
+            {% if item.heroImage %}
+            
+            <a href="{{item.url}}" style="background-image: url('{{ item.heroImage }}'); background-size: {{ item.heroImageSize | default: 'cover' }}; background-position: {{item.heroImagePosition | default: 'center'}};"
+               class="flex flex-col  aspect-video w-full h-auto md:h-max-[150px] rounded-lg bg-no-repeat bg-center mb-[20px] md:mb-0]
+                                            border-[1px] border-[rgba(255,255,255,0.075)]">
+            </a>
+            {% endif %}
+
+            <div class="absolute aspect-video w-full h-auto left-0 top-0 right-0 bottom-0 blur-[50px] opacity-80 md:opacity-80 saturate-[3]"
+                 style="
+            z-index: -10;
+            background-image: url({{item.heroImage}});
+            background-size: {{item.heroImageSize | default: 'cover'}};
+            background-position: {{item.heroImagePosition | default: 'center'}};
+        ">
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    {% endif %}
+    {% endfor %}
 
     <div class="content collection gap-[30px] md:gap-[60px]">
 
-        {% assign items = site.categories[page.category] %}
 
-        {% assign count = items | size %}
 
         {% if count == 0 %}
             <p class="mx-[10px]">Nothing to se here yet, please come back in a while. :)</div>
@@ -25,11 +65,12 @@
                     <div class="journal-item journal-first w-full md:flex md:gap-[40px]">
 
                         <div class="description flex flex-col self-stretch items-start flex-1 gap-[20px]">
-                        {% if item.heroImage %}
-                        <a href="{{item.url}}" style="background-image: url('{{ item.heroImage }}'); background-size: {{ item.heroImageSize | default: 'cover' }}"
-                           class=" flex flex-col  aspect-video w-full h-auto md:h-max-[150px] rounded-lg bg-no-repeat bg-center mb-[20px] md:mb-0]
-                                        border-[1px] border-[rgba(255,255,255,0.075)]">
-                        </a>
+
+<!--                        {% if item.heroImage %}-->
+<!--                        <a href="{{item.url}}" style="background-image: url('{{ item.heroImage }}'); background-size: {{ item.heroImageSize | default: 'cover' }}"-->
+<!--                           class=" flex flex-col  aspect-video w-full h-auto md:h-max-[150px] rounded-lg bg-no-repeat bg-center mb-[20px] md:mb-0]-->
+<!--                                        border-[1px] border-[rgba(255,255,255,0.075)]">-->
+<!--                        </a>-->
                         {% endif %}
                             <a href="{{item.url}}" class="flex flex-col items-start gap-[10px] " >
                                 <h2 class="hover:text-red m-0 ">{{ item.title }}</h2>

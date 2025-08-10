@@ -31,6 +31,10 @@ module.exports = {
         'gray-dark-20%': 'rgba(56,56,56,0.2)',
         'gray-light': '#F5F5F5',
       },
+
+      screens: {
+        'xxl': '1536px', // or your desired value
+      },
     }
   }
 }
