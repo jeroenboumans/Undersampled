@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "NGC6888, Crescent Nebula in HOO"
+date: 2025-09-09 10:30:00 +0200
+thumbnail: "https://res.cloudinary.com/undersampled/image/upload/v1757429764/Naamloos_kh9wxf.jpg"
+heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1757429241/HOO_NEW_REDUCED_g7hfjb.jpg"
+heroImageSource: "https://app.astrobin.com/i/nzjup8"
+captures: [
+    {label: "H-alpha", "url": "https://res.cloudinary.com/undersampled/image/upload/v1757429949/HOO_Ha_hjwcbo.jpg"},
+    {label: "O-III", "url": "https://res.cloudinary.com/undersampled/image/upload/v1757429949/HOO_OIII_o0hpgu.jpg"}
+]
+#heroImagePosition: 'bottom'
+categories: ngc journal
+tags:  mono nebula hoo
+toc: true
+m:
+slug: ngc6888-hoo
+ngc: 6888
+ic:
+description: "This is the Crescent Nebula (NGC 6888), located in the constellation Cygnus. In its center lies a massive Wolf-Rayet star, which is shedding its outer layers through intense stellar winds. "
+---
+
+## Acquisition Details
+
+| NGC6888    | Ha   | OIII |
+|------------|------|------|
+| Frames     | 124  | 147  |
+| Exp. Time  | 300s | 300s |
+| Flats      | 20   | 20   |
+| Flat Darks | 20   | 20   |
+| Darks      | 20   | 20   |
+
+## Final Masters
+
+{% include elements/grid.html %}
+
+## Crop of the Nebula
+
+![](https://res.cloudinary.com/undersampled/image/upload/v1757429764/Naamloos_kh9wxf2.jpg) *Crop*
+
+
+## Description
+
+This is the Crescent Nebula (NGC 6888), located in the constellation Cygnus.
+
+In its center lies a massive Wolf-Rayet star, which is shedding its outer layers through intense stellar winds. These fast winds slam into slower material that the star expelled earlier on, creating shockwaves that form the surrounding gas into a glowing 'cosmic bubble', the puff you can see here.
+
+It's an emission nebula, consisting mostly of hydrogen and oxygen. Therefor I chose to create a HOO palette image.
+
+🔭 Clear skies!
+

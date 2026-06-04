@@ -41,3 +41,11 @@ gem "jekyll-toc", "~> 0.18.0"
 gem "webrick", "~> 1.8"
 
 gem "jekyll-postcss", "~> 0.5.0"
+
+# Ruby 3.4+/4.0 no longer keep these on the default load path.
+# Jekyll 4.3.x requires them without declaring them, so pin them here.
+gem "logger"
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+gem "ostruct"

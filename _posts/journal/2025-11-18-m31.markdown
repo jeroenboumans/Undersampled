@@ -1,0 +1,52 @@
+---
+layout: post
+title:  "M31, The Andromeda Galaxy, Mosaic"
+date: 2025-11-18 10:30:00 +0200
+thumbnail: "https://res.cloudinary.com/undersampled/image/upload/t_Thumbnail/v1780602658/M_j7ryrd.jpg"
+heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1780602199/M31_C_f9uszh.jpg"
+#heroImageSource: "https://res.cloudinary.com/undersampled/image/upload/v1780602199/M31_C_f9uszh.jpg"
+captures: [
+  
+    {label: "Luminance", "url": "https://res.cloudinary.com/undersampled/image/upload/t_wide/v1780603162/Mosaic_L_rqgu62.jpg"},
+    {label: "H-alpha", "url": "https://res.cloudinary.com/undersampled/image/upload/v1780603169/Mosaic_Ha_judpgp.jpg"}
+]
+#heroImagePosition: 'bottom'
+categories: m journal
+tags:  mono galaxy lhargb
+toc: true
+m: 31
+slug: m31-lhargb
+ngc: 
+ic:
+description: "Here's M31, the Andromeda Galaxy, our nearest major galactic neighbor, sitting about 2.5 million light years away. A full 3-panel mosaic in LHaRGB"
+---
+
+## Acquisition Details
+
+| M31        | L    | Ha   | R    | G    | B    |
+|------------|------|------|------|------|------|
+| Frames     | 346  | 161  | 246  | 326  | 347  |
+| Exp. Time  | 180s | 300s | 180s | 180s | 180s |
+| Flats      | 20   | 20   | 20   | 20   | 20   |
+| Flat Darks | 20   | 20   | 20   | 20   | 20   |
+| Darks      | 20   | 20   | 20   | 20   | 20   |
+
+## Final Masters
+
+- LHaRGB: [stars](https://res.cloudinary.com/undersampled/image/upload/v1780602199/M31_C_f9uszh.jpg){:target="_blank"}, [starless](https://res.cloudinary.com/undersampled/image/upload/v1780605293/Mosaic_RGB_starless_w3nbjm.jpg){:target="_blank"}
+- H-alpha: [stars](https://res.cloudinary.com/undersampled/image/upload/v1780603169/Mosaic_Ha_judpgp.jpg){:target="_blank"}, [starless](https://res.cloudinary.com/undersampled/image/upload/v1780603223/Mosaic_Ha_starless_hdamns.jpg){:target="_blank"}
+- Luminance: [stars](https://res.cloudinary.com/undersampled/image/upload/v1780603162/Mosaic_L_rqgu62.jpg){:target="_blank"}, [starless](https://res.cloudinary.com/undersampled/image/upload/v1780603157/Mosaic_L_starless_cru06i.jpg){:target="_blank"}
+
+## Description
+
+Here's M31, the Andromeda Galaxy, our nearest major galactic neighbor, sitting about 2.5 million light years away.
+This mosaic took 3 panels to capture, combining H-alpha, Luminance, and RGB data for a total of 76 hours and 47 minutes of integration.
+
+Let me know what you think, and as always: clear skies!
+
+## Close Ups
+
+![](https://res.cloudinary.com/undersampled/image/upload/v1780604804/outer-l_h3chq0.jpg) *Outer region - left*
+![](https://res.cloudinary.com/undersampled/image/upload/v1780604804/center-m32_jpuvdl.jpg) *The center of M31, accompanied by M32*
+![](https://res.cloudinary.com/undersampled/image/upload/v1780604804/outer-r_z7efki.jpg) *Outer region - right*
+![](https://res.cloudinary.com/undersampled/image/upload/v1780602446/M110_ytoh06.jpg) *Messier 110*

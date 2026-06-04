@@ -1,0 +1,63 @@
+---
+layout: post
+title:  "NGC7000, Cygnus Wall"
+date: 2025-09-11 10:30:00 +0200
+thumbnail: "https://res.cloudinary.com/undersampled/image/upload/t_Thumbnail/v1757601976/NGC7000_-_Cygnus_Wall_-_SHO_icy5uv.jpg"
+heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1757601976/NGC7000_-_Cygnus_Wall_-_SHO_icy5uv.jpg"
+heroImageSource: "https://app.astrobin.com/i/lskh69"
+captures: [
+    {label: "H-alpha", "url": "https://res.cloudinary.com/undersampled/image/upload/v1780601855/NGC7000-O_wkxirb.jpg"},
+    {label: "O-III", "url": "https://res.cloudinary.com/undersampled/image/upload/v1780601855/NGC7000-H_xtfyvs.jpg"},
+    {label: "S-II", "url": "https://res.cloudinary.com/undersampled/image/upload/v1780601855/NGC7000-S_vcowze.jpg"}
+]
+#heroImagePosition: 'bottom'
+categories: ngc journal
+tags:  mono nebula sho
+toc: true
+m:
+slug: ngc7000-sho
+ngc: 7000
+ic:
+description: "This is the Crescent Nebula (NGC 6888), located in the constellation Cygnus. In its center lies a massive Wolf-Rayet star, which is shedding its outer layers through intense stellar winds. "
+---
+
+## Acquisition Details
+
+| NGC7000    | SII | Ha   | OIII |
+|------------|-----|------|------|
+| Frames     | 134 | 124  | 147  |
+| Exp. Time  | 72  | 300s | 300s |
+| Flats      | 179 | 20   | 20   |
+| Flat Darks | 20  | 20   | 20   |
+| Darks      | 20  | 20   | 20   |
+
+## Final Masters
+
+{% include elements/grid.html %}
+
+
+## 1. Intial Post: H-Alpha
+Some work in progress on the Cygnus Wall (NGC 7000). You might recognize this from an earlier RedCat51 shot of the North America Nebula.
+
+Data was captured remotely in Romania under beautiful Bortle 3 skies. 5h50m of H-alpha frames, each 300s. Same setup I use at home: **ASI533MM Pro** and **Askar 71F**.
+
+It's amazing to see the motion in the gas and dust streams here. If you look closely, you can spot stars forming inside the dark structures, especially in the darker region just above the center right.
+
+![](https://res.cloudinary.com/undersampled/image/upload/v1780601435/NGC7000-Ha_ll0jkf.jpg) *H-alpha Data*
+
+## 2. Update: Oxygen-III added
+
+Some more progress on the Cygnus Wall (NGC 7000). This is an HOO palette image, containing both Hydrogen-alpha (Ha) and Oxygen-3 (O-iii) data. Mapping HOO to RGB channels gives it this colors.
+
+Still waiting for the last batch of Sulfur-2 data to complete the final image but wanted to share it nonetheless.
+
+![](https://res.cloudinary.com/undersampled/image/upload/v1780601435/NGC7000-HOO_ujjb5s.jpg) *H-alpha and Oxygen-III*
+
+## 3. Final addition: Sulfur-II
+Another collab coming to an end! This is the final version of the Cygnus Wall (NGC 7000) in SHO-palette, containing Sulfur-2, Hydrogen-alpha (Ha) and Oxygen-3 (O-iii) data. Mapping SHO to RGB channels gives it this colors.
+
+![](https://res.cloudinary.com/undersampled/image/upload/v1757601976/NGC7000_-_Cygnus_Wall_-_SHO_icy5uv.jpg) *Final result in SHO*
+
+
+🔭 Clear skies!
+
