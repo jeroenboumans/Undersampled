@@ -1,9 +1,16 @@
-# no version needed since 2020
-
+# Pinned to Ruby 3.4.8 to match Netlify's build image (see .ruby-version),
+# so Gemfile.lock stays consistent and precompiled native gems resolve the
+# same locally and in CI.
 services:
   jekyll:
-    image: bretfisher/jekyll-serve
+    image: ruby:3.4.8
+    working_dir: /site
+    command: bash -c "bundle install && bundle exec jekyll serve --host 0.0.0.0 --force_polling"
     volumes:
       - .:/site
+      - bundle:/usr/local/bundle
     ports:
       - '4000:4000'
+
+volumes:
+  bundle:

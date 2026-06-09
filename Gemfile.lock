@@ -50,6 +50,8 @@ GEM
       sass-embedded (~> 1.54)
     jekyll-seo-tag (2.8.0)
       jekyll (>= 3.8, < 5.0)
+    jekyll-sitemap (1.4.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-toc (0.18.0)
       jekyll (>= 3.9)
       nokogiri (~> 1.12)
@@ -115,6 +117,8 @@ DEPENDENCIES
   jekyll (~> 4.3.1)
   jekyll-feed (~> 0.12)
   jekyll-postcss (~> 0.5.0)
+  jekyll-seo-tag (~> 2.8)
+  jekyll-sitemap (~> 1.4)
   jekyll-toc (~> 0.18.0)
   kramdown-syntax-coderay (~> 1.0)
   logger
