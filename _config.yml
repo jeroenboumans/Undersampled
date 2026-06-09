@@ -27,6 +27,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://undersampled.com" # the base hostname & protocol for your site
 github_username:  jeroenboumans
+google_analytics: G-F87ZEN1DEY
 
 # Build settings
 #theme: minima
