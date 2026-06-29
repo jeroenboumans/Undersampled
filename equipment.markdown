@@ -4,7 +4,7 @@
 
 layout: default
 title: "Equipment"
-heroImage: "/assets/img/equipment.jpg"
+heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1703147222/equipment_cff0sc.jpg"
 heroImagePosition: 'bottom'
 ---
 
