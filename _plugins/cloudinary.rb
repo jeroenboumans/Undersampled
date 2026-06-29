@@ -21,7 +21,7 @@ module Cloudinary
     "thumb"   => "f_auto,q_auto,c_fill,g_auto,ar_1:1,w_800",
     "tile"    => "f_auto,q_auto,c_fill,g_auto,ar_1:1,w_1000",
     "full"    => "f_auto,q_auto,c_limit,w_1600",
-    "content" => "f_auto,q_auto,c_limit,w_3200",
+    "content" => "f_auto,q_auto,c_limit,w_1800",
   }.freeze
 
   def self.transform(value, preset = "content")
