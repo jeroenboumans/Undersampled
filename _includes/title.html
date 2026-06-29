@@ -17,7 +17,8 @@
     {% include tags.html tags=page.tags %}
 </div>
 
-{% if page.heroImage %}
+{% assign hero_src = page.heroImage | default: page.image %}
+{% if hero_src %}
 <!-- blue rgba(94,0,255,0.2)-->
 <!-- red rgba(255,16,0,0.2)-->
 <div
@@ -27,7 +28,7 @@
         border-[rgba(255,255,255,0.075)]
         mb-0 md:dark:mb-[60px]"
     style="
-        background-image: url({{page.heroImage}});
+        background-image: url({{ hero_src | cloudinary: 'hero' }});
         background-size: {{page.heroImageSize | default: 'cover'}};
         background-position: {{page.heroImagePosition | default: 'center'}};
     ">
@@ -35,7 +36,7 @@
     <div class="absolute w-full h-full left-0 top-0 right-0 bottom-0 blur-[50px] opacity-80 md:opacity-80 saturate-[3]"
          style="
             z-index: -10;
-            background-image: url({{page.heroImage}});
+            background-image: url({{ hero_src | cloudinary: 'blur' }});
             background-size: {{page.heroImageSize | default: 'cover'}};
             background-position: {{page.heroImagePosition | default: 'center'}};
         ">

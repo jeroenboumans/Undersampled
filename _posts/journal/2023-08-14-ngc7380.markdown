@@ -2,13 +2,12 @@
 layout: post
 title:  "NGC 7380, The Wizard Nebula"
 date: 2023-08-14 23:23:55 +0200
-thumbnail: "/assets/img/thumbnails/NGC7380.jpg"
-heroImage: "/assets/img/NGC7380/NGC7380.jpg"
+image: "https://res.cloudinary.com/undersampled/image/upload/v1703147203/NGC7380/NGC7380_aiw5co.jpg"
 heroImageSource: "https://www.astrobin.com/xkrjxl"
 captures: [
-  {label: "Sulfur (SII)", "url": "/assets/img/NGC7380/S.jpg"},
-  {label: "Hydrogen (Hα)", "url": "/assets/img/NGC7380/H.jpg"},
-  {label: "Oxygen (OIII)", "url": "/assets/img/NGC7380/O.jpg"}
+  {label: "Sulfur (SII)", "url": "https://res.cloudinary.com/undersampled/image/upload/v1703147195/NGC7380/S_fungxo.jpg"},
+  {label: "Hydrogen (Hα)", "url": "https://res.cloudinary.com/undersampled/image/upload/v1703147194/NGC7380/H_qwuymc.jpg"},
+  {label: "Oxygen (OIII)", "url": "https://res.cloudinary.com/undersampled/image/upload/v1703147194/NGC7380/O_skxtpj.jpg"}
 ]
 heroImagePosition: 'center'
 categories: ngc journal

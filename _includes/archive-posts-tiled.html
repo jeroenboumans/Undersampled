@@ -16,7 +16,7 @@
                     bg-center bg-[percentage:100%] hover:bg-[percentage:300%] ease-out hover:duration-[7000ms] transition-all duration-300
                     border-[1px]
                     border-[rgba(255,255,255,0.075)]"
-                   style="background-image: url({{item.thumbnail}})">
+                   style="background-image: url({{ item.thumbnail | default: item.image | cloudinary: 'thumb' }})">
                     <div class="w-full text-center text-xl">{{page.prefix}}{{item[page.group]}}</div>
                 </a>
             {% endfor %}

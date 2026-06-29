@@ -9,14 +9,21 @@
           {% include google-analytics.html %}
         {% endif %}
         <meta charset="UTF-8">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+
+        <!-- Self-hosted fonts: preload critical weights; @font-face lives in dist-style.css -->
+        <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/noto-sans-400.woff2">
+        <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/noto-sans-700.woff2">
+        <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/noto-serif-400.woff2">
+
         <link rel="stylesheet" href="/assets/dist-style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Mono&display=swap">
         <link rel="stylesheet" x-bind:href="'/assets/css/igorpro.' + (darkMode == 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') + '.css'" >
-        <script src="//unpkg.com/alpinejs" defer></script>
+
+        {% assign hero_src = page.heroImage | default: page.image %}
+        {% if hero_src %}
+        <link rel="preload" as="image" fetchpriority="high" href="{{ hero_src | cloudinary: 'hero' }}">
+        {% endif %}
+        <script src="/assets/js/alpine.min.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="icon" type="image/svg+xml" x-bind:href="'/assets/favicons/' + (darkMode == 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') + '.svg'">
 

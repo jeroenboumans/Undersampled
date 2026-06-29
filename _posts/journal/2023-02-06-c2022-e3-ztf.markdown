@@ -2,14 +2,13 @@
 layout: post
 title:  "C/2022 E3 (ZTF)"
 date: 2023-02-06 14:32:55 +0200
-thumbnail: "/assets/img/thumbnails/C2022E3ZTF.jpg"
-heroImage: "/assets/img/C2022E3ZTF/C2022E3ZTF.jpg"
+image: "https://res.cloudinary.com/undersampled/image/upload/v1703147182/C2022E3ZTF/C2022E3ZTF_hurpqu.jpg"
 heroImageSource: "https://www.astrobin.com/eboy9i/C/"
 captures: [
-  {label: "Luminance (starless)", "url": "/assets/img/C2022E3ZTF/L.jpg"},
-  {label: "RGB (starless)", "url": "/assets/img/C2022E3ZTF/RGB.jpg"},
-  {label: "Luminance (stars, unused)", "url": "/assets/img/C2022E3ZTF/L_STARS.jpg"},
-  {label: "RGB (stars)", "url": "/assets/img/C2022E3ZTF/RGB_STARS.jpg"}
+  {label: "Luminance (starless)", "url": "https://res.cloudinary.com/undersampled/image/upload/v1703147183/C2022E3ZTF/L_osgpac.jpg"},
+  {label: "RGB (starless)", "url": "https://res.cloudinary.com/undersampled/image/upload/v1703147192/C2022E3ZTF/RGB_xuv3tl.jpg"},
+  {label: "Luminance (stars, unused)", "url": "https://res.cloudinary.com/undersampled/image/upload/v1703147186/C2022E3ZTF/L_STARS_hd1sg0.jpg"},
+  {label: "RGB (stars)", "url": "https://res.cloudinary.com/undersampled/image/upload/v1703147184/C2022E3ZTF/RGB_STARS_eboozx.jpg"}
 ]
 heroImagePosition: 'center'
 categories: comet journal

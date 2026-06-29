@@ -31,7 +31,10 @@
         {% for frame in page.captures %}
         <div>
             <div class="flex w-full items-end justify-end aspect-square rounded-lg border-[1px] border-[rgba(255,255,255,0.075)] cursor-pointer "
-                 style="background-size: cover; background-image: url('{{frame.url}}');" x-on:click="activeUrl = '{{frame.url}}';activeLabel = '{{frame.label}}'; modalOpen = true"
+                 style="background-size: cover; background-image: url('{{ frame.url | cloudinary: 'tile' }}');"
+                 x-on:mouseenter.once="new Image().src = '{{ frame.url | cloudinary: 'full' }}'"
+                 x-on:touchstart.once.passive="new Image().src = '{{ frame.url | cloudinary: 'full' }}'"
+                 x-on:click="activeUrl = '{{ frame.url | cloudinary: 'full' }}';activeLabel = '{{frame.label}}'; modalOpen = true"
             >
                 <div class="hover:text-white/50 text-white p-[10px] lg:p-[20px]" >
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

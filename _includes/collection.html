@@ -4,8 +4,9 @@
         {% for item in site.[page.collection] %}
 
         <div class="journal-item w-full md:flex md:gap-[40px]">
-            {% if item.thumbnail %}
-                <div style="background-image: url('{{ item.thumbnail }}'); background-size: {{ item.heroImageSize | default: 'cover' }}"
+            {% assign coll_thumb = item.thumbnail | default: item.image %}
+            {% if coll_thumb %}
+                <div style="background-image: url('{{ coll_thumb | cloudinary: 'thumb' }}'); background-size: {{ item.heroImageSize | default: 'cover' }}"
                      class=" flex flex-col w-full h-[250px] md:w-[150px] h-[300px] md:h-[150px] rounded-lg bg-no-repeat bg-center mb-[20px] md:mb-0]">
                 </div>
             {% endif %}

@@ -2,13 +2,12 @@
 layout: post
 title:  "NGC 7000, The America Nebula"
 date: 2023-07-13 11:40:16 +0200
-thumbnail: "/assets/img/thumbnails/NGC7000.jpg"
-heroImage: "/assets/img/ngc7000/NGC7000.jpg"
+image: "https://res.cloudinary.com/undersampled/image/upload/v1703147198/NGC7000/NGC7000_qqujbu.jpg"
 heroImageSource: "https://www.astrobin.com/eboy9i/C/"
 captures: [
-  {label: "Sulfur (SII)", "url": "/assets/img/NGC7000/S.webp"},
-  {label: "Hydrogen (Hα)", "url": "/assets/img/NGC7000/H.webp"},
-  {label: "Oxygen (OIII)", "url": "/assets/img/NGC7000/O.webp"}
+  {label: "Sulfur (SII)", "url": "https://res.cloudinary.com/undersampled/image/upload/v1703147194/NGC7000/S_w9l6lu.webp"},
+  {label: "Hydrogen (Hα)", "url": "https://res.cloudinary.com/undersampled/image/upload/v1703147194/NGC7000/H_kf10p0.webp"},
+  {label: "Oxygen (OIII)", "url": "https://res.cloudinary.com/undersampled/image/upload/v1703147194/NGC7000/O_p45utx.webp"}
 ]
 heroImagePosition: 'bottom'
 categories: ngc journal
@@ -39,7 +38,7 @@ Shooting targets like this with narrowband filters will create the posibility to
 (visual spectrum; what you see is what you get) images which result in a more red'ish looking image.
 
 > ## Hubble Color Palette
-> ![Pillars of Creation](/assets/img/pillars.jpg "Pillars of Creation")
+> ![Pillars of Creation](https://res.cloudinary.com/undersampled/image/upload/v1782747414/NGC7000/pillars_qqr6vd.jpg "Pillars of Creation")
 > *Pillars of Creation by the Hubble Telescope*
 >
 > If you'd like to create a narrowband image and want to follow the Hubble palette, you'd assign narrowband as **SHO** instead of **HOO**/**HSO**.

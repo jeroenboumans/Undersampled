@@ -1,0 +1,64 @@
+/* Self-hosted Noto fonts (Latin subset, woff2). Replaces the render-blocking
+   Google Fonts stylesheets. font-display: swap = text paints immediately. */
+
+/* Noto Sans — 400, 500, 600, 700, 900 */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/noto-sans-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/noto-sans-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/noto-sans-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/noto-sans-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('/assets/fonts/noto-sans-900.woff2') format('woff2');
+}
+
+/* Noto Serif — 400, 600 */
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/noto-serif-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/noto-serif-600.woff2') format('woff2');
+}
+
+/* Noto Sans Mono — 400 */
+@font-face {
+  font-family: 'Noto Sans Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/noto-sans-mono-400.woff2') format('woff2');
+}

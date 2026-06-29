@@ -3,13 +3,12 @@ layout: post
 title:  "IC1848, The Soul Nebula"
 titleShort: "IC1848"
 date: 2023-09-30 15:56:16 +0200
-thumbnail: "/assets/img/thumbnails/IC1848.jpg"
-heroImage: "/assets/img/IC1848/IC1848.jpeg"
+image: "https://res.cloudinary.com/undersampled/image/upload/v1703147188/IC1848/IC1848_cjjnyx.jpg"
 heroImageSource: "https://www.astrobin.com/wlvksi/C/"
 captures: [
-  {label: "Sulfur (SII)", "url": "/assets/img/IC1848/S.jpg"},
-  {label: "Hydrogen (Hα)", "url": "/assets/img/IC1848/H.jpg"},
-  {label: "Oxygen (OIII)", "url": "/assets/img/IC1848/O.jpg"}
+  {label: "Sulfur (SII)", "url": "https://res.cloudinary.com/undersampled/image/upload/v1703147185/IC1848/S_ptsotz.jpg"},
+  {label: "Hydrogen (Hα)", "url": "https://res.cloudinary.com/undersampled/image/upload/v1703147182/IC1848/H_go9caq.jpg"},
+  {label: "Oxygen (OIII)", "url": "https://res.cloudinary.com/undersampled/image/upload/v1703147184/IC1848/O_mxxq7c.jpg"}
 ]
 heroImagePosition: 'center'
 categories: ic journal nebula

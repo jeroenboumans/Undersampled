@@ -18,8 +18,9 @@
     <div class="journal-item journal-first  w-full md:w-full lg:w-3/4 xxl:w-full md:flex md:gap-[40px]">
 
         <div class="description flex flex-col self-stretch items-start flex-1 gap-[20px] relative">
-            {% if item.heroImage %}
-            <a href="{{item.url}}" style="background-image: url('{{ item.heroImage }}'); background-size: {{ item.heroImageSize | default: 'cover' }}; background-position: {{item.heroImagePosition | default: 'center'}};"
+            {% assign first_hero = item.heroImage | default: item.image %}
+            {% if first_hero %}
+            <a href="{{item.url}}" style="background-image: url('{{ first_hero | cloudinary: 'hero' }}'); background-size: {{ item.heroImageSize | default: 'cover' }}; background-position: {{item.heroImagePosition | default: 'center'}};"
                class="flex flex-col  aspect-video w-full h-auto md:h-max-[150px] rounded-lg bg-no-repeat bg-center mb-[20px] md:mb-0]
                                             border-[1px] border-[rgba(255,255,255,0.075)]">
             </a>
@@ -28,7 +29,7 @@
             <div class="absolute aspect-video w-full h-auto left-0 top-0 right-0 bottom-0 blur-[50px] opacity-80 md:opacity-80 saturate-[3]"
                  style="
             z-index: -10;
-            background-image: url({{item.heroImage}});
+            background-image: url({{ first_hero | cloudinary: 'blur' }});
             background-size: {{item.heroImageSize | default: 'cover'}};
             background-position: {{item.heroImagePosition | default: 'center'}};
         ">
@@ -87,8 +88,9 @@
 
                     {% else %}
             <div class="journal-item w-full md:flex md:gap-[40px]">
-                {% if item.thumbnail %}
-                <a href="{{item.url}}"  style="background-image: url('{{ item.thumbnail }}'); background-size: {{ item.heroImageSize | default: 'cover' }}"
+                {% assign list_thumb = item.thumbnail | default: item.image %}
+                {% if list_thumb %}
+                <a href="{{item.url}}"  style="background-image: url('{{ list_thumb | cloudinary: 'thumb' }}'); background-size: {{ item.heroImageSize | default: 'cover' }}"
                      class=" flex flex-col w-full h-[250px] md:w-[150px] h-[300px] md:h-[150px] rounded-lg bg-no-repeat bg-center mb-[20px] md:mb-0]
                         border-[1px] border-[rgba(255,255,255,0.075)]">
                 </a>
