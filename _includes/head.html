@@ -21,10 +21,29 @@
 
         {% assign hero_src = page.heroImage | default: page.image %}
         {% if hero_src %}
-        <link rel="preload" as="image" fetchpriority="high" href="{{ hero_src | cloudinary: 'hero' }}">
+        {% comment %} Detail page: hero shows on all viewports {% endcomment %}
+        <link rel="preload" as="image" fetchpriority="high"
+              href="{{ hero_src | cloudinary: 'hero_sm' }}"
+              imagesrcset="{{ hero_src | cloudinary: 'hero_xs' }} 640w, {{ hero_src | cloudinary: 'hero_sm' }} 1280w, {{ hero_src | cloudinary: 'hero_md' }} 1920w, {{ hero_src | cloudinary: 'hero' }} 2800w"
+              imagesizes="(max-width: 1480px) 100vw, 1440px">
+        {% elsif page.layout == 'archive-posts' and page.category %}
+        {% comment %} Archive: first item's wide hero (desktop) / thumbnail (mobile) is the LCP {% endcomment %}
+        {% assign first_post = site.categories[page.category] | first %}
+        {% assign first_hero = first_post.heroImage | default: first_post.image %}
+        {% assign first_thumb = first_post.thumbnail | default: first_post.image %}
+        {% if first_hero %}
+        <link rel="preload" as="image" fetchpriority="high" media="(min-width: 768px)"
+              href="{{ first_hero | cloudinary: 'hero_sm' }}"
+              imagesrcset="{{ first_hero | cloudinary: 'hero_xs' }} 640w, {{ first_hero | cloudinary: 'hero_sm' }} 1280w, {{ first_hero | cloudinary: 'hero_md' }} 1920w, {{ first_hero | cloudinary: 'hero' }} 2800w"
+              imagesizes="(max-width: 1480px) 100vw, 1440px">
+        {% endif %}
+        {% if first_thumb %}
+        <link rel="preload" as="image" fetchpriority="high" media="(max-width: 767px)"
+              href="{{ first_thumb | cloudinary: 'thumb' }}">
+        {% endif %}
         {% endif %}
         <script src="/assets/js/alpine.min.js" defer></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" x-bind:href="'/assets/favicons/' + (darkMode == 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') + '.svg'">
 
         {% seo %}

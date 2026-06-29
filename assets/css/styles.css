@@ -47,6 +47,21 @@ h6 {
     line-height: 32px;
 }
 
+/* Post date — was an <h6>; now a non-heading <time> for correct heading order.
+   Darker red in light mode to meet WCAG AA contrast (>=4.5:1 on white);
+   brand red in dark mode where it already passes. */
+.post-date {
+    color: #ff1000;
+    text-align: center;
+    font-size: 16px;
+    font-family: Noto Sans;
+    font-weight: 700;
+    line-height: 32px;
+}
+.dark .post-date {
+    color: #ff3d00;
+}
+
 table {
     font-size: 16px;
     border-collapse: separate;
@@ -147,6 +162,16 @@ body {
         flex-direction: column;
         align-items: center;
         align-self: center;
+
+        /* <main> landmark wraps the content include; keep it layout-neutral
+           so the inner .body still stretches to full container width. */
+        & > main {
+            align-self: stretch;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
         & .body {
             display: flex;

@@ -1,10 +1,4 @@
-
-
 <div class="body">
-
-
-
-
 
     {% include title.html %}
 
@@ -12,28 +6,33 @@
 
     {% assign count = items | size %}
 
-    {% for item in items  %}
-
+    {% comment %} Wide featured hero for the first item — desktop only {% endcomment %}
+    {% for item in items %}
     {% if forloop.first %}
-    <div class="journal-item journal-first  w-full md:w-full lg:w-3/4 xxl:w-full md:flex md:gap-[40px]">
+    <div class="hidden journal-item journal-first w-full md:w-full lg:w-3/4 xxl:w-full md:flex md:gap-[40px]">
 
         <div class="description flex flex-col self-stretch items-start flex-1 gap-[20px] relative">
             {% assign first_hero = item.heroImage | default: item.image %}
             {% if first_hero %}
-            <a href="{{item.url}}" style="background-image: url('{{ first_hero | cloudinary: 'hero' }}'); background-size: {{ item.heroImageSize | default: 'cover' }}; background-position: {{item.heroImagePosition | default: 'center'}};"
-               class="flex flex-col  aspect-video w-full h-auto md:h-max-[150px] rounded-lg bg-no-repeat bg-center mb-[20px] md:mb-0]
+            <a href="{{item.url}}" aria-label="{{ item.title | escape }}"
+               class="block relative overflow-hidden w-full rounded-lg mb-[20px] md:mb-0
                                             border-[1px] border-[rgba(255,255,255,0.075)]">
+                <img src="{{ first_hero | cloudinary: 'hero_sm' }}"
+                     srcset="{{ first_hero | cloudinary: 'hero_xs' }} 640w, {{ first_hero | cloudinary: 'hero_sm' }} 1280w, {{ first_hero | cloudinary: 'hero_md' }} 1920w, {{ first_hero | cloudinary: 'hero' }} 2800w"
+                     sizes="(max-width: 1480px) 100vw, 1440px"
+                     alt="" fetchpriority="high" decoding="async"
+                     class="block w-full aspect-video object-cover !m-0"
+                     style="object-position: {{ item.heroImagePosition | default: 'center' }};">
             </a>
             {% endif %}
 
-            <div class="absolute aspect-video w-full h-auto left-0 top-0 right-0 bottom-0 blur-[50px] opacity-80 md:opacity-80 saturate-[3]"
+            <div class="absolute aspect-video w-full left-0 top-0 right-0 blur-[50px] opacity-80 saturate-[3]"
                  style="
             z-index: -10;
             background-image: url({{ first_hero | cloudinary: 'blur' }});
-            background-size: {{item.heroImageSize | default: 'cover'}};
+            background-size: cover;
             background-position: {{item.heroImagePosition | default: 'center'}};
         ">
-
             </div>
         </div>
 
@@ -46,59 +45,53 @@
 
     <div class="content collection gap-[30px] md:gap-[60px]">
 
-
-
         {% if count == 0 %}
-            <p class="mx-[10px]">Nothing to se here yet, please come back in a while. :)</div>
+            <p class="mx-[10px]">Nothing to se here yet, please come back in a while. :)</p>
         {% else %}
-
-
 
             {% if page.sort %}
                 {% assign items = items | sort: page.sort %}
             {% endif %}
 
-
             {% for item in items  %}
 
                 {% if forloop.first %}
-                    <div class="journal-item journal-first w-full md:flex md:gap-[40px]">
-
-                        <div class="description flex flex-col self-stretch items-start flex-1 gap-[20px]">
-
-<!--                        {% if item.heroImage %}-->
-<!--                        <a href="{{item.url}}" style="background-image: url('{{ item.heroImage }}'); background-size: {{ item.heroImageSize | default: 'cover' }}"-->
-<!--                           class=" flex flex-col  aspect-video w-full h-auto md:h-max-[150px] rounded-lg bg-no-repeat bg-center mb-[20px] md:mb-0]-->
-<!--                                        border-[1px] border-[rgba(255,255,255,0.075)]">-->
-<!--                        </a>-->
+                    {% comment %} First item: on mobile a standard card; on desktop only the
+                       text (the wide hero above replaces the thumbnail). {% endcomment %}
+                    <div class="journal-item journal-first w-full">
+                        {% assign first_thumb = item.thumbnail | default: item.image %}
+                        {% if first_thumb %}
+                        <a href="{{item.url}}" aria-label="{{ item.title | escape }}"
+                           style="background-image: url('{{ first_thumb | cloudinary: 'thumb' }}'); background-size: {{ item.heroImageSize | default: 'cover' }}"
+                           class="md:hidden flex flex-col w-full h-[300px] rounded-lg bg-no-repeat bg-center mb-[20px]
+                                  border-[1px] border-[rgba(255,255,255,0.075)]">
+                        </a>
                         {% endif %}
+                        <div class="description flex flex-col self-stretch items-start flex-1 gap-[20px]">
                             <a href="{{item.url}}" class="flex flex-col items-start gap-[10px] " >
                                 <h2 class="hover:text-red m-0 ">{{ item.title }}</h2>
-                                <h6>{{ item.date  | date: "%-d %B, %Y" }}</h6>
+                                <time class="post-date" datetime="{{ item.date | date_to_xmlschema }}">{{ item.date  | date: "%-d %B, %Y" }}</time>
                                 {% include tags.html tags=item.tags %}
                                 <p class="md:mt-[20px]">{{ item.description | truncatewords: 25 }}</p>
                             </a>
                         </div>
-
                     </div>
 
+                    {% include elements/divider.html %}
 
-    {% include elements/divider.html %}
-
-
-                    {% else %}
+                {% else %}
             <div class="journal-item w-full md:flex md:gap-[40px]">
                 {% assign list_thumb = item.thumbnail | default: item.image %}
                 {% if list_thumb %}
-                <a href="{{item.url}}"  style="background-image: url('{{ list_thumb | cloudinary: 'thumb' }}'); background-size: {{ item.heroImageSize | default: 'cover' }}"
-                     class=" flex flex-col w-full h-[250px] md:w-[150px] h-[300px] md:h-[150px] rounded-lg bg-no-repeat bg-center mb-[20px] md:mb-0]
+                <a href="{{item.url}}" aria-label="{{ item.title | escape }}" style="background-image: url('{{ list_thumb | cloudinary: 'thumb' }}'); background-size: {{ item.heroImageSize | default: 'cover' }}"
+                     class=" flex flex-col w-full h-[300px] md:w-[150px] md:h-[150px] rounded-lg bg-no-repeat bg-center mb-[20px] md:mb-0
                         border-[1px] border-[rgba(255,255,255,0.075)]">
                 </a>
                 {% endif %}
                 <div class="description flex flex-col self-stretch items-start flex-1 gap-[20px]">
                     <a href="{{item.url}}" class="flex flex-col items-start gap-[10px] " >
                         <h2 class="hover:text-red m-0 ">{{ item.title }}</h2>
-                        <h6>{{ item.date  | date: "%-d %B, %Y" }}</h6>
+                        <time class="post-date" datetime="{{ item.date | date_to_xmlschema }}">{{ item.date  | date: "%-d %B, %Y" }}</time>
                         {% include tags.html tags=item.tags %}
                         <p class="md:mt-[20px]">{{ item.description | truncatewords: 25 }}</p>
                     </a>

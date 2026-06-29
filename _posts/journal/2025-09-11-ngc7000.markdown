@@ -2,7 +2,7 @@
 layout: post
 title:  "NGC7000, Cygnus Wall"
 date: 2025-09-11 10:30:00 +0200
-thumbnail: "https://res.cloudinary.com/undersampled/image/upload/t_Thumbnail/v1757601976/NGC7000_-_Cygnus_Wall_-_SHO_icy5uv.jpg"
+thumbnail: "https://res.cloudinary.com/undersampled/image/upload/v1757601976/NGC7000_-_Cygnus_Wall_-_SHO_icy5uv.jpg"
 heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1757601976/NGC7000_-_Cygnus_Wall_-_SHO_icy5uv.jpg"
 heroImageSource: "https://app.astrobin.com/i/lskh69"
 captures: [

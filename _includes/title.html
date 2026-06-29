@@ -1,7 +1,7 @@
 
 <div class="title w-full mb-0 md:mb-[50px] xl:mb-[70px] mt-[70px] md:mt-[70px] ">
     {% if page.layout == 'post' %}
-        <img src="/assets/img/dots.svg">
+        <img src="/assets/img/dots.svg" alt="">
     {% endif %}
 
 
@@ -12,7 +12,7 @@
     {% endif %}
 
     {% if page.date %}
-    <h6>{{page.date | date: "%-d %B, %Y"  }}</h6>
+    <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">{{page.date | date: "%-d %B, %Y"  }}</time>
     {% endif %}
     {% include tags.html tags=page.tags %}
 </div>
@@ -26,12 +26,13 @@
         aspect-square md:aspect-video
         border-[1px]
         border-[rgba(255,255,255,0.075)]
-        mb-0 md:dark:mb-[60px]"
-    style="
-        background-image: url({{ hero_src | cloudinary: 'hero' }});
-        background-size: {{page.heroImageSize | default: 'cover'}};
-        background-position: {{page.heroImagePosition | default: 'center'}};
-    ">
+        mb-0 md:dark:mb-[60px]">
+    <img src="{{ hero_src | cloudinary: 'hero_sm' }}"
+         srcset="{{ hero_src | cloudinary: 'hero_xs' }} 640w, {{ hero_src | cloudinary: 'hero_sm' }} 1280w, {{ hero_src | cloudinary: 'hero_md' }} 1920w, {{ hero_src | cloudinary: 'hero' }} 2800w"
+         sizes="(max-width: 1480px) 100vw, 1440px"
+         alt="" fetchpriority="high" decoding="async"
+         class="absolute inset-0 w-full h-full object-cover rounded-[16px] !m-0"
+         style="object-position: {{ page.heroImagePosition | default: 'center' }};">
     {% if page.heroImageSource %}
     <div class="absolute w-full h-full left-0 top-0 right-0 bottom-0 blur-[50px] opacity-80 md:opacity-80 saturate-[3]"
          style="
@@ -42,7 +43,7 @@
         ">
 
     </div>
-    <div class="hover:text-white/50 text-white" >
+    <div class="relative z-10 hover:text-white/50 text-white" >
             <a href="{{page.heroImageSource}}" target="_blank" class="font-medium font-noto-sans p-[10px] lg:p-[20px] block">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />

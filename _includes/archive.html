@@ -7,7 +7,7 @@
             {% for item in site[collection.label] %}
             <tr>
                 <td class="w-[200px]">
-                    <h6 class="inline mr-2">{{ item.date  | date: "%-d %B, %Y" }}</h6>
+                    <time class="post-date inline mr-2" datetime="{{ item.date | date_to_xmlschema }}">{{ item.date  | date: "%-d %B, %Y" }}</time>
                 </td>
                 <td>
                     <a href="{{ item.url }}">{{ item.title }}</a>

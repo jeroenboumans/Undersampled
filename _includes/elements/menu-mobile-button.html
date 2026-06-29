@@ -1,4 +1,5 @@
-<button @click="open = !open"  x-bind:class="open ? 'group' : ''"  class="relative">
+<li class="flex flex-row gap-[10px] md:gap-[20px]">
+<button type="button" aria-label="Menu" x-bind:aria-expanded="open" @click="open = !open"  x-bind:class="open ? 'group' : ''"  class="relative">
     <div class="flex flex-col justify-between w-[20px] h-[18px] transform transition-all duration-300 origin-center overflow-hidden">
         <div class="bg-black dark:bg-white h-[2px] w-7 transform transition-all duration-300 origin-left delay-100" x-bind:class="open ? 'translate-y-6' : ''"></div>
         <div class="bg-black dark:bg-white h-[2px] w-7 rounded transform transition-all duration-300 delay-75" x-bind:class="open ? 'translate-y-6' : ''"></div>
@@ -10,3 +11,4 @@
         </div>
     </div>
 </button>
+</li>

@@ -3,7 +3,7 @@ layout: post
 title:  "IC434, Horsehead Nebula"
 titleShort: "IC434"
 date: 2024-01-10 14:05:44 +0200
-thumbnail: "https://res.cloudinary.com/undersampled/image/upload/ar_1:1,c_thumb,g_auto/ar_1:1,c_scale,w_400/v1705482584/IC434/IC434_thumb.jpg"
+thumbnail: "https://res.cloudinary.com/undersampled/image/upload/v1705482584/IC434/IC434_thumb.jpg"
 heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1705482481/IC434/IC434_lojvyn_20041a_landscape.jpg"
 heroImageSource: "https://www.astrobin.com/l3r7q9/"
 captures: [

@@ -2,7 +2,7 @@
 layout: post
 title:  "M31, The Andromeda Galaxy, Mosaic"
 date: 2025-11-18 10:30:00 +0200
-thumbnail: "https://res.cloudinary.com/undersampled/image/upload/t_Thumbnail/v1780602658/M_j7ryrd.jpg"
+thumbnail: "https://res.cloudinary.com/undersampled/image/upload/v1780602658/M_j7ryrd.jpg"
 heroImage: "https://res.cloudinary.com/undersampled/image/upload/v1780602199/M31_C_f9uszh.jpg"
 #heroImageSource: "https://res.cloudinary.com/undersampled/image/upload/v1780602199/M31_C_f9uszh.jpg"
 captures: [
